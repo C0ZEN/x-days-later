@@ -1,0 +1,16 @@
+{
+  "generator-cozen-angular": {
+    "appName": "21days",
+    "appNameCamel": "21days",
+    "appNameKebab": "21-days",
+    "appNameUpperPython": "21DAYS",
+    "authorFirstName": "Geoffrey",
+    "authorLastName": "Testelin",
+    "authorEmail": "geoffrey.testelin@gmail.com",
+    "authorShort": "Geoffrey Testelin",
+    "authorLong": "Geoffrey Testelin geoffrey.testelin@gmail.com",
+    "controllerName": "main",
+    "controllerPath": "scripts/controllers",
+    "fileName": "main"
+  }
+}
