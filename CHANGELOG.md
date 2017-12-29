@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Changed
 - node_modules files are now ignored by git
+- Main styles
+- Font family
+- Favicon
 
 ## [0.1.1]
 ### Fixed
