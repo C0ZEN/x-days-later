@@ -35,7 +35,6 @@ module.exports = function (grunt) {
 				'string-replace:changelog',
 				'internal.bump',
 				'gitpush:develop',
-				'npm-command:publish',
 				'gitcheckout:master',
 				'gitmerge:develop',
 				'gittag:release',
