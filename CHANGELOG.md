@@ -5,8 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- node_modules files are now ignored by git
 
 ## [0.1.1]
+### Fixed
+- Grunt `release` task
 
 ## [0.1.0]
 ### Added
