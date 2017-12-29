@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- The release will now also edit the bower package version
+- Readme
+- The main controller will now watch the initial date changes
+- When the initial date is on error, a message will be display
 
 ## [0.1.7]
 ### Added

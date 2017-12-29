@@ -10,7 +10,8 @@
 module.exports = {
 	options: {
 		files             : [
-			'package.json'
+			'package.json',
+			'bower.json'
 		],
 		commit            : true,
 		commitMessage     : 'Release <%= newVersionTarget %> <%= newVersion %>',

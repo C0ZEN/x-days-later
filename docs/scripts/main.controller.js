@@ -14,12 +14,35 @@
 		.module('21days')
 		.controller('mainController', mainController);
 
-	mainController.$inject = [];
+	mainController.$inject = [
+		'$scope'
+	];
 
-	function mainController() {
+	function mainController($scope) {
 		let vm = this;
 
+		vm.data = {
+			initialDate: null
+		};
+
 		vm.methods = {};
+
+		// Watch the initial date change
+		// To display UI message when an error occurred
+		$scope.$watch('vm.initialDate', value => {
+			try {
+				vm.data.initialDate = new Date(value);
+			}
+			catch (e) {
+			}
+
+			if (!vm.data.initialDate) {
+				vm.data.initialDateError = 'This is not a valid date';
+			}
+			else {
+				vm.data.initialDateError = false;
+			}
+		});
 	}
 
 })(window.angular);
