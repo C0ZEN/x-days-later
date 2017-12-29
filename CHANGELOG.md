@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Main styles
+- Readme
 
 ## [0.1.4]
 ### Added
