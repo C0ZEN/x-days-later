@@ -1,0 +1,37 @@
+{
+    "name": "21-days",
+    "version": "0.0.0",
+    "description": "Use this app to find a date at 21 days later.",
+    "homepage": "https://github.com/C0ZEN/21-days",
+    "keywords": [
+        "cozen",
+        "angular",
+        "front-end",
+        "21-days",
+        "moment"
+    ],
+    "author": {
+        "name": "Geoffrey <C0ZEN> Testelin",
+        "email": "geoffrey.testelin@gmail.com",
+        "url": "www.geoffreytestelin.com"
+    },
+    "devDependencies": {
+    },
+    "dependencies": {
+    },
+    "scripts": {
+        "prepare": "nsp check",
+        "pretest": "eslint . --fix"
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "git add"
+        ],
+        "*.json": [
+            "git add"
+        ]
+    },
+    "repository": "C0ZEN/21-days",
+    "license": "MIT"
+}
