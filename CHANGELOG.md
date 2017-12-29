@@ -7,3 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Scaffolding
+- Grunt to create a release
+
+### Changed
+- Docs pushed into the sub docs folder
