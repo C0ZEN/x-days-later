@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New gem to allow jeckyll working with Angular
+
+### Changed
+- Main styles
+- Readme
+- default.html
 
 ## [0.1.6]
 ### Changed
