@@ -86,6 +86,7 @@
 
 		function onWindowClick() {
 			logService.fnCalled('onWindowClick');
+			vm.methods.hideDatepicker();
 		}
 
 		function hideDatepicker() {
