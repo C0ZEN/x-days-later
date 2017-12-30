@@ -5,8 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Link to `fr` angular-i18n script (datepicker with async loading does not works)
 
 ## [0.1.28]
+### Changed
+- Undo `fr-fr` i18n link
 
 ## [0.1.27]
 ### Removed
