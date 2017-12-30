@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Datepicker styles
+- Datepicker previous and next title 
+- Datepicker previous btn
+
+### Fixed
+- The first child of the datepicker will no longer have a reduced margin-top
 
 ## [0.1.11]
 ### Changed

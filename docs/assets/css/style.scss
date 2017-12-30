@@ -6,6 +6,7 @@
 $color-turquoise : #1ABC9C;
 $color-green-sea : #16A085;
 $color-clouds : #ECF0F1;
+$color-grey-light : rgba(0, 0, 0, .03);
 /// VARIABLES ///
 $color-title : $color-green-sea;
 $color-links : $color-turquoise;
@@ -43,15 +44,46 @@ body {
     padding : 4rem 5rem;
   }
 }
+// Description
 .project-tagline {
   margin-bottom : 0;
   color         : $color-header;
   opacity       : 1;
 }
+// Row
 row {
   display         : flex;
   flex-direction  : row;
   justify-content : flex-start;
   align-items     : center;
+}
+// Calendar
+._720kb-datepicker-calendar-day {
+  margin        : 5px 1%;
+  transition    : 100ms ease-out;
+  border-radius : 5px;
+  &._720kb-datepicker-today {
+    color : $color-green-sea;
+  }
+  &:hover, &:focus, &:active {
+    color            : $color-green-sea;
+    background-color : $color-grey-light;
+    &._720kb-datepicker-today {
+      color : $color-turquoise;
+    }
+  }
+  &._720kb-datepicker-active {
+    color            : $color-clouds;
+    background-color : $color-green-sea;
+    &:hover, &:focus, &:active {
+      background-color : $color-turquoise;
+    }
+  }
+}
+._720kb-datepicker-calendar-header:nth-child(odd) {
+  background-color : $color-green-sea;
+}
+._720kb-datepicker-calendar {
+  padding : 0;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
