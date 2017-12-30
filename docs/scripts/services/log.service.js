@@ -26,7 +26,9 @@
 		return {
 			init,
 			log,
-			fnCalled
+			fnCalled,
+			service,
+			fnCalledService
 		};
 
 		function init($target) {
@@ -44,6 +46,18 @@
 		function fnCalled($functionName) {
 			if (methods.isLogEnabled()) {
 				console.log($functionName, 'called');
+			}
+		}
+
+		function service($service, $log) {
+			if (methods.isLogEnabled()) {
+				console.log($service, '>>>', $log);
+			}
+		}
+
+		function fnCalledService($service, $functionName) {
+			if (methods.isLogEnabled()) {
+				console.log($service, '>>>', $functionName, 'called');
 			}
 		}
 

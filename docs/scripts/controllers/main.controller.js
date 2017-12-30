@@ -16,10 +16,11 @@
 
 	mainController.$inject = [
 		'$scope',
-		'logService'
+		'logService',
+		'dateService'
 	];
 
-	function mainController($scope, logService) {
+	function mainController($scope, logService, dateService) {
 		const vm = this;
 
 		// Public data
@@ -27,12 +28,15 @@
 			controller      : 'mainController',
 			today           : new Date(),
 			initialDate     : null,
-			initialDateError: false
+			initialDateError: false,
+			showDatepicker  : false
 		};
 
 		// Public methods
 		vm.methods = {
-			define21Date
+			define21Date,
+			onDatepickerClick,
+			toggleDatepicker
 		};
 
 		// Init
@@ -41,25 +45,37 @@
 
 		// Watch the initial date change
 		// To display UI message when an error occurred
-		// $scope.$watch('initialDate', $value => {
-		// 	logService.log($value);
-		// 	try {
-		// 		vm.data.initialDate = new Date($value);
-		// 	}
-		// 	catch ($e) {
-		// 	}
-		// 	logService.log(vm.data.initialDate);
-		//
-		// 	if (!vm.data.initialDate) {
-		// 		vm.data.initialDateError = 'This is not a valid date';
-		// 	}
-		// 	else {
-		// 		vm.data.initialDateError = false;
-		// 	}
-		// });
+		$scope.$watch('initialDate', $value => {
+			logService.log($value);
+			try {
+				vm.data.initialDate = new Date($value);
+			}
+			catch ($e) {
+			}
+			logService.log(vm.data.initialDate);
+
+			if (!vm.data.initialDate) {
+				vm.data.initialDateError = 'This is not a valid date';
+			}
+			else {
+				vm.data.initialDateError = false;
+			}
+		});
 
 		function define21Date() {
 			logService.fnCalled('define21Date');
+			vm.calculatedDate = dateService.add21days(vm.initialDate);
+		}
+
+		function onDatepickerClick($event) {
+			logService.fnCalled('onDatepickerClick');
+			$event.stopPropagation();
+			vm.methods.toggleDatepicker();
+		}
+
+		function toggleDatepicker() {
+			logService.fnCalled('toggleDatepicker');
+			vm.data.showDatepicker = !vm.data.showDatepicker;
 		}
 	}
 

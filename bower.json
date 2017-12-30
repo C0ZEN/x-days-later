@@ -6,7 +6,8 @@
     "angular": "^1.6.8",
     "moment": "^2.20.1",
     "angularjs-datepicker": "^2.1.23",
-    "angular-dynamic-locale": "^0.1.32"
+    "angular-dynamic-locale": "^0.1.32",
+    "moment-ferie-fr": "*"
   },
   "devDependencies": {
     "angular-i18n": "^1.6.8"

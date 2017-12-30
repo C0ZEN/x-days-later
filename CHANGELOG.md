@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- `moment-ferie-fr` as bower dependency
+- New service `date` to manage the dates
+
+### Changed
+- `main` controller method to calculate at +21 days
 
 ## [0.1.35]
 ### Changed
