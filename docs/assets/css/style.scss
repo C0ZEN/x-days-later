@@ -97,6 +97,24 @@ column {
     }
   }
 }
+.calculated-date {
+  margin-top : 1rem;
+  .calculated-date-label {
+    margin-bottom : 0.2rem;
+  }
+  .calculated-date-value {
+    width         : 100%;
+    max-width     : 350px;
+    border-radius : 3px;
+    border        : 1px solid $color-input-border;
+    padding       : 1rem 1.2rem 0.8rem 1.2rem;
+    color         : $color-input-color;
+    font-size     : 1rem;
+    font-weight   : 400;
+    line-height   : initial;
+    transition    : $transition;
+  }
+}
 // Calendar
 ._720kb-datepicker-calendar._720kb-datepicker-open {
   ._720kb-datepicker-calendar-day {

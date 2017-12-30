@@ -28,6 +28,14 @@
         {% raw %}{{ vm.data.initialDateError | json }}{% endraw %}
     </message>
 </row>
+<row class="calculated-date">
+    <span class="calculated-date-label">
+        Date calculée à 21 jours:
+    </span>
+    <date class="calculated-date-value">
+        {% raw %}{{ vm.calculatedDate }}{% endraw %}
+    </date>
+</row>
 
 <pre>{% raw %}{{ vm.data }}{% endraw %}</pre>
 <pre>{% raw %}{{ vm.initialDate }}{% endraw %}</pre>

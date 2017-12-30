@@ -33,9 +33,28 @@
 
 		logService.init(vm.data.controller);
 
+		vm.calculatedDate = null;
+
 		// Watch the initial date change
 		// To display UI message when an error occurred
 		$scope.$watch('vm.initialDate', $value => {
+			logService.log($value);
+			try {
+				vm.initialDate = new Date($value);
+			}
+			catch ($e) {
+			}
+			logService.log(vm.initialDate);
+
+			if (!vm.initialDate) {
+				vm.data.initialDateError = 'This is not a valid date';
+			}
+			else {
+				vm.data.initialDateError = false;
+			}
+		});
+
+		$scope.$watch('initialDate', $value => {
 			logService.log($value);
 			try {
 				vm.initialDate = new Date($value);
