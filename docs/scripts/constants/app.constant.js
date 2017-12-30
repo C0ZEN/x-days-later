@@ -21,7 +21,7 @@
 			},
 			debugInfoEnabled: false,
 			moment          : {
-				readableFormat: 'dddd MM MMMM YYYY'
+				readableFormat: 'dddd DD MMMM YYYY'
 			}
 		});
 
