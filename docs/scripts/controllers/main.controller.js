@@ -20,10 +20,11 @@
 		'dateService',
 		'$window',
 		'methods',
-		'$timeout'
+		'$timeout',
+		'copyService'
 	];
 
-	function mainController($scope, logService, dateService, $window, methods, $timeout) {
+	function mainController($scope, logService, dateService, $window, methods, $timeout, copyService) {
 		const vm = this;
 
 		// Public data
@@ -114,6 +115,7 @@
 
 		function onCopySuccess() {
 			logService.fnCalled('onCopySuccess');
+			copyService.show();
 		}
 	}
 
