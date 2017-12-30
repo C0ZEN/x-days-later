@@ -16,13 +16,15 @@
                 date-month-title="Mois sélectionné"
                 date-year-title="Année sélectionnée"
                 datepicker-toggle="false"
-                datepicker-show="vm.data.showDatepicker"
+                datepicker-show="{% raw %}{{vm.data.showDatepicker}}{% endraw %}"
                 ng-click="vm.methods.onDatepickerClick($event)">
         <input class="initial-date-input"
                type="text" 
                ng-model="vm.initialDate" 
                id="initialDate" 
-               name="initialDate">
+               name="initialDate"
+               tabindex="-1"
+               ng-disabled="true">
     </datepicker>
 </column>
 

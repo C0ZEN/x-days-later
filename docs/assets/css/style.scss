@@ -88,6 +88,7 @@ column {
       transition    : $transition;
       height        : 50px;
       min-height    : 50px;
+      cursor        : pointer;
       &:hover, &:focus, &:active {
         border : 1px solid $color-green-sea;
       }
