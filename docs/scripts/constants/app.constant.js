@@ -17,7 +17,7 @@
 				enabled: true
 			},
 			lang: {
-				current: 'fr-fr'
+				current: 'fr'
 			}
 		});
 
