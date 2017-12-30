@@ -52,11 +52,11 @@
 				// Convert the date
 				logService.service(data.service, 'original date is: ' + $date);
 				let date = moment($date);
-				logService.service(data.service, 'moment original date is: ' + readable(date));
+				logService.service(data.service, 'moment original date is: ' + methods.readable(date));
 
 				// Add 21 days
 				date = methods.add(date, data.days, 'days');
-				logService.service(data.service, 'new +21 days date is: ' + readable(date));
+				logService.service(data.service, 'new +21 days date is: ' + methods.readable(date));
 
 				return methods.weekendAndExceptionsStuff(date);
 			}
@@ -100,7 +100,7 @@
 
 				// Set the next monday
 				date = methods.setNextDayAfterWeekend(date);
-				logService.service(data.service, 'new date after weekend: ' + readable(date));
+				logService.service(data.service, 'new date after weekend: ' + methods.readable(date));
 			}
 
 			// Check if this is an fr exception
@@ -109,7 +109,7 @@
 
 				// Add one day
 				date = methods.add(date, data.one, 'days');
-				logService.service(data.service, 'new date after exception day: ' + readable(date));
+				logService.service(data.service, 'new date after exception day: ' + methods.readable(date));
 				date = weekendAndExceptionsStuff(date);
 			}
 			return date;

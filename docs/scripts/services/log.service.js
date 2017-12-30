@@ -50,7 +50,9 @@
 		}
 
 		function service($service, $log) {
+			console.log(1);
 			if (methods.isLogEnabled()) {
+				console.log(2);
 				console.log($service, '>>>', $log);
 			}
 		}
