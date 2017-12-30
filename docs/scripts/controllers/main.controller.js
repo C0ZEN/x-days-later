@@ -23,8 +23,10 @@
 		const vm = this;
 
 		vm.data = {
-			controller: 'mainController',
-			today     : new Date()
+			controller      : 'mainController',
+			today           : new Date(),
+			initialDate     : null,
+			initialDateError: false
 		};
 
 		vm.methods = {
@@ -37,33 +39,16 @@
 
 		// Watch the initial date change
 		// To display UI message when an error occurred
-		$scope.$watch('vm.initialDate', $value => {
-			logService.log($value);
-			try {
-				vm.initialDate = new Date($value);
-			}
-			catch ($e) {
-			}
-			logService.log(vm.initialDate);
-
-			if (!vm.initialDate) {
-				vm.data.initialDateError = 'This is not a valid date';
-			}
-			else {
-				vm.data.initialDateError = false;
-			}
-		});
-
 		$scope.$watch('initialDate', $value => {
 			logService.log($value);
 			try {
-				vm.initialDate = new Date($value);
+				vm.data.initialDate = new Date($value);
 			}
 			catch ($e) {
 			}
-			logService.log(vm.initialDate);
+			logService.log(vm.data.initialDate);
 
-			if (!vm.initialDate) {
+			if (!vm.data.initialDate) {
 				vm.data.initialDateError = 'This is not a valid date';
 			}
 			else {
