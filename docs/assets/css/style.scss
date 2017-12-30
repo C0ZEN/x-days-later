@@ -289,8 +289,18 @@ copy-container {
     user-select         : none;
     cursor              : default;
   }
-  &.display {
+  &.hiding,
+  &.showing {
     display : flex;
+  }
+  &.hiding {
+    animation-name     : fadeOut;
+    animation-duration : 200ms;
+    copied {
+      animation-name     : fadeOut;
+      animation-duration : 200ms;
+      animation-delay    : 0ms;
+    }
   }
 }
 @keyframes fadeIn {
@@ -299,6 +309,14 @@ copy-container {
   }
   100% {
     opacity : 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity : 1;
+  }
+  100% {
+    opacity : 0;
   }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
