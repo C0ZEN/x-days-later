@@ -1,13 +1,23 @@
 ## Calcul
 
 <row>
-    <label for="initialDate">Choisissez une date</label>
-    <datepicker date-set="{{ vm.data.today }}">
-        <input type="text" ng-model="vm.initialDate" id="initialDate" name="initialDate">
+    <label for="initialDate">
+        Choisissez une date
+    </label>
+    <datepicker date-set="{{ vm.data.today }}"
+                datepicker-append-to="body"
+                date-week-start-day="1"
+                date-typer="true">
+        <input type="text" 
+               ng-model="vm.initialDate" 
+               id="initialDate" 
+               name="initialDate">
     </datepicker>
 </row>
 <row>
-    <message ng-show="vm.data.initialDateError">{{ vm.data.initialDateError }}</message>
+    <message ng-show="vm.data.initialDateError">
+        {{ vm.data.initialDateError }}
+    </message>
 </row>
 
 <pre>{{ vm.initialDate | angular }}</pre>

@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- The datepicker is now append to body
+- The datepicker now start as monday for the first day of the week
+- Added span to wrap the footer text
+- Refactored readme html
+- The datepicker will now update the model as the user change the date in the input
 
 ## [0.1.9]
 ### Changed
