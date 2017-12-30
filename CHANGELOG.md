@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New constant `vendors` to inject `moment` as constant
+
+### Changed
+- `tmhDynamicLocale` config to add a default language as `fr`
 
 ## [0.1.14]
 ### Added

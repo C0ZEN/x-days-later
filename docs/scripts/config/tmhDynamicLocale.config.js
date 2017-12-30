@@ -19,7 +19,9 @@
 	];
 
 	function config(tmhDynamicLocaleProvider) {
-		tmhDynamicLocaleProvider.localeLocationPattern('/bower_components/angular-i18n/angular-locale_{{locale}}.js');
+		tmhDynamicLocaleProvider
+			.localeLocationPattern('/bower_components/angular-i18n/angular-locale_{{locale}}.js')
+			.defaultLocale('fr');
 	}
 
 }(window.angular));

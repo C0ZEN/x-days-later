@@ -41,6 +41,7 @@
         "beforeAll": true,
         "it": true,
         "process": true,
-        "__dirname": true
+        "__dirname": true,
+        "moment": true
     }
 }
