@@ -91,21 +91,22 @@ row {
     background-color : rgba(0, 0, 0, 0.1);
   }
 }
-._720kb-datepicker-calendar-header-left {
+._720kb-datepicker-calendar-header-left,
+._720kb-datepicker-calendar-header-right {
   display         : flex;
   flex-direction  : row;
   justify-content : center;
   align-items     : center;
   height          : 40px;
-}
-._720kb-datepicker-calendar-month-button {
-  display         : flex;
-  flex-direction  : row;
-  justify-content : center;
-  align-items     : center;
-  svg {
-    width  : 20px;
-    height : 20px;
+  &._720kb-datepicker-calendar-month-button {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : center;
+    align-items     : center;
+    svg {
+      width  : 20px;
+      height : 20px;
+    }
   }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

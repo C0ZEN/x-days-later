@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New initiator `languages` to set up the language as `fr`
+- New config `tmhDynamicLocale` to configure the path for languages
+
+### Changed
+- Datepicker styles
 
 ## [0.1.13]
 ### Changed

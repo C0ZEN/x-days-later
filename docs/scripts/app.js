@@ -12,6 +12,7 @@
 
 	angular
 		.module('21days', [
+			'tmh.dynamicLocale',
 			'720kb.datepicker'
 		]);
 

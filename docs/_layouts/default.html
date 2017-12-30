@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US"
+<html lang="fr-FR"
       ng-app="21days"
       ng-controller="mainController as vm">
     <head>
@@ -60,12 +60,18 @@
         <script type="text/javascript"
                 src="{{ '/bower_components/moment/min/moment-with-locales.js' | prepend: site.baseurl }}"></script>
         <script type="text/javascript"
+                src="{{ '/bower_components/angular-dynamic-locale/dist/tmhDynamicLocale.min.js' | prepend: site.baseurl }}"></script>
+        <script type="text/javascript"
                 src="{{ '/bower_components/angularjs-datepicker/dist/angular-datepicker.min.js' | prepend: site.baseurl }}"></script>
         <!-- end:bower dependencies -->
 
         <!-- start:scripts -->
         <script type="text/javascript"
                 src="{{ '/scripts/app.js' | prepend: site.baseurl }}"></script>
+        <script type="text/javascript"
+                src="{{ '/scripts/config/tmhDynamicLocale.config.js' | prepend: site.baseurl }}"></script>
+        <script type="text/javascript"
+                src="{{ '/scripts/initiators/language.initiator.js' | prepend: site.baseurl }}"></script>
         <script type="text/javascript"
                 src="{{ '/scripts/controllers/main.controller.js' | prepend: site.baseurl }}"></script>
         <!-- end:scripts -->
