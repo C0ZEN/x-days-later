@@ -16,10 +16,10 @@
 
 	mainController.$inject = [
 		'$scope',
-		'isLogEnabled'
+		'logService'
 	];
 
-	function mainController($scope, isLogEnabled) {
+	function mainController($scope, logService) {
 		const vm = this;
 
 		vm.data = {
@@ -28,7 +28,7 @@
 			today      : new Date()
 		};
 
-		isLogEnabled.init(vm.data.controller);
+		logService.init(vm.data.controller);
 
 		// Watch the initial date change
 		// To display UI message when an error occurred
