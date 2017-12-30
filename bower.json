@@ -1,6 +1,6 @@
 {
   "name": "21-days",
-  "version": "0.1.74",
+  "version": "0.1.75",
   "dependencies": {
     "jquery": "^3.2.1",
     "angular": "^1.6.8",
