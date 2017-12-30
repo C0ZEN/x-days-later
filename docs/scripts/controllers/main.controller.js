@@ -26,10 +26,11 @@
 
 		// Public data
 		vm.data = {
-			controller    : 'mainController',
-			today         : new Date(),
-			initialDate   : null,
-			showDatepicker: false
+			controller       : 'mainController',
+			today            : new Date(),
+			initialDate      : null,
+			showDatepicker   : false,
+			isHoverDatepicker: false
 		};
 
 		// Public methods
@@ -40,7 +41,9 @@
 			onDatepickerEnter,
 			onDatepickerFocus,
 			onWindowClick,
-			hideDatepicker
+			hideDatepicker,
+			isDatepickerOpen,
+			isHoverDatepicker
 		};
 
 		// Init
@@ -49,7 +52,7 @@
 
 		// Watch initialDate changes
 		$scope.$watch('initialDate', () => {
-			define21Date();
+			vm.methods.define21Date();
 		});
 
 		$window.addEventListener('click', vm.methods.onWindowClick);
@@ -81,13 +84,23 @@
 			vm.methods.toggleDatepicker();
 		}
 
-		function onWindowClick($event) {
+		function onWindowClick() {
 			logService.fnCalled('onWindowClick');
 		}
 
 		function hideDatepicker() {
 			logService.fnCalled('hideDatepicker');
-			// vm.data.showDatepicker = false;
+			if (vm.methods.isDatepickerOpen() && !vm.methods.isHoverDatepicker()) {
+				vm.data.showDatepicker = false;
+			}
+		}
+
+		function isDatepickerOpen() {
+			return vm.data.showDatepicker;
+		}
+
+		function isHoverDatepicker() {
+			return vm.data.isHoverDatepicker;
 		}
 	}
 

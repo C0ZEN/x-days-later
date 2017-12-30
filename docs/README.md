@@ -17,7 +17,9 @@
                 date-month-title="Mois sélectionné"
                 date-year-title="Année sélectionnée"
                 datepicker-toggle="false"
-                datepicker-show="{% raw %}{{vm.data.showDatepicker}}{% endraw %}">
+                datepicker-show="{% raw %}{{vm.data.showDatepicker}}{% endraw %}"
+                ng-mouseneter="vm.data.isHoverDatepicker = true"
+                ng-mouseleave="vm.data.isHoverDatepicker = false">
         <input class="initial-date-input"
                ng-class="{selected: vm.data.showDatepicker}"
                type="text" 
