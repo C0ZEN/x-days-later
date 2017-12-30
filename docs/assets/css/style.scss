@@ -19,6 +19,7 @@ $color-input-border : $color-grey;
 $color-input-color : $color-grey-darker;
 $transition : 100ms ease-out;
 $font-family : "Nunito Sans", sans-serif;
+$input-height : 3rem;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Titles color
@@ -90,8 +91,8 @@ column {
       font-weight      : 400;
       line-height      : initial;
       transition       : $transition;
-      height           : 50px;
-      min-height       : 50px;
+      height           : $input-height;
+      min-height       : $input-height;
       cursor           : pointer;
       background-color : $color-white;
       user-select      : none;
@@ -125,9 +126,14 @@ column {
     font-weight    : 400;
     line-height    : initial;
     transition     : $transition;
-    height         : 50px;
-    min-height     : 50px;
-    user-select    : $color-turquoise;
+    height         : $input-height;
+    min-height     : $input-height;
+    ::selection {
+      background : $color-turquoise;
+    }
+    ::-moz-selection {
+      background : $color-turquoise;
+    }
     text-transform : capitalize;
     margin-right   : 2rem;
   }
@@ -231,12 +237,12 @@ copy-btn {
   outline          : none;
   cursor           : pointer;
   border-radius    : 50%;
-  width            : 1.6rem;
-  height           : 1.6rem;
+  width            : $input-height;
+  height           : $input-height;
   transition       : $transition;
   svg {
-    width  : 75%;
-    height : 75%;
+    width  : 40%;
+    height : 40%;
     fill   : inherit;
   }
   &:hover, &:focus, &:active {
