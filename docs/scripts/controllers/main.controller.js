@@ -39,7 +39,8 @@
 			toggleDatepicker,
 			onDatepickerEnter,
 			onDatepickerFocus,
-			onWindowClick
+			onWindowClick,
+			hideDatepicker
 		};
 
 		// Init
@@ -82,6 +83,11 @@
 
 		function onWindowClick($event) {
 			logService.fnCalled('onWindowClick');
+		}
+
+		function hideDatepicker() {
+			logService.fnCalled('hideDatepicker');
+			// vm.data.showDatepicker = false;
 		}
 	}
 
