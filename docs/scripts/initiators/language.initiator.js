@@ -16,13 +16,13 @@
 
 	config.$inject = [
 		'tmhDynamicLocale',
-		'moment'
+		'moment',
+		'appConstant'
 	];
 
-	function config(tmhDynamicLocale, moment) {
-		const lang = 'fr';
-		tmhDynamicLocale.set(lang);
-		moment.locale(lang);
+	function config(tmhDynamicLocale, moment, appConstant) {
+		tmhDynamicLocale.set(appConstant.lang.current);
+		moment.locale(appConstant.lang.current);
 	}
 
 }(window.angular));

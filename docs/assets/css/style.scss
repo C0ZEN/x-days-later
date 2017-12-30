@@ -109,4 +109,29 @@ row {
     }
   }
 }
+._720kb-datepicker-calendar-years-pagination-pages {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : center;
+  align-items     : center;
+  > a {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : center;
+    align-items     : center;
+    > svg {
+      width  : 20px;
+      height : 20px;
+    }
+  }
+}
+._720kb-datepicker-calendar-month {
+  text-transform : capitalize;
+}
+._720kb-datepicker-calendar-header:nth-child(even) {
+  background-color : $color-turquoise;
+}
+._720kb-datepicker-calendar-header-opened-pagination::after {
+  bottom : 0;
+}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

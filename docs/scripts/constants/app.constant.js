@@ -15,6 +15,9 @@
 		.constant('appConstant', {
 			logs: {
 				enabled: true
+			},
+			lang: {
+				current: 'fr-fr'
 			}
 		});
 

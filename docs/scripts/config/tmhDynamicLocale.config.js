@@ -21,7 +21,7 @@
 	function config(tmhDynamicLocaleProvider) {
 		tmhDynamicLocaleProvider
 			.localeLocationPattern('/21-days/bower_components/angular-i18n/angular-locale_{{locale}}.js')
-			.defaultLocale('fr');
+			.defaultLocale('fr-fr');
 	}
 
 }(window.angular));
