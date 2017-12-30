@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Wrong path for the `tmhDynamicLocale` config
 
 ## [0.1.15]
 ### Added

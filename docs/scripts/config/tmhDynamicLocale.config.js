@@ -20,7 +20,7 @@
 
 	function config(tmhDynamicLocaleProvider) {
 		tmhDynamicLocaleProvider
-			.localeLocationPattern('/bower_components/angular-i18n/angular-locale_{{locale}}.js')
+			.localeLocationPattern('/21-days/bower_components/angular-i18n/angular-locale_{{locale}}.js')
 			.defaultLocale('fr');
 	}
 
