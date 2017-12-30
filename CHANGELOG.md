@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.1.27]
 ### Removed
 - `interpolateProvider` which is now useless
 - `fr-fr` i18n link
