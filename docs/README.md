@@ -3,7 +3,7 @@
 <column class="initial-date">
     <label class="initial-date-label"
            for="initialDate">
-        Choisissez une date
+        Choisissez une date:
     </label>
     <datepicker class="initial-date-datepicker"
                 date-set="{% raw %}{{ vm.data.today }}{% endraw %}"
@@ -30,6 +30,7 @@
 </row>
 
 <pre>{% raw %}{{ vm.data }}{% endraw %}</pre>
+<pre>{% raw %}{{ vm.initialDate }}{% endraw %}</pre>
 
 ## Comment ça marche ?
 

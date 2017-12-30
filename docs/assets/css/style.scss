@@ -68,10 +68,12 @@ column {
 }
 .initial-date {
   .initial-date-label {
-    cursor : pointer;
+    cursor        : pointer;
+    margin-bottom : 0.2rem;
   }
   .initial-date-datepicker {
     max-width : 350px;
+    margin    : 0;
     .initial-date-input {
       max-width     : inherit;
       width         : inherit;
@@ -84,6 +86,9 @@ column {
       font-weight   : 400;
       line-height   : initial;
       transition    : $transition;
+      &:hover, &:focus, &:active {
+        border : 1px solid $color-green-sea;
+      }
     }
     &:hover, &:focus, &:active {
       .initial-date-input {

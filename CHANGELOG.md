@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New fn to log fn call
+- New fn for `main` controller to calc the date at +21 days
+
+### Changed
+- Styles
 
 ## [0.1.30]
 ### Changed

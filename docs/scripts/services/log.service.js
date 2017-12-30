@@ -25,7 +25,8 @@
 
 		return {
 			init,
-			log
+			log,
+			fnCalled
 		};
 
 		function init($target) {
@@ -36,7 +37,13 @@
 
 		function log($text) {
 			if (methods.isLogEnabled()) {
-				console.info($text);
+				console.log($text);
+			}
+		}
+
+		function fnCalled($functionName) {
+			if (methods.isLogEnabled()) {
+				console.log($functionName, 'called');
 			}
 		}
 

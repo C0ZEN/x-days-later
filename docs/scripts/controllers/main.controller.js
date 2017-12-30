@@ -27,6 +27,10 @@
 			today     : new Date()
 		};
 
+		vm.methods = {
+			define21Date
+		};
+
 		logService.init(vm.data.controller);
 
 		// Watch the initial date change
@@ -47,6 +51,10 @@
 				vm.data.initialDateError = false;
 			}
 		});
+
+		function define21Date() {
+			logService.fnCalled('define21Date');
+		}
 	}
 
 })(window.angular);
