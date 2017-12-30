@@ -28,7 +28,7 @@
 		// Public data
 		vm.data = {
 			controller       : 'mainController',
-			today            : dateService.toISOString(),
+			today            : dateService.toString(),
 			initialDate      : null,
 			showDatepicker   : false,
 			isHoverDatepicker: false

@@ -43,7 +43,8 @@
 
 		return {
 			add21days,
-			toISOString
+			toISOString,
+			toString
 		};
 
 		function add21days($date) {
@@ -128,6 +129,13 @@
 				return moment($date).toISOString();
 			}
 			return moment().toISOString();
+		}
+
+		function toString($date) {
+			if ($date) {
+				return moment($date).toString();
+			}
+			return moment().toString();
 		}
 	}
 
