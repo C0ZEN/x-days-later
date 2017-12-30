@@ -186,7 +186,7 @@
         "comma-spacing": "error",
         "comma-style": "error",
         "computed-property-spacing": "error",
-        "consistent-this": "error",
+        "consistent-this": "off",
         "func-call-spacing": "error",
         "func-name-matching": "error",
         "func-names": "error",

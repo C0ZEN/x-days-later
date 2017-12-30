@@ -2,7 +2,7 @@
 
 <row>
     <label for="initialDate">Choisissez une date</label>
-    <datepicker>
+    <datepicker date-set="{{ vm.data.today }}">
         <input type="text" ng-model="vm.initialDate" id="initialDate" name="initialDate">
     </datepicker>
 </row>
@@ -13,6 +13,8 @@
 <pre>{{ vm.initialDate | angular }}</pre>
 <pre>{{ vm.data | angular }}</pre>
 <pre>{{ 'vm.data' | angular }}</pre>
+<pre>{{ vm.data }}</pre>
+<pre>{{ 'vm.data' }}</pre>
 
 ## Comment ça marche ?
 

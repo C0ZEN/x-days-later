@@ -19,10 +19,11 @@
 	];
 
 	function mainController($scope) {
-		let vm = this;
+		const vm = this;
 
 		vm.data = {
-			initialDate: null
+			initialDate: null,
+			today      : new Date()
 		};
 
 		vm.methods = {};
