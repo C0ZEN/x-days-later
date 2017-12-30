@@ -58,9 +58,13 @@ row {
   align-items     : center;
 }
 // Calendar
+._720kb-datepicker-calendar._720kb-datepicker-open {
+  ._720kb-datepicker-calendar-day {
+    transition : 100ms ease-out;
+  }
+}
 ._720kb-datepicker-calendar-day {
   margin        : 5px 1%;
-  transition    : 100ms ease-out;
   border-radius : 5px;
   &._720kb-datepicker-today {
     color : $color-green-sea;
