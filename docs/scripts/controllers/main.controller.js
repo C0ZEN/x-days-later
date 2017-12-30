@@ -15,11 +15,12 @@
 		.controller('mainController', mainController);
 
 	mainController.$inject = [
+		'$scope',
 		'logService',
 		'dateService'
 	];
 
-	function mainController(logService, dateService) {
+	function mainController($scope, logService, dateService) {
 		const vm = this;
 
 		// Public data
@@ -40,6 +41,10 @@
 		// Init
 		logService.init(vm.data.controller);
 		vm.calculatedDate = null;
+
+		$scope.$watch('initialDate', () => {
+			define21Date();
+		});
 
 		function define21Date() {
 			logService.fnCalled('define21Date');

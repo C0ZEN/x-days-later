@@ -45,14 +45,17 @@
 
 		function add21days($date) {
 			logService.fnCalledService(data.service, 'isFerie');
+			if ($date) {
 
-			// Convert the date
-			let date = moment($date);
+				// Convert the date
+				let date = moment($date);
 
-			// Add 21 days
-			date = methods.add(date, data.days, 'days');
+				// Add 21 days
+				date = methods.add(date, data.days, 'days');
 
-			return methods.weekendAndExceptionsStuff(date);
+				return methods.weekendAndExceptionsStuff(date);
+			}
+			return null;
 		}
 
 		function add($date, $quantity, $type) {
