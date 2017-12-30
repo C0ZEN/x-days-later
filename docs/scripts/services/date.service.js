@@ -42,7 +42,8 @@
 		};
 
 		return {
-			add21days
+			add21days,
+			toISOString
 		};
 
 		function add21days($date) {
@@ -50,6 +51,9 @@
 			if ($date) {
 
 				// Convert the date
+				logService.service(data.service, 'New date: ' + new Date());
+				logService.service(data.service, 'moment toISOString: ' + moment().toISOString());
+				logService.service(data.service, 'moment toString: ' + moment().toString());
 				logService.service(data.service, 'original date is: ' + $date);
 				let date = moment($date);
 				logService.service(data.service, 'moment original date is: ' + methods.readable(date));
@@ -117,6 +121,13 @@
 
 		function readable($date) {
 			return moment($date).format(appConstant.moment.readableFormat);
+		}
+
+		function toISOString($date) {
+			if ($date) {
+				return moment($date).toISOString();
+			}
+			return moment().toISOString();
 		}
 	}
 
