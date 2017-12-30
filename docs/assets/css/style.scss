@@ -58,7 +58,7 @@ body {
 // Description
 .project-tagline {
   margin-bottom : 0;
-  color         : $color-header;
+  color         : $color-white;
   opacity       : 1;
 }
 // Row
@@ -138,10 +138,10 @@ column {
       font-weight    : 400;
       transition     : $transition;
       text-transform : capitalize;
-      ::selection {
+      &::selection {
         background : $color-turquoise;
       }
-      ::-moz-selection {
+      &::-moz-selection {
         background : $color-turquoise;
       }
     }
