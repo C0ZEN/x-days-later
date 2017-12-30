@@ -19,7 +19,10 @@
 			lang            : {
 				current: 'fr'
 			},
-			debugInfoEnabled: false
+			debugInfoEnabled: false,
+			moment          : {
+				readableFormat: 'dddd MM MMMM YYYY'
+			}
 		});
 
 }(window.angular));
