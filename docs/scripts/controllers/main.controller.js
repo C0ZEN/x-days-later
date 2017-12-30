@@ -54,7 +54,9 @@
 
 		// Watch initialDate changes
 		$scope.$watch('initialDate', () => {
-			$timeout(vm.methods.define21Date);
+			$timeout(() => {
+				vm.methods.define21Date();
+			});
 		});
 
 		$window.addEventListener('click', vm.methods.onWindowClick);

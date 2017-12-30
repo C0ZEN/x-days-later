@@ -18,6 +18,7 @@ $color-header : $color-clouds;
 $color-input-border : $color-grey;
 $color-input-color : $color-grey-darker;
 $transition : 100ms ease-out;
+$font-family : "Nunito Sans", sans-serif;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Titles color
@@ -94,6 +95,7 @@ column {
       cursor           : pointer;
       background-color : $color-white;
       user-select      : none;
+      font-family      : $font-family;
       &.selected,
       &:hover, &:focus, &:active {
         border : 1px solid $color-green-sea;
@@ -129,9 +131,14 @@ column {
   }
 }
 // Calendar
-._720kb-datepicker-calendar._720kb-datepicker-open {
-  ._720kb-datepicker-calendar-day {
-    transition : $transition;
+._720kb-datepicker-calendar {
+  &._720kb-datepicker-open {
+    ._720kb-datepicker-calendar-day {
+      transition : $transition;
+    }
+  }
+  * {
+    font-family : $font-family;
   }
 }
 ._720kb-datepicker-calendar-day {

@@ -27,7 +27,8 @@
 			sunday  : 0,
 			saturday: 6,
 			one     : 1,
-			two     : 2
+			two     : 2,
+			ms      : 1000
 		};
 
 		const methods = {
@@ -38,7 +39,8 @@
 			isWeekend,
 			setNextDayAfterWeekend,
 			weekendAndExceptionsStuff,
-			readable
+			readable,
+			toTimestamp
 		};
 
 		return {
@@ -114,7 +116,7 @@
 				logService.service(data.service, 'new date after exception day: ' + methods.readable(date));
 				date = weekendAndExceptionsStuff(date);
 			}
-			return date;
+			return methods.toTimestamp(date);
 		}
 
 		function readable($date) {
@@ -133,6 +135,10 @@
 				return moment($date).toString();
 			}
 			return moment().toString();
+		}
+
+		function toTimestamp($date) {
+			return moment($date).unix() * data.ms;
 		}
 	}
 

@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New method `toTimestamp` for the `date` service
+
+### Changed
+- The methods `weekendAndExceptionsStuff` will know return the unix timestamp date
+- Changed font-family
 
 ## [0.1.60]
 ### Changed
