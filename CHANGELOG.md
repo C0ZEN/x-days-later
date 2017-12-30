@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.1.10]
 ### Changed
 - The datepicker is now append to body
 - The datepicker now start as monday for the first day of the week
