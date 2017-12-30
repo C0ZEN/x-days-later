@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- More calls for calc +21 days
+
+### Removed
+- debugger
 
 ## [0.1.51]
 ### Added

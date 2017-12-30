@@ -53,7 +53,6 @@
 
 		// Watch initialDate changes
 		$scope.$watch('initialDate', () => {
-			debugger;
 			vm.methods.define21Date();
 		});
 
@@ -73,6 +72,7 @@
 		function toggleDatepicker() {
 			logService.fnCalled('toggleDatepicker');
 			vm.data.showDatepicker = !vm.data.showDatepicker;
+			vm.methods.define21Date();
 		}
 
 		function onDatepickerEnter() {
@@ -95,6 +95,7 @@
 			logService.fnCalled('hideDatepicker');
 			if (vm.methods.isDatepickerOpen() && !vm.methods.isHoverDatepicker()) {
 				vm.data.showDatepicker = false;
+				vm.methods.define21Date();
 				methods.safeApply($scope);
 			}
 		}
