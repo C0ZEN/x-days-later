@@ -25,7 +25,7 @@
                id="initialDate" 
                name="initialDate"
                tabindex="0"
-               ng-disabled="true"
+               onclick="this.blur();"
                ng-click="vm.methods.onDatepickerClick($event)"
                on-enter="vm.methods.onDatepickerClick()">
     </datepicker>

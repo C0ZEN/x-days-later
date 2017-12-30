@@ -13,12 +13,13 @@
 	angular
 		.module('21days')
 		.constant('appConstant', {
-			logs: {
+			logs            : {
 				enabled: true
 			},
-			lang: {
+			lang            : {
 				current: 'fr'
-			}
+			},
+			debugInfoEnabled: false
 		});
 
 }(window.angular));

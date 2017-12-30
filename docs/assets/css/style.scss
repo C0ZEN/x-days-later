@@ -36,7 +36,8 @@ $transition : 100ms ease-out;
 }
 // Links color
 a {
-  color : $color-links;
+  color   : $color-links;
+  outline : none;
   &:hover, &:focus, &:active {
     color : $color-links-hover;
   }
@@ -71,6 +72,7 @@ column {
   .initial-date-label {
     cursor        : pointer;
     margin-bottom : 0.2rem;
+    display       : inline-table;
   }
   .initial-date-datepicker {
     max-width : 350px;
@@ -106,6 +108,7 @@ column {
   margin-top : 1rem;
   .calculated-date-label {
     margin-bottom : 0.2rem;
+    display       : inline-table;
   }
   .calculated-date-value {
     width         : 100%;
@@ -202,5 +205,8 @@ column {
 }
 ._720kb-datepicker-calendar-header-opened-pagination::after {
   bottom : 0;
+}
+datepicker {
+  outline : none;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
