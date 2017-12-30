@@ -22,6 +22,7 @@
 	function mainController($scope, logService) {
 		const vm = this;
 
+		// Public data
 		vm.data = {
 			controller      : 'mainController',
 			today           : new Date(),
@@ -29,32 +30,33 @@
 			initialDateError: false
 		};
 
+		// Public methods
 		vm.methods = {
 			define21Date
 		};
 
+		// Init
 		logService.init(vm.data.controller);
-
 		vm.calculatedDate = null;
 
 		// Watch the initial date change
 		// To display UI message when an error occurred
-		$scope.$watch('initialDate', $value => {
-			logService.log($value);
-			try {
-				vm.data.initialDate = new Date($value);
-			}
-			catch ($e) {
-			}
-			logService.log(vm.data.initialDate);
-
-			if (!vm.data.initialDate) {
-				vm.data.initialDateError = 'This is not a valid date';
-			}
-			else {
-				vm.data.initialDateError = false;
-			}
-		});
+		// $scope.$watch('initialDate', $value => {
+		// 	logService.log($value);
+		// 	try {
+		// 		vm.data.initialDate = new Date($value);
+		// 	}
+		// 	catch ($e) {
+		// 	}
+		// 	logService.log(vm.data.initialDate);
+		//
+		// 	if (!vm.data.initialDate) {
+		// 		vm.data.initialDateError = 'This is not a valid date';
+		// 	}
+		// 	else {
+		// 		vm.data.initialDateError = false;
+		// 	}
+		// });
 
 		function define21Date() {
 			logService.fnCalled('define21Date');
