@@ -20,6 +20,8 @@ $color-input-color : $color-grey-darker;
 $transition : 100ms ease-out;
 $font-family : "Nunito Sans", sans-serif;
 $input-height : 3rem;
+$label-bottom-space : 0.4rem;
+$input-max-width : 450px;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Titles color
@@ -73,11 +75,11 @@ column {
 .initial-date {
   .initial-date-label {
     cursor        : pointer;
-    margin-bottom : 0.2rem;
+    margin-bottom : $label-bottom-space;
     display       : inline-table;
   }
   .initial-date-datepicker {
-    max-width : 350px;
+    max-width : $input-max-width;
     margin    : 0;
     .initial-date-input {
       max-width        : inherit;
@@ -110,9 +112,9 @@ column {
   }
 }
 .calculated-date {
-  margin-top : 1rem;
+  margin-top : 2rem;
   .calculated-date-label {
-    margin-bottom : 0.2rem;
+    margin-bottom : $label-bottom-space;
     display       : inline-table;
   }
   .calculated-date-value-container {
@@ -121,7 +123,7 @@ column {
     justify-content : flex-start;
     align-items     : center;
     width           : 100%;
-    max-width       : 350px;
+    max-width       : $input-max-width;
     border-radius   : 3px;
     border          : 1px solid $color-input-border;
     padding         : 0 1.2rem 0 1.2rem;
@@ -272,7 +274,6 @@ copy-container {
   animation-name      : fadeIn;
   animation-duration  : 500ms;
   animation-fill-mode : both;
-  transition          : all 500ms;
   copied {
     padding             : 2rem 0;
     font-size           : 3rem;
@@ -282,9 +283,9 @@ copy-container {
     background-color    : #16A08590;
     text-align          : center;
     animation-name      : fadeIn;
-    animation-duration  : 200ms;
+    animation-duration  : 300ms;
     animation-fill-mode : both;
-    animation-delay     : 300ms;
+    animation-delay     : 200ms;
     user-select         : none;
     cursor              : default;
   }
