@@ -1,10 +1,12 @@
 ## Calcul
 
-<row>
-    <label for="initialDate">
+<column class="initial-date">
+    <label class="initial-date-label"
+           for="initialDate">
         Choisissez une date
     </label>
-    <datepicker date-set="{{ vm.data.today }}"
+    <datepicker class="initial-date-datepicker"
+                date-set="{% raw %}{{ vm.data.today }}{% endraw %}"
                 date-format="longDate"
                 date-week-start-day="1"
                 date-typer="true"
@@ -14,15 +16,16 @@
                 button-next-title="Suivant"
                 date-month-title="Mois sélectionné"
                 date-year-title="Année sélectionnée">
-        <input type="text" 
+        <input class="initial-date-input"
+               type="text" 
                ng-model="vm.initialDate" 
                id="initialDate" 
                name="initialDate">
     </datepicker>
-</row>
+</column>
 <row>
     <message ng-show="vm.data.initialDateError">
-        {% raw %}{{ vm.data.initialDateError }}{% endraw %}
+        {% raw %}{{ vm.data.initialDateError | json }}{% endraw %}
     </message>
 </row>
 

@@ -24,12 +24,19 @@
 		};
 
 		return {
-			init
+			init,
+			log
 		};
 
 		function init($target) {
 			if (methods.isLogEnabled()) {
 				console.info('Init >>>', $target);
+			}
+		}
+
+		function log($text) {
+			if (methods.isLogEnabled()) {
+				console.info($text);
 			}
 		}
 

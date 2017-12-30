@@ -23,23 +23,24 @@
 		const vm = this;
 
 		vm.data = {
-			controller : 'mainController',
-			initialDate: null,
-			today      : new Date()
+			controller: 'mainController',
+			today     : new Date()
 		};
 
 		logService.init(vm.data.controller);
 
 		// Watch the initial date change
 		// To display UI message when an error occurred
-		$scope.$watch('vm.initialDate', value => {
+		$scope.$watch('vm.initialDate', $value => {
+			logService.log($value);
 			try {
-				vm.data.initialDate = new Date(value);
+				vm.initialDate = new Date($value);
 			}
-			catch (e) {
+			catch ($e) {
 			}
+			logService.log(vm.initialDate);
 
-			if (!vm.data.initialDate) {
+			if (!vm.initialDate) {
 				vm.data.initialDateError = 'This is not a valid date';
 			}
 			else {

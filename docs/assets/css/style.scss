@@ -7,11 +7,16 @@ $color-turquoise : #1ABC9C;
 $color-green-sea : #16A085;
 $color-clouds : #ECF0F1;
 $color-grey-light : rgba(0, 0, 0, .03);
+$color-grey : #DCE6F0;
+$color-grey-darker : #606C71;
 /// VARIABLES ///
 $color-title : $color-green-sea;
 $color-links : $color-turquoise;
 $color-links-hover : $color-green-sea;
 $color-header : $color-clouds;
+$color-input-border : $color-grey;
+$color-input-color : $color-grey-darker;
+$transition : 100ms ease-out;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Titles color
@@ -57,10 +62,40 @@ row {
   justify-content : flex-start;
   align-items     : center;
 }
+column {
+  display        : flex;
+  flex-direction : column;
+}
+.initial-date {
+  .initial-date-label {
+    cursor : pointer;
+  }
+  .initial-date-datepicker {
+    max-width : 350px;
+    .initial-date-input {
+      max-width     : inherit;
+      width         : inherit;
+      outline       : none;
+      border-radius : 3px;
+      border        : 1px solid $color-input-border;
+      padding       : 1rem 1.2rem 0.8rem 1.2rem;
+      color         : $color-input-color;
+      font-size     : 1rem;
+      font-weight   : 400;
+      line-height   : initial;
+      transition    : $transition;
+    }
+    &:hover, &:focus, &:active {
+      .initial-date-input {
+        border : 1px solid $color-green-sea;
+      }
+    }
+  }
+}
 // Calendar
 ._720kb-datepicker-calendar._720kb-datepicker-open {
   ._720kb-datepicker-calendar-day {
-    transition : 100ms ease-out;
+    transition : $transition;
   }
 }
 ._720kb-datepicker-calendar-day {

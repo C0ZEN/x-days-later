@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Raw the data for datepicker data-set attr
+- Added logs
+- Styles
 
 ## [0.1.29]
 ### Added
