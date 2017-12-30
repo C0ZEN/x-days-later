@@ -136,8 +136,6 @@ column {
       font-weight    : 400;
       transition     : $transition;
       text-transform : capitalize;
-      user-select    : none;
-      cursor         : default;
       ::selection {
         background : $color-turquoise;
       }
@@ -281,12 +279,14 @@ copy-container {
     color               : white;
     font-weight         : 600;
     width               : 100%;
-    background-color    : fade-in($color-green-sea, 0.9);
+    background-color    : #16A08590;
     text-align          : center;
     animation-name      : fadeIn;
     animation-duration  : 200ms;
     animation-fill-mode : both;
     animation-delay     : 300ms;
+    user-select         : none;
+    cursor              : default;
   }
   &.display {
     display : flex;

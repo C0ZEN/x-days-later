@@ -31,7 +31,7 @@
 		function show() {
 			logService.fnCalledService(data.service, 'show');
 			const container = angular.element(document).find('copy-container');
-			$animate.addClass(container, 'display', () => {
+			$animate.addClass(container, 'display').then(() => {
 				$animate.removeClass(container, 'display');
 			});
 		}
