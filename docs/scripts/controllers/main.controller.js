@@ -53,6 +53,7 @@
 
 		// Watch initialDate changes
 		$scope.$watch('initialDate', () => {
+			debugger;
 			vm.methods.define21Date();
 		});
 
