@@ -118,7 +118,7 @@ column {
   .calculated-date-value-container {
     display         : flex;
     flex-direction  : row;
-    justify-content : center;
+    justify-content : flex-start;
     align-items     : center;
     width           : 100%;
     max-width       : 350px;
@@ -272,6 +272,7 @@ copy-container {
   animation-name      : fadeIn;
   animation-duration  : 500ms;
   animation-fill-mode : both;
+  transition          : all 500ms;
   copied {
     padding             : 2rem 0;
     font-size           : 3rem;
