@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Styles
+
+### Fixed
+- Lang parsing
 
 ## [0.1.72]
 ### Changed

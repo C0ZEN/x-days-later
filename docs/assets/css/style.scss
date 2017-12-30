@@ -99,6 +99,7 @@ column {
       background-color : $color-white;
       user-select      : none;
       font-family      : $font-family;
+      text-transform   : capitalize;
       &.selected,
       &:hover, &:focus, &:active {
         border : 1px solid $color-green-sea;

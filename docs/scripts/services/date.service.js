@@ -55,7 +55,7 @@
 
 				// Convert the date
 				logService.service(data.service, 'original date is: ' + $date);
-				let date = moment($date, appConstant.moment.readableFormat);
+				let date = moment($date, appConstant.moment.readableFormat, appConstant.lang.current);
 				logService.service(data.service, 'moment original date is: ' + methods.readable(date));
 
 				// Add 21 days
