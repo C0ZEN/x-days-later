@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New constant `app` to configure the app globally
+- New service `log` to print logs
+
+### Changed
+- Datepicker styles
+- The controller `main` will print a log on init
 
 ## [0.1.16]
 ### Fixed

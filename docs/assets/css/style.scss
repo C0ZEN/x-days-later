@@ -98,7 +98,7 @@ row {
   justify-content : center;
   align-items     : center;
   height          : 40px;
-  &._720kb-datepicker-calendar-month-button {
+  > ._720kb-datepicker-calendar-month-button {
     display         : flex;
     flex-direction  : row;
     justify-content : center;

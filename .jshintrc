@@ -42,6 +42,7 @@
         "it": true,
         "process": true,
         "__dirname": true,
-        "moment": true
+        "moment": true,
+        "console": true
     }
 }
