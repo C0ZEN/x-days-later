@@ -22,11 +22,11 @@
 </row>
 <row>
     <message ng-show="vm.data.initialDateError">
-        {{ vm.data.initialDateError }}
+        {% raw %}{{ vm.data.initialDateError }}{% endraw %}
     </message>
 </row>
 
-<pre>[[ vm.data | angular ]]</pre>
+<pre>{% raw %}{{ vm.data }}{% endraw %}</pre>
 
 ## Comment ça marche ?
 

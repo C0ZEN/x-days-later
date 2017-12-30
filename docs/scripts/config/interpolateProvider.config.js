@@ -20,8 +20,8 @@
 
 	function config($interpolateProvider) {
 		$interpolateProvider
-			.startSymbol('[[')
-			.endSymbol(']]');
+			.startSymbol('{{')
+			.endSymbol('}}');
 	}
 
 }(window.angular));
