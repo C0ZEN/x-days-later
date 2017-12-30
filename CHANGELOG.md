@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.28]
+
 ## [0.1.27]
 ### Removed
 - `interpolateProvider` which is now useless
