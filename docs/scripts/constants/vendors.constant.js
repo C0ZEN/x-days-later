@@ -12,6 +12,7 @@
 
 	angular
 		.module('21days')
-		.constant('moment', moment);
+		.constant('moment', moment)
+		.constant('methods', Methods);
 
 }(window.angular));

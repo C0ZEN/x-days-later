@@ -18,10 +18,11 @@
 		'$scope',
 		'logService',
 		'dateService',
-		'$window'
+		'$window',
+		'methods'
 	];
 
-	function mainController($scope, logService, dateService, $window) {
+	function mainController($scope, logService, dateService, $window, methods) {
 		const vm = this;
 
 		// Public data
@@ -93,6 +94,7 @@
 			logService.fnCalled('hideDatepicker');
 			if (vm.methods.isDatepickerOpen() && !vm.methods.isHoverDatepicker()) {
 				vm.data.showDatepicker = false;
+				methods.safeApply($scope);
 			}
 		}
 
