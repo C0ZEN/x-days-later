@@ -85,7 +85,7 @@ column {
       outline          : none;
       border-radius    : 3px;
       border           : 1px solid $color-input-border;
-      padding          : 1rem 1.2rem 0.8rem 1.2rem;
+      padding          : 0 1.2rem 0 1.2rem;
       color            : $color-input-color;
       font-size        : 1rem;
       font-weight      : 400;
@@ -115,27 +115,34 @@ column {
     margin-bottom : 0.2rem;
     display       : inline-table;
   }
-  .calculated-date-value {
-    width          : 100%;
-    max-width      : 350px;
-    border-radius  : 3px;
-    border         : 1px solid $color-input-border;
-    padding        : 1rem 1.2rem 0.8rem 1.2rem;
-    color          : $color-input-color;
-    font-size      : 1rem;
-    font-weight    : 400;
-    line-height    : initial;
-    transition     : $transition;
-    height         : $input-height;
-    min-height     : $input-height;
-    ::selection {
-      background : $color-turquoise;
+  .calculated-date-value-container {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : center;
+    align-items     : center;
+    width           : 100%;
+    max-width       : 350px;
+    border-radius   : 3px;
+    border          : 1px solid $color-input-border;
+    padding         : 0 1.2rem 0 1.2rem;
+    line-height     : initial;
+    transition      : $transition;
+    height          : $input-height;
+    min-height      : $input-height;
+    margin-right    : 1rem;
+    .calculated-date-value {
+      color          : $color-input-color;
+      font-size      : 1rem;
+      font-weight    : 400;
+      transition     : $transition;
+      text-transform : capitalize;
+      ::selection {
+        background : $color-turquoise;
+      }
+      ::-moz-selection {
+        background : $color-turquoise;
+      }
     }
-    ::-moz-selection {
-      background : $color-turquoise;
-    }
-    text-transform : capitalize;
-    margin-right   : 2rem;
   }
 }
 // Calendar
@@ -251,7 +258,7 @@ copy-btn {
   }
 }
 copy-container {
-  display             : flex;
+  display             : none;
   flex-direction      : row;
   justify-content     : center;
   align-items         : center;
@@ -277,6 +284,9 @@ copy-container {
     animation-duration  : 200ms;
     animation-fill-mode : both;
     animation-delay     : 300ms;
+  }
+  &.display {
+    display : flex;
   }
 }
 @keyframes fadeIn {

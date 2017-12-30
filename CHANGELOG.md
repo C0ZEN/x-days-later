@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New bower dependency `angular-animate`
+
+### Changed
+- Styles
+- The day of showing and hiding the copied container
 
 ## [0.1.64]
 ### Added

@@ -14,7 +14,8 @@
 		.module('21days', [
 			'tmh.dynamicLocale',
 			'720kb.datepicker',
-			'ngclipboard'
+			'ngclipboard',
+			'ngAnimate'
 		]);
 
 })(window.angular);

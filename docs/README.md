@@ -37,8 +37,8 @@
         Date calculée à 21 jours:
     </span>
     <row>
-        <date class="calculated-date-value">
-            {% raw %}{{ vm.calculatedDate | date:'EEEE MM MMMM yyyy' }}{% endraw %}
+        <date class="calculated-date-value-container">
+            <value class="calculated-date-value">{% raw %}{{ vm.calculatedDate | date:'EEEE MM MMMM yyyy' }}{% endraw %}</value>
         </date>
         <copy-btn ngclipboard 
                   data-clipboard-target=".calculated-date-value"

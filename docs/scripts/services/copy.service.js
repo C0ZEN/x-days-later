@@ -15,24 +15,19 @@
 		.factory('copyService', copyService);
 
 	copyService.$inject = [
-		'$document',
-		'$timeout'
+		'$animate'
 	];
 
-	function copyService($document, $timeout) {
-		const data = {
-			timeout: 500
-		};
-
+	function copyService($animate) {
 		return {
 			show
 		};
 
 		function show() {
-			angular.element($document).append('<copy-container><copied>Copier !</copied></copy-container>');
-			$timeout(() => {
-				angular.element($document).find('copy-container').remove();
-			}, data.timeout);
+			const container = angular.element(document).find('copy-container');
+			$animate.addClass(container, 'display', () => {
+				$animate.removeClass(container, 'display');
+			});
 		}
 	}
 
