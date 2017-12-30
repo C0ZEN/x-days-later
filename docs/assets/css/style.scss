@@ -136,6 +136,8 @@ column {
       font-weight    : 400;
       transition     : $transition;
       text-transform : capitalize;
+      user-select    : none;
+      cursor         : default;
       ::selection {
         background : $color-turquoise;
       }

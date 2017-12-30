@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Log for `copy` service
+
+### Changed
+- Styles
 
 ## [0.1.66]
 ### Changed

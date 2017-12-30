@@ -15,15 +15,21 @@
 		.factory('copyService', copyService);
 
 	copyService.$inject = [
-		'$animate'
+		'$animate',
+		'logService'
 	];
 
-	function copyService($animate) {
+	function copyService($animate, logService) {
+		const data = {
+			service: 'copyService'
+		};
+
 		return {
 			show
 		};
 
 		function show() {
+			logService.fnCalledService(data.service, 'show');
 			const container = angular.element(document).find('copy-container');
 			$animate.addClass(container, 'display', () => {
 				$animate.removeClass(container, 'display');
