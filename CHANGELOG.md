@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Default date
+
+### Removed
+- `main` controller watcher
 
 ## [0.1.40]
 ### Added

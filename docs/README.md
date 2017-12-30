@@ -6,6 +6,7 @@
         Choisissez une date:
     </label>
     <datepicker class="initial-date-datepicker"
+                date-set="{% raw %}{{vm.data.initialDate}}{% endraw %}"
                 date-format="longDate"
                 date-week-start-day="1"
                 date-typer="false"
@@ -30,12 +31,6 @@
                on-enter="vm.methods.onDatepickerClick()">
     </datepicker>
 </column>
-
-<row>
-    <message ng-show="vm.data.initialDateError">
-        {% raw %}{{ vm.data.initialDateError | json }}{% endraw %}
-    </message>
-</row>
 
 <column class="calculated-date">
     <span class="calculated-date-label">
