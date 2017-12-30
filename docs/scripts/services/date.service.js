@@ -116,7 +116,7 @@
 				logService.service(data.service, 'new date after exception day: ' + methods.readable(date));
 				date = weekendAndExceptionsStuff(date);
 			}
-			return methods.toTimestamp(date);
+			return methods.toString(date);
 		}
 
 		function readable($date) {

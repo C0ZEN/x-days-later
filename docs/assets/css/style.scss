@@ -141,9 +141,11 @@ column {
       text-transform : capitalize;
       &::selection {
         background : $color-turquoise;
+        color      : $color-white;
       }
       &::-moz-selection {
         background : $color-turquoise;
+        color      : $color-white;
       }
     }
   }
