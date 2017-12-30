@@ -17,10 +17,11 @@
 	mainController.$inject = [
 		'$scope',
 		'logService',
-		'dateService'
+		'dateService',
+		'$window'
 	];
 
-	function mainController($scope, logService, dateService) {
+	function mainController($scope, logService, dateService, $window) {
 		const vm = this;
 
 		// Public data
@@ -35,16 +36,22 @@
 		vm.methods = {
 			define21Date,
 			onDatepickerClick,
-			toggleDatepicker
+			toggleDatepicker,
+			onDatepickerEnter,
+			onDatepickerFocus,
+			onWindowClick
 		};
 
 		// Init
 		logService.init(vm.data.controller);
 		vm.calculatedDate = null;
 
+		// Watch initialDate changes
 		$scope.$watch('initialDate', () => {
 			define21Date();
 		});
+
+		$window.addEventListener('click', vm.methods.onWindowClick);
 
 		function define21Date() {
 			logService.fnCalled('define21Date');
@@ -53,15 +60,28 @@
 
 		function onDatepickerClick($event) {
 			logService.fnCalled('onDatepickerClick');
-			if ($event) {
-				$event.stopPropagation();
-			}
+			$event.stopPropagation();
 			vm.methods.toggleDatepicker();
 		}
 
 		function toggleDatepicker() {
 			logService.fnCalled('toggleDatepicker');
 			vm.data.showDatepicker = !vm.data.showDatepicker;
+		}
+
+		function onDatepickerEnter() {
+			logService.fnCalled('onDatepickerEnter');
+			vm.methods.toggleDatepicker();
+		}
+
+		function onDatepickerFocus($event) {
+			logService.fnCalled('onDatepickerFocus');
+			$event.stopPropagation();
+			vm.methods.toggleDatepicker();
+		}
+
+		function onWindowClick($event) {
+			logService.fnCalled('onWindowClick');
 		}
 	}
 

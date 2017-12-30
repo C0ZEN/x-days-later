@@ -21,6 +21,7 @@
                 ng-click="vm.methods.onDatepickerClick($event)"
                 tabindex="-1">
         <input class="initial-date-input"
+               ng-class="{selected: vm.data.showDatepicker}"
                type="text" 
                ng-model="vm.initialDate" 
                id="initialDate" 
@@ -29,8 +30,8 @@
                onclick="this.blur();"
                onfocus="this.blur()"
                ng-click="vm.methods.onDatepickerClick($event)"
-               on-enter="vm.methods.onDatepickerClick()"
-               ng-focus="vm.methods.onDatepickerClick($event)">
+               on-enter="vm.methods.onDatepickerEnter()"
+               ng-focus="vm.methods.onDatepickerFocus($event)">
     </datepicker>
 </column>
 

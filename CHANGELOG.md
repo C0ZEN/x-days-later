@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Input selected class when the datepicker is down
+
+### Changed
+- Styles
+- Added more functions to focus, click and enter the input
 
 ## [0.1.43]
 ### Changed

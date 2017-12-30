@@ -93,6 +93,8 @@ column {
       min-height       : 50px;
       cursor           : pointer;
       background-color : $color-white;
+      user-select      : none;
+      &.selected,
       &:hover, &:focus, &:active {
         border : 1px solid $color-green-sea;
       }
