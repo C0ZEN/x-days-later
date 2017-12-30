@@ -5,7 +5,6 @@
         Choisissez une date
     </label>
     <datepicker date-set="{{ vm.data.today }}"
-                datepicker-append-to="body"
                 date-week-start-day="1"
                 date-typer="true">
         <input type="text" 

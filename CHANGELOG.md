@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Favicon
+- The datepicker is now append to the input
+- Config to add `jekyll-angular` plugin
+- Refactored static links in default.html
 
 ## [0.1.10]
 ### Changed

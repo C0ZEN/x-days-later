@@ -13,3 +13,6 @@ gitHubUrl: https://github.com/C0ZEN/21-days
 
 gems:
   - jekyll-angular
+
+plugins:
+  - jekyll-angular

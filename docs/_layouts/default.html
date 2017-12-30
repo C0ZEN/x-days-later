@@ -15,7 +15,7 @@
         <!-- start:bower dependencies -->
         <link rel="stylesheet"
               type="text/css"
-              href="bower_components/angularjs-datepicker/dist/angular-datepicker.min.css">
+              href="{{ '/bower_components/angularjs-datepicker/dist/angular-datepicker.min.css' | prepend: site.baseurl }}">
         <!-- end:bower dependencies -->
 
         <link href='https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600'
@@ -54,20 +54,20 @@
 
         <!-- start:bower dependencies -->
         <script type="text/javascript"
-                src="bower_components/jquery/dist/jquery.min.js"></script>
+                src="{{ '/bower_components/jquery/dist/jquery.min.js' | prepend: site.baseurl }}"></script>
         <script type="text/javascript"
-                src="bower_components/angular/angular.min.js"></script>
+                src="{{ '/bower_components/angular/angular.min.js' | prepend: site.baseurl }}"></script>
         <script type="text/javascript"
-                src="bower_components/moment/min/moment-with-locales.js"></script>
+                src="{{ '/bower_components/moment/min/moment-with-locales.js' | prepend: site.baseurl }}"></script>
         <script type="text/javascript"
-                src="bower_components/angularjs-datepicker/dist/angular-datepicker.min.js"></script>
+                src="{{ '/bower_components/angularjs-datepicker/dist/angular-datepicker.min.js' | prepend: site.baseurl }}"></script>
         <!-- end:bower dependencies -->
 
         <!-- start:scripts -->
         <script type="text/javascript"
-                src="scripts/app.js"></script>
+                src="{{ '/scripts/app.js' | prepend: site.baseurl }}"></script>
         <script type="text/javascript"
-                src="scripts/controllers/main.controller.js"></script>
+                src="{{ '/scripts/controllers/main.controller.js' | prepend: site.baseurl }}"></script>
         <!-- end:scripts -->
     </body>
 </html>
