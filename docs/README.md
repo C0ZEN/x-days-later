@@ -27,8 +27,10 @@
                name="initialDate"
                tabindex="0"
                onclick="this.blur();"
+               onfocus="this.blur()"
                ng-click="vm.methods.onDatepickerClick($event)"
-               on-enter="vm.methods.onDatepickerClick()">
+               on-enter="vm.methods.onDatepickerClick()"
+               ng-focus="vm.methods.onDatepickerClick($event)">
     </datepicker>
 </column>
 
