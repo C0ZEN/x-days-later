@@ -36,6 +36,12 @@
         <section class="main-content">
             {{ content }}
 
+            <pre>{{ vm.initialDate | angular }}</pre>
+            <pre>{{ vm.data | angular }}</pre>
+            <pre>{{ 'vm.data' | angular }}</pre>
+            <pre>{{ vm.data }}</pre>
+            <pre>{{ 'vm.data' }}</pre>
+
             <footer class="site-footer">
                 {% if site.github.is_project_page %}
                 <span class="site-footer-owner">
