@@ -26,11 +26,7 @@
     </message>
 </row>
 
-<pre>{{ vm.initialDate | angular }}</pre>
-<pre>{{ vm.data | angular }}</pre>
-<pre>{{ 'vm.data' | angular }}</pre>
-<pre>{{ vm.data }}</pre>
-<pre>{{ 'vm.data' }}</pre>
+<pre>[[ vm.data | angular ]]</pre>
 
 ## Comment ça marche ?
 
