@@ -32,7 +32,9 @@
 			logService.fnCalledService(data.service, 'show');
 			const container = angular.element(document).find('copy-container');
 			$animate.setClass(container, 'showing', 'hiding').then(() => {
-				$animate.setClass(container, 'hiding', 'showing');
+				$animate.setClass(container, 'hiding', 'showing').then(() => {
+					$animate.removeClass(container, 'hiding');
+				});
 			});
 		}
 	}

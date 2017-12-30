@@ -274,6 +274,7 @@ copy-container {
   animation-name      : fadeIn;
   animation-duration  : 500ms;
   animation-fill-mode : both;
+  transition          : 500ms;
   copied {
     padding             : 2rem 0;
     font-size           : 3rem;
@@ -296,6 +297,7 @@ copy-container {
   &.hiding {
     animation-name     : fadeOut;
     animation-duration : 200ms;
+    transition         : 200ms;
     copied {
       animation-name     : fadeOut;
       animation-duration : 200ms;
