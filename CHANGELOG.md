@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- `clipboard` as bower dependency
+- `ngclipboard` as bower dependency
+- Btn to copy the value
+
+### Changed
+- Styles
 
 ## [0.1.61]
 ### Added

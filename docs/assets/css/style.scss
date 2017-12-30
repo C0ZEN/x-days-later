@@ -115,19 +115,21 @@ column {
     display       : inline-table;
   }
   .calculated-date-value {
-    width         : 100%;
-    max-width     : 350px;
-    border-radius : 3px;
-    border        : 1px solid $color-input-border;
-    padding       : 1rem 1.2rem 0.8rem 1.2rem;
-    color         : $color-input-color;
-    font-size     : 1rem;
-    font-weight   : 400;
-    line-height   : initial;
-    transition    : $transition;
-    height        : 50px;
-    min-height    : 50px;
-    user-select   : $color-turquoise;
+    width          : 100%;
+    max-width      : 350px;
+    border-radius  : 3px;
+    border         : 1px solid $color-input-border;
+    padding        : 1rem 1.2rem 0.8rem 1.2rem;
+    color          : $color-input-color;
+    font-size      : 1rem;
+    font-weight    : 400;
+    line-height    : initial;
+    transition     : $transition;
+    height         : 50px;
+    min-height     : 50px;
+    user-select    : $color-turquoise;
+    text-transform : capitalize;
+    margin-right   : 2rem;
   }
 }
 // Calendar
@@ -218,5 +220,28 @@ column {
 }
 datepicker {
   outline : none;
+}
+copy-btn {
+  display          : flex;
+  flex-direction   : row;
+  justify-content  : center;
+  align-items      : center;
+  background-color : $color-white;
+  fill             : $color-green-sea;
+  outline          : none;
+  cursor           : pointer;
+  border-radius    : 50%;
+  width            : 1.6rem;
+  height           : 1.6rem;
+  transition       : $transition;
+  svg {
+    width  : 75%;
+    height : 75%;
+    fill   : inherit;
+  }
+  &:hover, &:focus, &:active {
+    background-color : $color-grey-light;
+    fill             : $color-turquoise;
+  }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

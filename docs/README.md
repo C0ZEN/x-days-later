@@ -36,9 +36,20 @@
     <span class="calculated-date-label">
         Date calculée à 21 jours:
     </span>
-    <date class="calculated-date-value">
-        {% raw %}{{ vm.calculatedDate | date:'EEEE MM MMMM yyyy' }}{% endraw %}
-    </date>
+    <row>
+        <date class="calculated-date-value">
+            {% raw %}{{ vm.calculatedDate | date:'EEEE MM MMMM yyyy' }}{% endraw %}
+        </date>
+        <copy-btn ngclipboard 
+                  data-clipboard-target=".calculated-date-value"
+                  ngclipboard-success="vm.methods.onCopySuccess()">
+            <svg viewBox="0 0 50 50">
+                <g>
+                    <path d="M 15 0 C 13.90625 0 13 0.90625 13 2 L 6 2 C 4.347656 2 3 3.347656 3 5 L 3 41 C 3 42.652344 4.347656 44 6 44 L 21 44 L 21 42 L 23 42 L 23 44 L 36 44 C 37.652344 44 39 42.652344 39 41 L 39 16 L 37 16 L 37 14 L 39 14 L 39 5 C 39 3.347656 37.652344 2 36 2 L 29 2 C 29 0.90625 28.09375 0 27 0 Z M 15 2 L 27 2 L 27 5 C 27 5.566406 26.566406 6 26 6 L 16 6 C 15.433594 6 15 5.566406 15 5 Z M 21 14 L 23 14 L 23 16 L 21 16 Z M 25 14 L 27 14 L 27 16 L 25 16 Z M 29 14 L 31 14 L 31 16 L 29 16 Z M 33 14 L 35 14 L 35 16 L 33 16 Z M 41 14 L 41 16 L 43 16 L 43 14 Z M 45 14 L 45 16 L 47 16 L 47 14 Z M 21 18 L 23 18 L 23 20 L 21 20 Z M 45 18 L 45 20 L 47 20 L 47 18 Z M 21 22 L 23 22 L 23 24 L 21 24 Z M 45 22 L 45 24 L 47 24 L 47 22 Z M 21 26 L 23 26 L 23 28 L 21 28 Z M 45 26 L 45 28 L 47 28 L 47 26 Z M 21 30 L 23 30 L 23 32 L 21 32 Z M 45 30 L 45 32 L 47 32 L 47 30 Z M 21 34 L 23 34 L 23 36 L 21 36 Z M 45 34 L 45 36 L 47 36 L 47 34 Z M 21 38 L 23 38 L 23 40 L 21 40 Z M 45 38 L 45 40 L 47 40 L 47 38 Z M 45 42 L 45 44 L 47 44 L 47 42 Z M 21 46 L 21 48 L 23 48 L 23 46 Z M 25 46 L 25 48 L 27 48 L 27 46 Z M 29 46 L 29 48 L 31 48 L 31 46 Z M 33 46 L 33 48 L 35 48 L 35 46 Z M 37 46 L 37 48 L 39 48 L 39 46 Z M 41 46 L 41 48 L 43 48 L 43 46 Z M 45 46 L 45 48 L 47 48 L 47 46 Z "></path>
+                </g>
+            </svg>
+        </copy-btn>
+    </row>
 </column>
 
 ## Comment ça marche ?

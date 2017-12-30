@@ -45,7 +45,8 @@
 			onWindowClick,
 			hideDatepicker,
 			isDatepickerOpen,
-			isHoverDatepicker
+			isHoverDatepicker,
+			onCopySuccess
 		};
 
 		// Init
@@ -109,6 +110,10 @@
 
 		function isHoverDatepicker() {
 			return vm.data.isHoverDatepicker;
+		}
+
+		function onCopySuccess() {
+			logService.fnCalled('onCopySuccess');
 		}
 	}
 
