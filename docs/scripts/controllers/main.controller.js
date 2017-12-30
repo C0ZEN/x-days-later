@@ -19,10 +19,11 @@
 		'logService',
 		'dateService',
 		'$window',
-		'methods'
+		'methods',
+		'$timeout'
 	];
 
-	function mainController($scope, logService, dateService, $window, methods) {
+	function mainController($scope, logService, dateService, $window, methods, $timeout) {
 		const vm = this;
 
 		// Public data
@@ -53,7 +54,7 @@
 
 		// Watch initialDate changes
 		$scope.$watch('initialDate', () => {
-			vm.methods.define21Date();
+			$timeout(vm.methods.define21Date);
 		});
 
 		$window.addEventListener('click', vm.methods.onWindowClick);

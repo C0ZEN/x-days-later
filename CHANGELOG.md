@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.60]
+### Changed
+- Styles
+
 ## [0.1.59]
 ### Fixed
 - Wrong format for moment readable

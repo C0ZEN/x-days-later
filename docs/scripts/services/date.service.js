@@ -48,7 +48,7 @@
 		};
 
 		function add21days($date) {
-			logService.fnCalledService(data.service, 'isFerie');
+			logService.fnCalledService(data.service, 'add21days');
 			if ($date) {
 
 				// Convert the date
