@@ -69,7 +69,9 @@
 
 		function onDatepickerClick($event) {
 			logService.fnCalled('onDatepickerClick');
-			$event.stopPropagation();
+			if ($event) {
+				$event.stopPropagation();
+			}
 			vm.methods.toggleDatepicker();
 		}
 

@@ -17,14 +17,17 @@
                 date-year-title="Année sélectionnée"
                 datepicker-toggle="false"
                 datepicker-show="{% raw %}{{vm.data.showDatepicker}}{% endraw %}"
-                ng-click="vm.methods.onDatepickerClick($event)">
+                ng-click="vm.methods.onDatepickerClick($event)"
+                tabindex="-1">
         <input class="initial-date-input"
                type="text" 
                ng-model="vm.initialDate" 
                id="initialDate" 
                name="initialDate"
-               tabindex="-1"
-               ng-disabled="true">
+               tabindex="0"
+               ng-disabled="true"
+               ng-click="vm.methods.onDatepickerClick($event)"
+               on-enter="vm.methods.onDatepickerClick()">
     </datepicker>
 </column>
 

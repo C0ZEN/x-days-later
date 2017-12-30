@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New service `keyboard`
+- New directive `onEnter`
 
 ## [0.1.38]
 ### Fixed

@@ -9,6 +9,7 @@ $color-clouds : #ECF0F1;
 $color-grey-light : rgba(0, 0, 0, .03);
 $color-grey : #DCE6F0;
 $color-grey-darker : #606C71;
+$color-white : #FFFFFF;
 /// VARIABLES ///
 $color-title : $color-green-sea;
 $color-links : $color-turquoise;
@@ -75,20 +76,21 @@ column {
     max-width : 350px;
     margin    : 0;
     .initial-date-input {
-      max-width     : inherit;
-      width         : inherit;
-      outline       : none;
-      border-radius : 3px;
-      border        : 1px solid $color-input-border;
-      padding       : 1rem 1.2rem 0.8rem 1.2rem;
-      color         : $color-input-color;
-      font-size     : 1rem;
-      font-weight   : 400;
-      line-height   : initial;
-      transition    : $transition;
-      height        : 50px;
-      min-height    : 50px;
-      cursor        : pointer;
+      max-width        : inherit;
+      width            : inherit;
+      outline          : none;
+      border-radius    : 3px;
+      border           : 1px solid $color-input-border;
+      padding          : 1rem 1.2rem 0.8rem 1.2rem;
+      color            : $color-input-color;
+      font-size        : 1rem;
+      font-weight      : 400;
+      line-height      : initial;
+      transition       : $transition;
+      height           : 50px;
+      min-height       : 50px;
+      cursor           : pointer;
+      background-color : $color-white;
       &:hover, &:focus, &:active {
         border : 1px solid $color-green-sea;
       }
