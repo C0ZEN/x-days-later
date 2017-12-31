@@ -12,7 +12,7 @@ Check out the [Contributing](CONTRIBUTING.md) file.
 
 ## Documentation
 
-You can also see me [beautifully](https://c0zen.github.io/generator-cozen-angular/).
+You can also see me [beautifully](https://c0zen.github.io/21-days/).
 
 ## License
 

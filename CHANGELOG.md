@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Link to the real documentation in the readme
+- Error with the $filter injection in the `logEx` config
 
 ## [0.1.81]
 ### Changed

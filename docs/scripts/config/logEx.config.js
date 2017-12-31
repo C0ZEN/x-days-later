@@ -16,14 +16,17 @@
 
 	config.$inject = [
 		'logExProvider',
-		'appConstant',
-		'$filter'
+		'appConstant'
 	];
 
-	function config(logExProvider, appConstant, $filter) {
+	function config(logExProvider, appConstant) {
 		logExProvider
 			.enableLogging(appConstant.logs.enabled)
 			.overrideLogPrefix($className => {
+				const $injector = angular.injector([
+					'ng'
+				]);
+				const $filter   = $injector.get('$filter');
 				const separator = ' >> ';
 				const format    = 'hh:mm:ss';
 				const now       = $filter('date')(new Date(), format);
