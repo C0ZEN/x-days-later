@@ -68,7 +68,6 @@
 
 		// Subscribe to calculated date history
 		calculatedDateHistoryService.subscribe($scope, $data => {
-			console.log($data);
 			vm.data.history = $data.newHistory;
 		});
 

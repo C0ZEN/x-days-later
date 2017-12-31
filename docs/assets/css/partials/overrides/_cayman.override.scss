@@ -35,3 +35,13 @@ body {
   color         : $color-white;
   opacity       : 1;
 }
+* {
+  &::selection {
+    background : $color-turquoise;
+    color      : $color-white;
+  }
+  &::-moz-selection {
+    background : $color-turquoise;
+    color      : $color-white;
+  }
+}

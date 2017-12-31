@@ -14,7 +14,7 @@
 		.module('21days')
 		.constant('appConstant', {
 			logs            : {
-				enabled: true
+				enabled: false
 			},
 			lang            : {
 				current: 'fr'
