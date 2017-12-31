@@ -83,6 +83,9 @@
 ._720kb-datepicker-calendar-header-opened-pagination::after {
   bottom : 0;
 }
+_720kb-datepicker-calendar-days-header > div {
+  text-transform : capitalize;
+}
 datepicker {
   outline : none;
 }
