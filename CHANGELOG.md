@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- The output format for the `calculatedDateHistory` is now timestamp
 
 ## [0.1.88]
 ### Changed
