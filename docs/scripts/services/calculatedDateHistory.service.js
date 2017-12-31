@@ -15,10 +15,11 @@
 		.factory('calculatedDateHistoryService', calculatedDateHistoryService);
 
 	calculatedDateHistoryService.$inject = [
-		'$rootScope'
+		'$rootScope',
+		'logService'
 	];
 
-	function calculatedDateHistoryService($rootScope) {
+	function calculatedDateHistoryService($rootScope, logService) {
 		const data = {
 			service: 'calculatedDateHistoryService',
 			history: null
@@ -49,6 +50,7 @@
 		}
 
 		function reset() {
+			logService.service(data.service, 'reset');
 			data.history = {
 				exception         : false,
 				exceptionTriggered: 0,
@@ -57,18 +59,21 @@
 		}
 
 		function setOriginal($date) {
+			logService.service(data.service, 'setOriginal');
 			data.history.original = {
 				date: $date
 			};
 		}
 
 		function setCalculated($date) {
+			logService.service(data.service, 'setCalculated');
 			data.history.calculated = {
 				date: $date
 			};
 		}
 
 		function setFinal($date) {
+			logService.service(data.service, 'setFinal');
 			data.history.final = {
 				date: $date
 			};
@@ -80,6 +85,7 @@
 		 * @param {object} $data > Object with data (dateBefore, dateAfter, type (sunday, saturday))
 		 */
 		function addWeekend($data) {
+			logService.service(data.service, 'addWeekend');
 			methods.newException($data);
 		}
 
@@ -88,6 +94,7 @@
 		 * @param {object} $data > Object with data (dateBefore, dateAfter, ferie)
 		 */
 		function addFerie($data) {
+			logService.service(data.service, 'addFerie');
 			$data.type = 'ferie';
 			methods.newException($data);
 		}
