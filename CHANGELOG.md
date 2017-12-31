@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New initiator `loader` to removed the loader once the application is loaded
+- New loader on init
 
 ## [0.2.4]
 ### Changed

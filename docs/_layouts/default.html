@@ -60,6 +60,11 @@
             </copied>
         </copy-container>
 
+        <!-- Loader overlay -->
+        <loader-container>
+            <loader></loader>
+        </loader-container>
+
         <!-- start:bower dependencies -->
         <script type="text/javascript"
                 src="{{ '/bower_components/jquery/dist/jquery.min.js' | prepend: site.baseurl }}"></script>
@@ -119,6 +124,8 @@
 
         <script type="text/javascript"
                 src="{{ '/scripts/initiators/language.initiator.js' | prepend: site.baseurl }}"></script>
+        <script type="text/javascript"
+                src="{{ '/scripts/initiators/loader.initiator.js' | prepend: site.baseurl }}"></script>
 
         <script type="text/javascript"
                 src="{{ '/scripts/controllers/main.controller.js' | prepend: site.baseurl }}"></script>
