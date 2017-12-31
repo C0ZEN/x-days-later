@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.4]
+
 ## [0.3.3]
 ### Fixed
 - Sass compilation error
