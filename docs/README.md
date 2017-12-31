@@ -109,7 +109,7 @@ Une date à `date + 21 jours` sera alors calculée.
 
 <neutral>
     <row>
-        <span>Si la `date + 21 jours` est un samedi ou un dimanche,</span>
+        <span>Si la <code>date + 21 jours</code> est un samedi ou un dimanche,</span>
     </row>  
     <row>
         <span>Alors la date calculée sera le lundi suivant.</span>
