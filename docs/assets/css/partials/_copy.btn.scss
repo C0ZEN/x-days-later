@@ -1,0 +1,23 @@
+copy-btn {
+  display          : flex;
+  flex-direction   : row;
+  justify-content  : center;
+  align-items      : center;
+  background-color : $color-white;
+  fill             : $color-green-sea;
+  outline          : none;
+  cursor           : pointer;
+  border-radius    : 50%;
+  width            : $input-height;
+  height           : $input-height;
+  transition       : $transition;
+  svg {
+    width  : 50%;
+    height : 50%;
+    fill   : inherit;
+  }
+  &:hover, &:focus, &:active {
+    background-color : $color-grey-light;
+    fill             : $color-turquoise;
+  }
+}

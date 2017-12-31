@@ -1,0 +1,88 @@
+._720kb-datepicker-calendar {
+  &._720kb-datepicker-open {
+    ._720kb-datepicker-calendar-day {
+      transition : $transition;
+    }
+  }
+  * {
+    font-family : $font-family;
+  }
+}
+._720kb-datepicker-calendar-day {
+  margin        : 5px 1%;
+  border-radius : 5px;
+  &._720kb-datepicker-today {
+    color : $color-green-sea;
+  }
+  &:hover, &:focus, &:active {
+    color            : $color-green-sea;
+    background-color : $color-grey-light;
+    &._720kb-datepicker-today {
+      color : $color-turquoise;
+    }
+  }
+  &._720kb-datepicker-active {
+    color            : $color-clouds;
+    background-color : $color-green-sea;
+    &:hover, &:focus, &:active {
+      background-color : $color-turquoise;
+    }
+  }
+}
+._720kb-datepicker-calendar-header:nth-child(odd) {
+  background-color : $color-green-sea;
+}
+._720kb-datepicker-calendar {
+  padding : 0;
+}
+._720kb-datepicker-calendar-header a {
+  &:hover, &:focus, &:active {
+    background-color : rgba(0, 0, 0, 0.1);
+  }
+}
+._720kb-datepicker-calendar-header-left,
+._720kb-datepicker-calendar-header-right {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : center;
+  align-items     : center;
+  height          : 40px;
+  > ._720kb-datepicker-calendar-month-button {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : center;
+    align-items     : center;
+    svg {
+      width  : 20px;
+      height : 20px;
+    }
+  }
+}
+._720kb-datepicker-calendar-years-pagination-pages {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : center;
+  align-items     : center;
+  > a {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : center;
+    align-items     : center;
+    > svg {
+      width  : 20px;
+      height : 20px;
+    }
+  }
+}
+._720kb-datepicker-calendar-month {
+  text-transform : capitalize;
+}
+._720kb-datepicker-calendar-header:nth-child(even) {
+  background-color : $color-turquoise;
+}
+._720kb-datepicker-calendar-header-opened-pagination::after {
+  bottom : 0;
+}
+datepicker {
+  outline : none;
+}

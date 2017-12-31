@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Changed
 - Readme title
+- Styles
+- Split sass files
+
+### Removed
+- `ng-strict-di` which is useless
+- `ng-cloak` which could be responsible for freezing the app sometimes
 
 ## [0.1.76]
 ### Fixed

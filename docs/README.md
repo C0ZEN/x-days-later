@@ -1,4 +1,4 @@
-## Calculer la date
+## Choisir une date
 
 <column class="initial-date">
     <label class="initial-date-label"
@@ -32,6 +32,8 @@
                ng-focus="vm.methods.onDatepickerFocus($event)">
     </datepicker>
 </column>
+
+## Résultat
 
 <column class="calculated-date">
     <span class="calculated-date-label">

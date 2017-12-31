@@ -1,0 +1,37 @@
+.calculated-date {
+  .calculated-date-label {
+    margin-bottom : $label-bottom-space;
+    display       : inline-table;
+  }
+  .calculated-date-value-container {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : flex-start;
+    align-items     : center;
+    width           : 100%;
+    max-width       : $input-max-width;
+    border-radius   : 3px;
+    border          : 1px solid $color-input-border;
+    padding         : 0 1.2rem 0 1.2rem;
+    line-height     : initial;
+    transition      : $transition;
+    height          : $input-height;
+    min-height      : $input-height;
+    margin-right    : 1rem;
+    .calculated-date-value {
+      color          : $color-input-color;
+      font-size      : 1rem;
+      font-weight    : 400;
+      transition     : $transition;
+      text-transform : capitalize;
+      &::selection {
+        background : $color-turquoise;
+        color      : $color-white;
+      }
+      &::-moz-selection {
+        background : $color-turquoise;
+        color      : $color-white;
+      }
+    }
+  }
+}
