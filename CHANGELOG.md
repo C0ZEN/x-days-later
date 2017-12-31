@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.6.3]
+### Changed
+- Capitalized the days for the datepicker
+
 ## [0.6.2]
 ### Changed
 - Capitalized the days for the datepicker
