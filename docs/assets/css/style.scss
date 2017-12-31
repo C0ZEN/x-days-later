@@ -10,6 +10,7 @@ $color-grey-light : rgba(0, 0, 0, .03);
 $color-grey : #DCE6F0;
 $color-grey-darker : #606C71;
 $color-white : #FFFFFF;
+$color-red : #E74C3C;
 /// VARIABLES ///
 $color-title : $color-green-sea;
 $color-links : $color-turquoise;
@@ -23,7 +24,6 @@ $input-height : 3rem;
 $label-bottom-space : 0.4rem;
 $input-max-width : 450px;
 $loader-size : 7rem;
-$loader-border-size : 0.35rem;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @import "partials/overrides/cayman.override";
 @import "partials/overrides/calendar.override";
@@ -34,4 +34,5 @@ $loader-border-size : 0.35rem;
 @import "partials/copy.container";
 @import "partials/animation";
 @import "partials/loader";
+@import "partials/error";
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

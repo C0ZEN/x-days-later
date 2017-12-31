@@ -5,8 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New design for errors
 
 ## [0.3.4]
+### Fixed
+- Sass compilation error
 
 ## [0.3.3]
 ### Fixed
