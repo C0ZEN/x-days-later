@@ -107,9 +107,20 @@ Une date à `date + 21 jours` sera alors calculée.
 
 ### Exceptions
 
-> Si la `date + 21 jours` est un samedi ou un dimanche,  
-> Alors la date calculée sera le lundi suivant.
+<neutral>
+    <row>
+        <span>Si la `date + 21 jours` est un samedi ou un dimanche,</span>
+    </row>  
+    <row>
+        <span>Alors la date calculée sera le lundi suivant.</span>
+    </row>  
+</neutral>
 
-> Si la date calculée est un jour férié,  
-> Alors la date calculée sera le jour suivant non férié.
-
+<neutral>
+    <row>
+        <span>Si la date calculée est un jour férié,  </span>
+    </row>  
+    <row>
+        <span>Alors la date calculée sera le jour suivant non férié.</span>
+    </row>  
+</neutral>

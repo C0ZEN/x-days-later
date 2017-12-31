@@ -1,0 +1,18 @@
+neutral {
+  margin           : $messages-margin;
+  padding          : $messages-padding;
+  border-left      : 0.3rem solid $color-silver;
+  background-color : #BDC3C720;
+  display          : flex;
+  flex-direction   : column;
+  &::selection,
+  &::selection * {
+    background-color : $color-asbestos;
+    color            : $color-white;
+  }
+  &::-moz-selection,
+  &::-moz-selection * {
+    background-color : $color-asbestos;
+    color            : $color-white;
+  }
+}
