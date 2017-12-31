@@ -123,7 +123,8 @@
 				logService.service(data.service, 'isFerie');
 				const ferie = {
 					dateBefore: methods.toString(date),
-					dateAfter : null
+					dateAfter : null,
+					ferie     : date.getFerie()
 				};
 
 				// Add one day

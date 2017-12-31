@@ -19,10 +19,6 @@
 	];
 
 	function logService($log) {
-		const data = {
-			logInstance: $log.getInstance('logService')
-		};
-
 		return {
 			init,
 			log,
@@ -32,23 +28,23 @@
 		};
 
 		function init($target) {
-			data.logInstance.log('Init >>>', $target);
+			$log.log('Init >>>', $target);
 		}
 
 		function log($text) {
-			data.logInstance.info($text);
+			$log.info($text);
 		}
 
 		function fnCalled($functionName) {
-			data.logInstance.log($functionName, 'called');
+			$log.log($functionName, 'called');
 		}
 
 		function service($service, $text) {
-			data.logInstance.info($service, '>>>', $text);
+			$log.info($service, '>>>', $text);
 		}
 
 		function fnCalledService($service, $functionName) {
-			data.logInstance.log($service, '>>>', $functionName, 'called');
+			$log.log($service, '>>>', $functionName, 'called');
 		}
 	}
 

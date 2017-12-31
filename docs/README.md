@@ -55,6 +55,33 @@
     </row>
 </column>
 
+### Détails
+
+<p>
+    <row>La date sélectionnée est le <strong>{% raw %}{{ vm.data.history.original.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</row>
+    <row>La date calculée à 21 jours est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</row>
+    <br>
+    <row ng-if="!vm.data.history.exception">Aucune exception détectée.</row>
+    <row ng-if="vm.data.history.exceptionTriggered === 1"><strong></strong>exception détectée.</row>
+    <row ng-if="vm.data.history.exception > 1"><strong></strong>exceptions détectées.</row>
+    <ul ng-if="vm.data.history.exception">
+        <li ng-repeat="exception in vm.data.history.exceptionList track by $index"
+            ng-switch="exception.type">
+            <span>Exception <strong>{% raw %}{{ $index + 1 }}{% endraw %}</strong></span>
+            <ul>
+                <li ng-switch-when="sunday">La date calculée est un <strong>dimanche</strong></li>
+                <li ng-switch-when="sunday">La nouvelle date calculée est le <strong>{% raw %}{{ exception.dateAfter | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong></li>
+                <li ng-switch-when="saturday">La date calculée est un <strong>samedi</strong></li>
+                <li ng-switch-when="saturday">La nouvelle date calculée est le <strong>{% raw %}{{ exception.dateAfter | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong></li>
+                <li ng-switch-when="ferie">La date calculée est un jour férié: <strong>{% raw %}{{ exception.ferie }}{% endraw %}</strong></li>
+                <li ng-switch-when="ferie">La nouvelle date calculée est le <strong>{% raw %}{{ exception.dateAfter | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong></li>
+            </ul>
+        </li>
+    </ul>
+    <br>
+    <row>La date final calculée est le <strong>{% raw %}{{ vm.data.history.final.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</row>
+</p>
+
 ## Comment ça marche ?
 
 Saisissez une `date`.  

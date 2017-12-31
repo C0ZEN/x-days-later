@@ -26,7 +26,7 @@
 				'ng'
 			]);
 			const $filter   = $injector.get('$filter');
-			const separator = ' >> ';
+			const separator = ' >>';
 			const format    = 'hh:mm:ss';
 			const now       = $filter('date')(new Date(), format);
 			return now.toString() + (!angular.isString($className) ? '' : '::' + $className) + separator;

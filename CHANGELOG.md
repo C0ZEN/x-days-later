@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Stuff to display details information about the calculated date
+
+### Changed
+- Logs
+
+### Fixed
+- Missing notify call for `calculatedDateHistory` service
 
 ## [0.1.83]
 ### Added

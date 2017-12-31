@@ -72,6 +72,7 @@
 			data.history.final = {
 				date: $date
 			};
+			methods.notify();
 		}
 
 		/**
@@ -84,7 +85,7 @@
 
 		/**
 		 * Add a ferie exception
-		 * @param {object} $data > Object with data (dateBefore, dateAfter)
+		 * @param {object} $data > Object with data (dateBefore, dateAfter, ferie)
 		 */
 		function addFerie($data) {
 			$data.type = 'ferie';
