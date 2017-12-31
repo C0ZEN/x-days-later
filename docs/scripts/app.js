@@ -15,7 +15,8 @@
 			'tmh.dynamicLocale',
 			'720kb.datepicker',
 			'ngclipboard',
-			'ngAnimate'
+			'ngAnimate',
+			'log.ex.uo'
 		]);
 
 })(window.angular);

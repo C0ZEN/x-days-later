@@ -1,6 +1,6 @@
 /**
  * Generated header by C0ZEN for 21-days project
- * Generated file compileProvider.config on WebStorm
+ * Generated file compile.config on WebStorm
  *
  * Created by: Geoffrey "C0ZEN" Testelin
  * Date: 30/12/2017

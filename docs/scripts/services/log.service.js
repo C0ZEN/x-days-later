@@ -15,13 +15,16 @@
 		.factory('logService', logService);
 
 	logService.$inject = [
-		'appConstant'
+		'appConstant',
+		'$log'
 	];
 
-	function logService(appConstant) {
+	function logService(appConstant, $log) {
 		const methods = {
 			isLogEnabled
 		};
+
+		$log = $log.getInstance('logService');
 
 		return {
 			init,
@@ -33,31 +36,31 @@
 
 		function init($target) {
 			if (methods.isLogEnabled()) {
-				console.info('Init >>>', $target);
+				$log.log('Init >>>', $target);
 			}
 		}
 
 		function log($text) {
 			if (methods.isLogEnabled()) {
-				console.log($text);
+				$log.info($text);
 			}
 		}
 
 		function fnCalled($functionName) {
 			if (methods.isLogEnabled()) {
-				console.log($functionName, 'called');
+				$log.log($functionName, 'called');
 			}
 		}
 
 		function service($service, $log) {
 			if (methods.isLogEnabled()) {
-				console.log($service, '>>>', $log);
+				$log.info($service, '>>>', $log);
 			}
 		}
 
 		function fnCalledService($service, $functionName) {
 			if (methods.isLogEnabled()) {
-				console.log($service, '>>>', $functionName, 'called');
+				$log.log($service, '>>>', $functionName, 'called');
 			}
 		}
 

@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Added new bower dependency `angular-logex`
+
+### Changed
+- console.x to $log.x
 
 ## [0.1.77]
 ### Changed
