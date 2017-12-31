@@ -11,6 +11,8 @@ loader-container {
   justify-content  : center;
   align-items      : center;
   transition       : $transition;
+  pointer-events   : none;
+  cursor           : default;
   loader,
   loader:after {
     border-radius : 50%;
