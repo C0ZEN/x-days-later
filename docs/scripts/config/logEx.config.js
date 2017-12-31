@@ -16,7 +16,7 @@
 
 	config.$inject = [
 		'logExProvider',
-		'appConstants',
+		'appConstant',
 		'$filter'
 	];
 

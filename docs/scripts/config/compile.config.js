@@ -16,11 +16,11 @@
 
 	config.$inject = [
 		'$compileProvider',
-		'appConstants'
+		'appConstant'
 	];
 
-	function config($compileProvider, appConstants) {
-		$compileProvider.debugInfoEnabled(appConstants.debugInfoEnabled);
+	function config($compileProvider, appConstant) {
+		$compileProvider.debugInfoEnabled(appConstant.debugInfoEnabled);
 	}
 
 }(window.angular));

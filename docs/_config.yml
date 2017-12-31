@@ -11,5 +11,6 @@ homePageUrl: https://c0zen.github.io/21-days/
 baseUrl: https://c0zen.github.io/21-days/
 gitHubUrl: https://github.com/C0ZEN/21-days
 
+# Required when using import to import other sass files
 sass:
   sass_dir: ./assets/css
