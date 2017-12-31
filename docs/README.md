@@ -61,12 +61,22 @@
 </h3>
 
 <p ng-if="vm.data.history">
-    <row>La date sélectionnée est le <strong>{% raw %}{{ vm.data.history.original.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</row>
-    <row>La date calculée à 21 jours est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</row>
+    <row>
+        <span>La date sélectionnée est le <strong>{% raw %}{{ vm.data.history.original.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
+    </row>
+    <row>
+        <span>La date calculée à 21 jours est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
+    </row>
     <br>
-    <row ng-if="!vm.data.history.exception">Aucune exception détectée.</row>
-    <row ng-if="vm.data.history.exceptionTriggered === 1"><strong>1</strong> exception détectée.</row>
-    <row ng-if="vm.data.history.exceptionTriggered > 1"><strong>{% raw %}{{ vm.data.history.exceptionTriggered }}{% endraw %}</strong> exceptions détectées.</row>
+    <row ng-if="!vm.data.history.exception">
+        <span>Aucune exception détectée.</span>
+    </row>
+    <row ng-if="vm.data.history.exceptionTriggered === 1">
+        <span><strong>1</strong> exception détectée.</span>
+    </row>
+    <row ng-if="vm.data.history.exceptionTriggered > 1">
+        <span><strong>{% raw %}{{ vm.data.history.exceptionTriggered }}{% endraw %}</strong> exceptions détectées.</span>
+    </row>
 </p>
 
 <ul ng-if="vm.data.history && vm.data.history.exception">
@@ -85,7 +95,9 @@
 </ul>
 
 <p ng-if="vm.data.history">
-    <row>La date final calculée est le <strong>{% raw %}{{ vm.data.history.final.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</row>
+    <row>
+        <span>La date final calculée est le <strong>{% raw %}{{ vm.data.history.final.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
+    </row>
 </p>
 
 ## Comment ça marche ?
