@@ -160,7 +160,7 @@
         "no-sync": "error",
         "array-bracket-newline": [
             "error",
-            "always"
+            "consistent"
         ],
         "array-bracket-spacing": "error",
         "array-element-newline": [
@@ -240,7 +240,9 @@
         "nonblock-statement-body-position": "error",
         "object-curly-newline": [
             "error",
-            "always"
+            {
+                "consistent": true
+            }
         ],
         "object-curly-spacing": [
             "error",

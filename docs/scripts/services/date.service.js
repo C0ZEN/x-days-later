@@ -17,10 +17,11 @@
 	dateService.$inject = [
 		'moment',
 		'logService',
-		'appConstant'
+		'appConstant',
+		'calculatedDateHistoryService'
 	];
 
-	function dateService(moment, logService, appConstant) {
+	function dateService(moment, logService, appConstant, calculatedDateHistoryService) {
 		const data = {
 			service : 'dateService',
 			days    : 21,
@@ -52,15 +53,18 @@
 		function add21days($date) {
 			logService.fnCalledService(data.service, 'add21days');
 			if ($date) {
+				logService.service(data.service, 'original date is: ' + $date);
+				calculatedDateHistoryService.reset();
 
 				// Convert the date
-				logService.service(data.service, 'original date is: ' + $date);
 				let date = moment($date, appConstant.moment.readableFormat, appConstant.lang.current);
 				logService.service(data.service, 'moment original date is: ' + methods.readable(date));
+				calculatedDateHistoryService.setOriginal(methods.toString(date));
 
 				// Add 21 days
 				date = methods.add(date, data.days, 'days');
 				logService.service(data.service, 'new +21 days date is: ' + methods.readable(date));
+				calculatedDateHistoryService.setCalculated(methods.toString(date));
 
 				return methods.weekendAndExceptionsStuff(date);
 			}
@@ -101,22 +105,38 @@
 			// Check if this is the weekend
 			if (methods.isWeekend(date)) {
 				logService.service(data.service, 'isWeekend');
+				const weekend = {
+					dateBefore: methods.toString(date),
+					dateAfter : null,
+					type      : methods.isSunday(date) ? 'sunday' : 'saturday'
+				};
 
 				// Set the next monday
 				date = methods.setNextDayAfterWeekend(date);
 				logService.service(data.service, 'new date after weekend: ' + methods.readable(date));
+				weekend.dateAfter = methods.toString(date);
+				calculatedDateHistoryService.addWeekend(weekend);
 			}
 
 			// Check if this is an fr exception
 			if (date.isFerie()) {
 				logService.service(data.service, 'isFerie');
+				const ferie = {
+					dateBefore: methods.toString(date),
+					dateAfter : null
+				};
 
 				// Add one day
 				date = methods.add(date, data.one, 'days');
 				logService.service(data.service, 'new date after exception day: ' + methods.readable(date));
+				ferie.dateAfter = methods.toString(date);
+				calculatedDateHistoryService.addFerie(ferie);
+
+				// Loop again
 				date = weekendAndExceptionsStuff(date);
 			}
 			logService.service(data.service, 'final new date: ' + methods.readable(date));
+			calculatedDateHistoryService.setFinal(methods.toString(date));
 			return methods.toTimestamp(date);
 		}
 

@@ -20,18 +20,17 @@
 	];
 
 	function config(logExProvider, appConstant) {
-		logExProvider
-			.enableLogging(appConstant.logs.enabled)
-			.overrideLogPrefix($className => {
-				const $injector = angular.injector([
-					'ng'
-				]);
-				const $filter   = $injector.get('$filter');
-				const separator = ' >> ';
-				const format    = 'hh:mm:ss';
-				const now       = $filter('date')(new Date(), format);
-				return now.toString() + (!angular.isString($className) ? '' : '::' + $className) + separator;
-			});
+		logExProvider.enableLogging(appConstant.logs.enabled);
+		logExProvider.overrideLogPrefix($className => {
+			const $injector = angular.injector([
+				'ng'
+			]);
+			const $filter   = $injector.get('$filter');
+			const separator = ' >> ';
+			const format    = 'hh:mm:ss';
+			const now       = $filter('date')(new Date(), format);
+			return now.toString() + (!angular.isString($className) ? '' : '::' + $className) + separator;
+		});
 	}
 
 }(window.angular));

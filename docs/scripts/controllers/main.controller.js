@@ -21,10 +21,11 @@
 		'$window',
 		'methods',
 		'$timeout',
-		'copyService'
+		'copyService',
+		'calculatedDateHistoryService'
 	];
 
-	function mainController($scope, logService, dateService, $window, methods, $timeout, copyService) {
+	function mainController($scope, logService, dateService, $window, methods, $timeout, copyService, calculatedDateHistoryService) {
 		const vm = this;
 
 		// Public data
@@ -33,7 +34,8 @@
 			today            : dateService.toString(),
 			initialDate      : null,
 			showDatepicker   : false,
-			isHoverDatepicker: false
+			isHoverDatepicker: false,
+			history          : null
 		};
 
 		// Public methods
@@ -61,7 +63,14 @@
 			});
 		});
 
+		// Listen window click
 		$window.addEventListener('click', vm.methods.onWindowClick);
+
+		// Subscribe to calculated date history
+		calculatedDateHistoryService.subscribe($scope, $data => {
+			console.log($data);
+			vm.data.history = $data.newHistory;
+		});
 
 		function define21Date() {
 			logService.fnCalled('define21Date');

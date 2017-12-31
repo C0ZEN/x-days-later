@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Added new service `calculatedDateHistory`
+
+### Changed
+- Eslint `array-bracket-newline` configuration to `consistent`
+- Eslint `object-curly-newline` configuration to `consistent`
+
+### Fixed
+- Error with `logExProvider` config
+
 ### Removed
 - Page title prefix
 
