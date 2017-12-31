@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.5.3]
+
 ## [0.5.2]
 ### Changed
 - Errors styles
