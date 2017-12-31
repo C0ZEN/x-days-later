@@ -11,6 +11,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - console.x to $log.x
 
+### Fixed
+- Sass error
+
 ## [0.1.77]
 ### Changed
 - Readme title
