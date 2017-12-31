@@ -13,9 +13,9 @@ copy-container {
   animation-name      : fadeIn;
   animation-duration  : 400ms;
   animation-fill-mode : both;
-  transition          : 400ms;
+  transition          : 500ms;
   copied {
-    display             : none;
+    display             : flex;
     flex-direction      : row;
     justify-content     : center;
     align-items         : center;
