@@ -2,9 +2,8 @@
 theme: jekyll-theme-cayman
 title: 21 jours
 description: Affiche la date à 21 jours
-author: C0ZEN
-author_email: geoffrey.testelin@gmail.com
 permalink: pretty
+url: https://c0zen.github.io/21-days/
 
 # Url
 homePageUrl: https://c0zen.github.io/21-days/
@@ -14,3 +13,21 @@ gitHubUrl: https://github.com/C0ZEN/21-days
 # Required when using import to import other sass files
 sass:
   sass_dir: ./assets/css
+
+# SEO configuration
+author: C0ZEN
+author_email: geoffrey.testelin@gmail.com
+twitter:
+  username: C0ZEN
+logo: /images/logo.png
+social:
+  name: Geoffrey Testelin
+  links:
+    - https://twitter.com/C0ZEN
+    - https://github.com/C0ZEN
+    - https://www.linkedin.com/in/testelingeoffrey/
+    - https://codepen.io/C0ZEN/
+    - https://github.com/C0ZEN
+    - http://www.geoffreytestelin.com/
+    - https://stackoverflow.com/users/4440414/c0zen
+lang: fr_FR
