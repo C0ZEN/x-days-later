@@ -20,9 +20,9 @@
 		'$filter'
 	];
 
-	function config(logExProvider, appConstants, $filter) {
+	function config(logExProvider, appConstant, $filter) {
 		logExProvider
-			.enableLogging(appConstants.logs.enabled)
+			.enableLogging(appConstant.logs.enabled)
 			.overrideLogPrefix($className => {
 				const separator = ' >> ';
 				const format    = 'hh:mm:ss';
