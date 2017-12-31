@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Fixed
 - Spellcheck error
+- Wrong removed styles for `error` message
 
 ## [0.6.0]
 ### Fixed
