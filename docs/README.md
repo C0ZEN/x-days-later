@@ -65,8 +65,8 @@
     <row>La date calculée à 21 jours est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</row>
     <br>
     <row ng-if="!vm.data.history.exception">Aucune exception détectée.</row>
-    <row ng-if="vm.data.history.exceptionTriggered === 1"><strong></strong>exception détectée.</row>
-    <row ng-if="vm.data.history.exception > 1"><strong></strong>exceptions détectées.</row>
+    <row ng-if="vm.data.history.exceptionTriggered === 1"><strong>1</strong> exception détectée.</row>
+    <row ng-if="vm.data.history.exceptionTriggered > 1"><strong>{% raw %}{{ vm.data.history.exceptionTriggered }}{% endraw %}</strong> exceptions détectées.</row>
 </p>
 
 <ul ng-if="vm.data.history && vm.data.history.exception">
