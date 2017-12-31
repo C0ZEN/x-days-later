@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New bower dependency `animate.css`
+
+### Changed
+- Animate for the copy text in the container
 
 ## [0.2.1]
 ### Changed
