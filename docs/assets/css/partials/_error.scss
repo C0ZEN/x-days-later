@@ -11,4 +11,14 @@ error {
   > ul {
     margin-bottom : 0;
   }
+  &::selection,
+  &::selection * {
+    background-color : $color-red;
+    color            : $color-white;
+  }
+  &::-moz-selection,
+  &::-moz-selection * {
+    background-color : $color-red;
+    color            : $color-white;
+  }
 }
