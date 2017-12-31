@@ -49,7 +49,8 @@
 			hideDatepicker,
 			isDatepickerOpen,
 			isHoverDatepicker,
-			onCopySuccess
+			onCopySuccess,
+			onInitialDateChange
 		};
 
 		// Init
@@ -124,6 +125,10 @@
 		function onCopySuccess() {
 			logService.fnCalled('onCopySuccess');
 			copyService.show();
+		}
+
+		function onInitialDateChange() {
+			console.log(1);
 		}
 	}
 

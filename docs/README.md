@@ -29,7 +29,8 @@
                tabindex="0"
                onfocus="this.blur()"
                on-enter="vm.methods.onDatepickerEnter()"
-               ng-focus="vm.methods.onDatepickerFocus($event)">
+               ng-focus="vm.methods.onDatepickerFocus($event)"
+               ng-change="vm.methods.onInitialDateChange()">
     </datepicker>
 </column>
 
