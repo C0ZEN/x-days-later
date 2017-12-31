@@ -55,7 +55,10 @@
     </row>
 </column>
 
-### Détails
+<h3 ng-if="vm.data.history"
+    id="détails">
+    Détails
+</h3>
 
 <p ng-if="vm.data.history">
     <row>La date sélectionnée est le <strong>{% raw %}{{ vm.data.history.original.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</row>
@@ -66,7 +69,7 @@
     <row ng-if="vm.data.history.exception > 1"><strong></strong>exceptions détectées.</row>
 </p>
 
-<ul ng-if="vm.data.history.exception">
+<ul ng-if="vm.data.history && vm.data.history.exception">
     <li ng-repeat="exception in vm.data.history.exceptionList track by $index"
         ng-switch="exception.type">
         <span>Exception <strong>{% raw %}{{ $index + 1 }}{% endraw %}</strong></span>
@@ -81,7 +84,7 @@
     </li>
 </ul>
 
-<p>
+<p ng-if="vm.data.history">
     <row>La date final calculée est le <strong>{% raw %}{{ vm.data.history.final.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</row>
 </p>
 

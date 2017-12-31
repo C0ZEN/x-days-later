@@ -59,12 +59,12 @@
 				// Convert the date
 				let date = moment($date, appConstant.moment.readableFormat, appConstant.lang.current);
 				logService.service(data.service, 'moment original date is: ' + methods.readable(date));
-				calculatedDateHistoryService.setOriginal(methods.toString(date));
+				calculatedDateHistoryService.setOriginal(toString(date));
 
 				// Add 21 days
 				date = methods.add(date, data.days, 'days');
 				logService.service(data.service, 'new +21 days date is: ' + methods.readable(date));
-				calculatedDateHistoryService.setCalculated(methods.toString(date));
+				calculatedDateHistoryService.setCalculated(toString(date));
 
 				return methods.weekendAndExceptionsStuff(date);
 			}
@@ -106,7 +106,7 @@
 			if (methods.isWeekend(date)) {
 				logService.service(data.service, 'isWeekend');
 				const weekend = {
-					dateBefore: methods.toString(date),
+					dateBefore: toString(date),
 					dateAfter : null,
 					type      : methods.isSunday(date) ? 'sunday' : 'saturday'
 				};
@@ -114,7 +114,7 @@
 				// Set the next monday
 				date = methods.setNextDayAfterWeekend(date);
 				logService.service(data.service, 'new date after weekend: ' + methods.readable(date));
-				weekend.dateAfter = methods.toString(date);
+				weekend.dateAfter = toString(date);
 				calculatedDateHistoryService.addWeekend(weekend);
 			}
 
@@ -122,7 +122,7 @@
 			if (date.isFerie()) {
 				logService.service(data.service, 'isFerie');
 				const ferie = {
-					dateBefore: methods.toString(date),
+					dateBefore: toString(date),
 					dateAfter : null,
 					ferie     : date.getFerie()
 				};
@@ -130,14 +130,14 @@
 				// Add one day
 				date = methods.add(date, data.one, 'days');
 				logService.service(data.service, 'new date after exception day: ' + methods.readable(date));
-				ferie.dateAfter = methods.toString(date);
+				ferie.dateAfter = toString(date);
 				calculatedDateHistoryService.addFerie(ferie);
 
 				// Loop again
 				date = weekendAndExceptionsStuff(date);
 			}
 			logService.service(data.service, 'final new date: ' + methods.readable(date));
-			calculatedDateHistoryService.setFinal(methods.toString(date));
+			calculatedDateHistoryService.setFinal(toString(date));
 			return methods.toTimestamp(date);
 		}
 

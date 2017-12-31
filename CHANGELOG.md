@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Added more conditions to hide details if history is empty
+
+### Fixed
+- Wrong method call for `toString`
 
 ## [0.1.85]
 ### Added
