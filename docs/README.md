@@ -96,7 +96,7 @@
 
 <p ng-if="vm.data.history">
     <row>
-        <span>La date final calculée est le <strong>{% raw %}{{ vm.data.history.final.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
+        <span>La date finale calculée est le <strong>{% raw %}{{ vm.data.history.final.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
     </row>
 </p>
 
