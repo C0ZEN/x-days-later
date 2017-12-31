@@ -128,7 +128,8 @@
 		}
 
 		function onInitialDateChange() {
-			console.log(1);
+			logService.fnCalled('onInitialDateChange');
+			$timeout(vm.methods.define21Date);
 		}
 	}
 
