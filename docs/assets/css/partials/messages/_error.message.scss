@@ -26,8 +26,9 @@ error {
     animation-fill-mode : both;
     animation-duration  : 200ms;
   }
+  &.ng-leave,
   &.ng-hide {
-    display   : none !important;
-    animation : none !important;
+    display            : none !important;
+    animation-duration : 0ms !important;
   }
 }
