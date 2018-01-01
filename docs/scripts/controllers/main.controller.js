@@ -19,13 +19,12 @@
 		'logService',
 		'dateService',
 		'$window',
-		'methods',
 		'$timeout',
 		'copyService',
 		'calculatedDateHistoryService'
 	];
 
-	function mainController($scope, logService, dateService, $window, methods, $timeout, copyService, calculatedDateHistoryService) {
+	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService) {
 		const vm = this;
 
 		// Public data
@@ -110,7 +109,7 @@
 			if (vm.methods.isDatepickerOpen() && !vm.methods.isHoverDatepicker()) {
 				vm.data.showDatepicker = false;
 				vm.methods.define21Date();
-				methods.safeApply($scope);
+				Methods.safeApply($scope);
 			}
 		}
 
