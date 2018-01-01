@@ -6,12 +6,12 @@ neutral {
   display          : flex;
   flex-direction   : column;
   &::selection,
-  &::selection * {
+  & *::selection {
     background-color : $color-asbestos;
     color            : $color-white;
   }
   &::-moz-selection,
-  &::-moz-selection * {
+  & *::-moz-selection {
     background-color : $color-asbestos;
     color            : $color-white;
   }

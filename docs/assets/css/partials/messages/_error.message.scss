@@ -12,13 +12,22 @@ error {
     margin-bottom : 0;
   }
   &::selection,
-  &::selection * {
+  & *::selection {
     background-color : $color-red;
     color            : $color-white;
   }
   &::-moz-selection,
-  &::-moz-selection * {
+  & *::-moz-selection {
     background-color : $color-red;
     color            : $color-white;
+  }
+  &.with-animation {
+    animation-name      : fadeInUp;
+    animation-fill-mode : both;
+    animation-duration  : 200ms;
+  }
+  &.ng-hide {
+    display   : none !important;
+    animation : none !important;
   }
 }

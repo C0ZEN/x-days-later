@@ -80,9 +80,11 @@
     </row>
 </p>
 
-<error ng-if="vm.data.history && vm.data.history.exception"
+<error class="with-animation"
+       ng-if="vm.data.history && vm.data.history.exception"
        ng-repeat="exception in vm.data.history.exceptionList track by $index"
-       ng-switch="exception.type">
+       ng-switch="exception.type"
+       ng-style="{'animation-delay': ($index * 100 + 'ms')}">
     <span>Exception <strong>{% raw %}{{ $index + 1 }}{% endraw %}</strong></span>
     <ul>
         <li ng-switch-when="sunday">La date calculée est un <strong>dimanche</strong></li>

@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Animation for error messages
+
+### Changed
+- Styles for messages selection
 
 ## [0.6.3]
 ### Changed
