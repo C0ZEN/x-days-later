@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New npm dependency `grunt-contrib-concat`
+- New npm dependency `grunt-contrib-clean`
+- New npm dependency `grunt-contrib-uglify`
+- A bunch of npm dependencies for `babel`
+- New grunt config file `concat` to concat js files
+- New grunt config file `clean` to remove the generated js files
+- New grunt config file `babel` to minify the parse the code to es2015
+- New grunt task `js.release` to create the js release file
 
 ## [0.7.0]
 ### Changed
