@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- File location for the uglify
+
+### Removed
+- Mangle
 
 ## [0.7.1]
 ### Added

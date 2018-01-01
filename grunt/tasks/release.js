@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 
 		// Execute the grunt tasks
 		grunt.task.run([
-            'prompt:isChangelogUpdated',
+			'prompt:isChangelogUpdated',
 			'if:isChangelogUpdated'
 		]);
 	});

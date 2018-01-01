@@ -8,18 +8,18 @@
  * Version: 1.0.0
  */
 module.exports = {
-	tmpScripts: {
+	tmpScripts    : {
 		src: [
 			'.tmp/release/scripts.js',
-			'.tmp/release/scripts.js.map',
-			'.tmp/release/21-days.js',
-			'.tmp/release/21-days.js.map'
+			'.tmp/release/scripts.js.map'
 		]
 	},
 	releaseScripts: {
 		src: [
-			'docs/scripts/21-days.min.js',
-			'docs/scripts/21-days.min.js.map'
+			'docs/release/21-days.js',
+			'docs/release/21-days.js.map',
+			'docs/release/21-days.min.js',
+			'docs/release/21-days.min.js.map'
 		]
 	}
 };

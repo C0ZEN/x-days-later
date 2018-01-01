@@ -16,20 +16,17 @@ module.exports = {
 	},
 	concatScripts: {
 		files: {
-			'.tmp/release/21-days.js': '.tmp/release/scripts.js'
+			'docs/release/21-days.js': '.tmp/release/scripts.js'
 		}
 	},
 	uglifyScripts: {
 		options: {
 			minified: true,
-			compact: true,
-			comments: false,
-			plugins: [
-				'minify-mangle-names'
-			]
+			compact : true,
+			comments: false
 		},
 		files  : {
-			'docs/scripts/21-days.min.js': '.tmp/release/21-days.js'
+			'docs/release/21-days.min.js': 'docs/release/21-days.js'
 		}
 	}
 };
