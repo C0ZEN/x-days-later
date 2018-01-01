@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.7.4]
 ### Added
 - Append version of the build for the js min file in the index
 
