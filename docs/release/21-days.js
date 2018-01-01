@@ -68,7 +68,7 @@
 (function (angular) {
 	'use strict';
 
-	angular.module('21days').constant('moment', moment).constant('methods', Methods);
+	angular.module('21days').constant('moment', moment);
 })(window.angular);
 
 (function (angular) {
@@ -76,9 +76,9 @@
 
 	angular.module('21days').controller('mainController', mainController);
 
-	mainController.$inject = ['$scope', 'logService', 'dateService', '$window', 'methods', '$timeout', 'copyService', 'calculatedDateHistoryService'];
+	mainController.$inject = ['$scope', 'logService', 'dateService', '$window', '$timeout', 'copyService', 'calculatedDateHistoryService'];
 
-	function mainController($scope, logService, dateService, $window, methods, $timeout, copyService, calculatedDateHistoryService) {
+	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService) {
 		var vm = this;
 
 		// Public data
@@ -163,7 +163,7 @@
 			if (vm.methods.isDatepickerOpen() && !vm.methods.isHoverDatepicker()) {
 				vm.data.showDatepicker = false;
 				vm.methods.define21Date();
-				methods.safeApply($scope);
+				Methods.safeApply($scope);
 			}
 		}
 
