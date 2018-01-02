@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.8.1]
+### Fixed
+- Error with `rgba-border`:  $hexadecimal-color must come before any optional arguments
+
 ## [0.8.0]
 ### Fixed
 - Error with `rgba-border`:  $hexadecimal-color must come before any optional arguments
