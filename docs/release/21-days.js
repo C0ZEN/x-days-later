@@ -616,7 +616,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('21-days version: 0.8.1');
+		console.info('21-days version: 0.9.1');
 	}
 })(window.angular);
 
