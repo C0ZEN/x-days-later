@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Error with `rgba-border`:  $hexadecimal-color must come before any optional arguments
 
 ## [0.7.10]
 ### Added

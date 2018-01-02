@@ -1,4 +1,4 @@
-@mixin rgba-border($border-width: 1px, $border-style: solid, $hexadecimal-color, $opacity: 1) {
+@mixin rgba-border($border-width: 1px, $border-style: solid, $hexadecimal-color: black, $opacity: 1) {
   border : $border-width $border-style $hexadecimal-color;
   border : $border-width $border-style rgba($hexadecimal-color, $opacity);
 }
