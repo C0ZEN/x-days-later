@@ -16,7 +16,7 @@
   }
   &:hover, &:focus, &:active {
     color : $color-green-sea;
-    @include rgba-background($color-grey-light);
+    @include rgba-background($color-grey-light, $color-grey-light-opacity);
     &._720kb-datepicker-today {
       color : $color-turquoise;
     }

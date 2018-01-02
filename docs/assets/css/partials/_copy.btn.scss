@@ -17,7 +17,7 @@ copy-btn {
     fill   : inherit;
   }
   &:hover, &:focus, &:active {
-    @include rgba-background($color-grey-light);
+    @include rgba-background($color-grey-light, $color-grey-light-opacity);
     fill : $color-turquoise;
   }
 }
