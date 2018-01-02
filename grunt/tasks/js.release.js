@@ -12,6 +12,7 @@ module.exports = function (grunt) {
 		grunt.task.run([
 			'clean:tmpScripts',
 			'clean:releaseScripts',
+			'preprocess:versionInitiator',
 			'concat:release',
 			'babel:concatScripts',
 			'babel:uglifyScripts'

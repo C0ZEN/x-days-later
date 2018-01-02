@@ -608,6 +608,18 @@ function safeApply(scope, fn) {
 		}
 	}
 }
+(function (angular) {
+	'use strict';
+
+	angular.module('21days').run(config);
+
+	config.$inject = [];
+
+	function config() {
+		console.info('21-days version: 0.8.1');
+	}
+})(window.angular);
+
 /* end:concat-scripts */
 //# sourceMappingURL=scripts.js.map
 //# sourceMappingURL=21-days.js.map

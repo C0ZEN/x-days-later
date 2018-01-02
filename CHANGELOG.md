@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New npm dependency `grunt-preprocess`
+- New initiator `version` to log on version on run time
+- New grunt config `preprocess` to write the version in the initiator file
+
+### Changed
+- `js.release` task to handle `preprocess` stuff
 
 ## [0.8.1]
 ### Fixed

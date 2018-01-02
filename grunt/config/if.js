@@ -32,9 +32,9 @@ module.exports = function (grunt) {
 			},
 			ifTrue : [
 				'gitcheckout:develop',
-				'js.release',
 				'string-replace:changelog',
 				'internal.bump',
+				'js.release',
 				'gitpush:develop',
 				'gitcheckout:master',
 				'gitmerge:develop',

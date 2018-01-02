@@ -16,7 +16,11 @@ module.exports = {
 		sourceMap   : true
 	},
 	release: {
-		src : 'docs/scripts/**/*',
+		src : [
+			'docs/scripts/**/*',
+			'!docs/scripts/initiators/version.initiator.js',
+			'.tmp/release/version.initiator.js'
+		],
 		dest: '.tmp/release/scripts.js'
 	}
 };

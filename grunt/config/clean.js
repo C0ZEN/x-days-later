@@ -11,7 +11,8 @@ module.exports = {
 	tmpScripts    : {
 		src: [
 			'.tmp/release/scripts.js',
-			'.tmp/release/scripts.js.map'
+			'.tmp/release/scripts.js.map',
+			'.tmp/release/version.initiator.js'
 		]
 	},
 	releaseScripts: {
