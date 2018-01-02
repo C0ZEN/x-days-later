@@ -7,16 +7,14 @@
  * Time: 11:52
  * Version: 1.0.0
  */
-module.exports = grunt => {
-	return {
-		options         : {
-			context: {
-				version: grunt.file.readJSON('package.json').version
-			}
-		},
-		versionInitiator: {
-			src : 'docs/scripts/initiators/version.initiator.js',
-			dest: '.tmp/release/version.initiator.js'
+module.exports = {
+	options         : {
+		context: {
+			version: '<%= newVersion %>'
 		}
-	};
+	},
+	versionInitiator: {
+		src : 'docs/scripts/initiators/version.initiator.js',
+		dest: '.tmp/release/version.initiator.js'
+	}
 };
