@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.7.5]
 ### Added
 - `bower update` as postinstall npm script
 - New Sass mixin `rgba-background`
