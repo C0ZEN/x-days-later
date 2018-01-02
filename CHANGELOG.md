@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- `rgba-background` mixin
+- Wrong alpha values
 
 ## [0.7.7]
 ### Fixed

@@ -1,5 +1,4 @@
-@mixin rgba-background($hexadecimal-color, $opacity) {
-  $rgb : rgb($hexadecimal-color);
+@mixin rgba-background($hexadecimal-color, $opacity: 1) {
   background-color : $hexadecimal-color;
-  background-color : rgba($rgb, $opacity);
+  background-color : rgba($hexadecimal-color, $opacity);
 }
