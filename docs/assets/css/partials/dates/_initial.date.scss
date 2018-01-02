@@ -12,7 +12,7 @@
       width          : inherit;
       outline        : none;
       border-radius  : 3px;
-      border         : 1px solid $color-input-border;
+      @include rgba-border(1px, solid, $color-input-border);
       padding        : 0 1.2rem 0 1.2rem;
       color          : $color-input-color;
       font-size      : 1rem;
@@ -28,12 +28,12 @@
       text-transform : capitalize;
       &.selected,
       &:hover, &:focus, &:active {
-        border : 1px solid $color-green-sea;
+        @include rgba-border(1px, solid, $color-green-sea);
       }
     }
     &:hover, &:focus, &:active {
       .initial-date-input {
-        border : 1px solid $color-green-sea;
+        @include rgba-border(1px, solid, $color-green-sea);
       }
     }
   }

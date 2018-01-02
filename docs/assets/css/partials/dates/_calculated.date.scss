@@ -11,7 +11,7 @@
     width           : 100%;
     max-width       : $input-max-width;
     border-radius   : 3px;
-    border          : 1px solid $color-input-border;
+    @include rgba-border(1px, solid, $color-input-border);
     padding         : 0 1.2rem 0 1.2rem;
     line-height     : initial;
     transition      : $transition;

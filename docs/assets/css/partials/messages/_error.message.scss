@@ -1,7 +1,7 @@
 error {
   margin         : $messages-margin;
   padding        : $messages-padding;
-  border-left    : 0.3rem solid $color-red;
+  @include rgba-border-left(0.3rem, solid, $color-red);
   display        : flex;
   flex-direction : column;
   @include rgba-background($color-red, $color-red-opacity);

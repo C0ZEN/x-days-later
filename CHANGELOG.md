@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- `rgba-border` mixin
+
+### Changed
+- Refactored all borders with the `rgba-border` mixin
 
 ## [0.7.9]
 ### Changed

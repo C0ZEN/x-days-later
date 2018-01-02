@@ -1,7 +1,7 @@
 neutral {
   margin         : $messages-margin;
   padding        : $messages-padding;
-  border-left    : 0.3rem solid $color-silver;
+  @include rgba-border-left(0.3rem, solid, $color-silver);
   display        : flex;
   flex-direction : column;
   @include rgba-background($color-silver, $color-silver-opacity);
