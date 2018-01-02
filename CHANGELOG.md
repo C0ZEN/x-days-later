@@ -5,8 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- `bower update` as postinstall npm script
+- New Sass mixin `rgba-background`
+
 ### Changed
 - Head meta `theme-color` value
+
+### Fixed
+- Background-color for error message
 
 ## [0.7.4]
 ### Added
