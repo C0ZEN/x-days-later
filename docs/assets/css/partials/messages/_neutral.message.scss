@@ -7,12 +7,12 @@ neutral {
   @include rgba-background($color-silver, $color-silver-opacity);
   &::selection,
   & *::selection {
-    background-color : $color-asbestos;
-    color            : $color-white;
+    @include rgba-background($color-asbestos);
+    color : $color-white;
   }
   &::-moz-selection,
   & *::-moz-selection {
-    background-color : $color-asbestos;
-    color            : $color-white;
+    @include rgba-background($color-asbestos);
+    color : $color-white;
   }
 }

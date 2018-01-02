@@ -8,24 +8,24 @@
     max-width : $input-max-width;
     margin    : 0;
     .initial-date-input {
-      max-width        : inherit;
-      width            : inherit;
-      outline          : none;
-      border-radius    : 3px;
-      border           : 1px solid $color-input-border;
-      padding          : 0 1.2rem 0 1.2rem;
-      color            : $color-input-color;
-      font-size        : 1rem;
-      font-weight      : 400;
-      line-height      : initial;
-      transition       : $transition;
-      height           : $input-height;
-      min-height       : $input-height;
-      cursor           : pointer;
-      background-color : $color-white;
-      user-select      : none;
-      font-family      : $font-family;
-      text-transform   : capitalize;
+      max-width      : inherit;
+      width          : inherit;
+      outline        : none;
+      border-radius  : 3px;
+      border         : 1px solid $color-input-border;
+      padding        : 0 1.2rem 0 1.2rem;
+      color          : $color-input-color;
+      font-size      : 1rem;
+      font-weight    : 400;
+      line-height    : initial;
+      transition     : $transition;
+      height         : $input-height;
+      min-height     : $input-height;
+      cursor         : pointer;
+      @include rgba-background($color-white);
+      user-select    : none;
+      font-family    : $font-family;
+      text-transform : capitalize;
       &.selected,
       &:hover, &:focus, &:active {
         border : 1px solid $color-green-sea;

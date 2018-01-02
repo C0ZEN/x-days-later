@@ -13,13 +13,13 @@ error {
   }
   &::selection,
   & *::selection {
-    background-color : $color-red;
-    color            : $color-white;
+    @include rgba-background($color-red);
+    color : $color-white;
   }
   &::-moz-selection,
   & *::-moz-selection {
-    background-color : $color-red;
-    color            : $color-white;
+    @include rgba-background($color-red);
+    color : $color-white;
   }
   &.with-animation {
     animation-name      : fadeInUp;

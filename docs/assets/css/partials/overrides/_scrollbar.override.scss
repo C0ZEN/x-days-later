@@ -1,11 +1,11 @@
 *::-webkit-scrollbar-track {
   -webkit-box-shadow : inset 0 0 0.4rem rgba(0, 0, 0, 0.3);
-  background-color   : $color-scrollbar-background;
+  @include rgba-background($color-scrollbar-background);
 }
 *::-webkit-scrollbar {
-  width            : 0.5rem;
-  background-color : $color-scrollbar-background;
+  width : 0.5rem;
+  @include rgba-background($color-scrollbar-background);
 }
 *::-webkit-scrollbar-thumb {
-  background-color : $color-scrollbar-foreground;
+  @include rgba-background($color-scrollbar-foreground);
 }
