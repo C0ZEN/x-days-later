@@ -5,6 +5,7 @@ neutral {
   background-color : #BDC3C720;
   display          : flex;
   flex-direction   : column;
+  @include rgba-background($color-silver, $color-silver-opacity);
   &::selection,
   & *::selection {
     background-color : $color-asbestos;

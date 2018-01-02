@@ -4,7 +4,7 @@ error {
   border-left    : 0.3rem solid $color-red;
   display        : flex;
   flex-direction : column;
-  @include rgba-background($color-red, $color-red-light-opacity);
+  @include rgba-background($color-red, $color-red-opacity);
   > span {
     margin-bottom : 0.5rem;
   }
