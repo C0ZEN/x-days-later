@@ -182,7 +182,10 @@
 
 		function onInitialDateChange() {
 			logService.fnCalled('onInitialDateChange');
-			$timeout(vm.methods.define21Date);
+			$timeout(function () {
+				vm.methods.hideDatepicker();
+				vm.methods.define21Date();
+			});
 		}
 	}
 })(window.angular);
@@ -616,7 +619,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('21-days version: 0.9.2');
+		console.info('21-days version: 0.9.3');
 	}
 })(window.angular);
 
