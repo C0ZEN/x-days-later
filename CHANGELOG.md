@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.9.4]
+
 ## [0.9.3]
 ### Changed
 - When the model change, close the datepicker

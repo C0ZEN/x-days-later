@@ -81,6 +81,11 @@
 	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService) {
 		var vm = this;
 
+		// Internal methods
+		var methods = {
+			execHideDatePicker: execHideDatePicker
+		};
+
 		// Public data
 		vm.data = {
 			controller: 'mainController',
@@ -158,12 +163,12 @@
 			vm.methods.hideDatepicker();
 		}
 
-		function hideDatepicker() {
+		function hideDatepicker($force) {
 			logService.fnCalled('hideDatepicker');
-			if (vm.methods.isDatepickerOpen() && !vm.methods.isHoverDatepicker()) {
-				vm.data.showDatepicker = false;
-				vm.methods.define21Date();
-				Methods.safeApply($scope);
+			if (true === $force) {
+				methods.execHideDatePicker();
+			} else if (vm.methods.isDatepickerOpen() && !vm.methods.isHoverDatepicker()) {
+				methods.execHideDatePicker();
 			}
 		}
 
@@ -183,9 +188,15 @@
 		function onInitialDateChange() {
 			logService.fnCalled('onInitialDateChange');
 			$timeout(function () {
-				vm.methods.hideDatepicker();
+				vm.methods.hideDatepicker(true);
 				vm.methods.define21Date();
 			});
+		}
+
+		function execHideDatePicker() {
+			vm.data.showDatepicker = false;
+			vm.methods.define21Date();
+			Methods.safeApply($scope);
 		}
 	}
 })(window.angular);
@@ -619,7 +630,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('21-days version: 0.9.3');
+		console.info('21-days version: 0.9.4');
 	}
 })(window.angular);
 
