@@ -128,7 +128,10 @@
 
 		function onInitialDateChange() {
 			logService.fnCalled('onInitialDateChange');
-			$timeout(vm.methods.define21Date);
+			$timeout(() => {
+				vm.methods.hideDatepicker();
+				vm.methods.define21Date();
+			});
 		}
 	}
 
