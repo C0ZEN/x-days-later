@@ -45,7 +45,7 @@
 
 		// Public methods
 		vm.methods = {
-			define21Date,
+			defineDate,
 			onDatepickerClick,
 			toggleDatepicker,
 			onDatepickerEnter,
@@ -65,7 +65,7 @@
 		// Watch initialDate changes
 		$scope.$watch('initialDate', () => {
 			$timeout(() => {
-				vm.methods.define21Date();
+				vm.methods.defineDate();
 			});
 		});
 
@@ -77,9 +77,9 @@
 			vm.data.history = $data.newHistory;
 		});
 
-		function define21Date() {
-			logService.fnCalled('define21Date');
-			vm.calculatedDate = dateService.add21days(vm.initialDate);
+		function defineDate() {
+			logService.fnCalled('defineDate');
+			vm.calculatedDate = dateService.addDays(vm.data.xDays, vm.initialDate);
 		}
 
 		function onDatepickerClick($event) {
@@ -91,7 +91,7 @@
 		function toggleDatepicker() {
 			logService.fnCalled('toggleDatepicker');
 			vm.data.showDatepicker = !vm.data.showDatepicker;
-			vm.methods.define21Date();
+			vm.methods.defineDate();
 		}
 
 		function onDatepickerEnter() {
@@ -137,13 +137,13 @@
 			logService.fnCalled('onInitialDateChange');
 			$timeout(() => {
 				vm.methods.hideDatepicker(true);
-				vm.methods.define21Date();
+				vm.methods.defineDate();
 			});
 		}
 
 		function execHideDatePicker() {
 			vm.data.showDatepicker = false;
-			vm.methods.define21Date();
+			vm.methods.defineDate();
 			Methods.safeApply($scope);
 		}
 	}

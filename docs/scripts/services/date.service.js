@@ -24,7 +24,6 @@
 	function dateService(moment, logService, appConstant, calculatedDateHistoryService) {
 		const data = {
 			service : 'dateService',
-			days    : 21,
 			sunday  : 0,
 			saturday: 6,
 			one     : 1,
@@ -45,13 +44,13 @@
 		};
 
 		return {
-			add21days,
+			addDays,
 			toISOString,
 			toString
 		};
 
-		function add21days($date) {
-			logService.fnCalledService(data.service, 'add21days');
+		function addDays($days, $date) {
+			logService.fnCalledService(data.service, 'addDays');
 			if ($date) {
 				logService.service(data.service, 'original date is: ' + $date);
 				calculatedDateHistoryService.reset();
@@ -62,8 +61,8 @@
 				calculatedDateHistoryService.setOriginal(methods.toTimestamp(date));
 
 				// Add 21 days
-				date = methods.add(date, data.days, 'days');
-				logService.service(data.service, 'new +21 days date is: ' + methods.readable(date));
+				date = methods.add(date, $days, 'days');
+				logService.service(data.service, 'new +' + $days + ' days date is: ' + methods.readable(date));
 				calculatedDateHistoryService.setCalculated(methods.toTimestamp(date));
 
 				return methods.weekendAndExceptionsStuff(date);
