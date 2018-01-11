@@ -11,6 +11,7 @@
            id="x-days-input" 
            name="x-days-input"
            tabindex="0"
+           min="1"
            ng-change="vm.methods.onDaysInputChange()">
 </column>
 
