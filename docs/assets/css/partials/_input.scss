@@ -20,6 +20,14 @@
 	min-height    : $input-height;
 	@include rgba-background($color-white);
 	font-family   : $font-family;
+	&[type="number"]::-webkit-outer-spin-button,
+	&[type="number"]::-webkit-inner-spin-button {
+	  -webkit-appearance : none;
+	  margin             : 0;
+	}
+	&[type="number"] {
+	  -moz-appearance : textfield;
+	}
 	&:hover, &:focus, &:active {
 	  @include rgba-border(1px, solid, $color-green-sea);
 	}
