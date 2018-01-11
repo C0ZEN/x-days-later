@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.10.1]
+
 ## [0.10.0]
 ### Added
 - New input to choose the number of days instead of a fixed 21 days
