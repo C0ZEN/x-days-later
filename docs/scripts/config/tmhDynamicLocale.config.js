@@ -1,5 +1,5 @@
 /**
- * Generated header by C0ZEN for 21-days project
+ * Generated header by C0ZEN for x-days-later project
  * Generated file tmhDynamicLocale.config on WebStorm
  *
  * Created by: Geoffrey "C0ZEN" Testelin
@@ -11,7 +11,7 @@
 	'use strict';
 
 	angular
-		.module('21days')
+		.module('xDaysLater')
 		.config(config);
 
 	config.$inject = [
@@ -20,7 +20,7 @@
 
 	function config(tmhDynamicLocaleProvider) {
 		tmhDynamicLocaleProvider
-			.localeLocationPattern('/21-days/bower_components/angular-i18n/angular-locale_{{locale}}.js')
+			.localeLocationPattern('/x-days-later/bower_components/angular-i18n/angular-locale_{{locale}}.js')
 			.defaultLocale('fr');
 	}
 

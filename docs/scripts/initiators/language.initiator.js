@@ -1,5 +1,5 @@
 /**
- * Generated header by C0ZEN for 21-days project
+ * Generated header by C0ZEN for x-days-later project
  * Generated file language.initiator on WebStorm
  *
  * Created by: Geoffrey "C0ZEN" Testelin
@@ -11,7 +11,7 @@
 	'use strict';
 
 	angular
-		.module('21days')
+		.module('xDaysLater')
 		.run(config);
 
 	config.$inject = [

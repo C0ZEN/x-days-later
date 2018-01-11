@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New input to choose the number of days instead of a fixed 21 days
+
+### Changed
+- Renamed the app to `x-days-later`
 
 ## [0.9.5]
 ### Changed

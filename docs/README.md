@@ -1,3 +1,18 @@
+## Choisir le nombre de jours
+
+<column class="x-days">
+    <label class="x-days-label"
+           for="x-days-input">
+        Choisissez un nombre de jours:
+    </label>
+    <input class="x-days-input"
+           type="number" 
+           ng-model="vm.data.xDays" 
+           id="x-days-input" 
+           name="x-days-input"
+           tabindex="0">
+</column>
+
 ## Choisir une date
 
 <column class="initial-date">
@@ -38,7 +53,7 @@
 
 <column class="calculated-date">
     <span class="calculated-date-label">
-        Date calculée à 21 jours:
+        Date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours:
     </span>
     <row>
         <date class="calculated-date-value-container">
@@ -66,7 +81,7 @@
         <span>La date sélectionnée est le <strong>{% raw %}{{ vm.data.history.original.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
     </row>
     <row>
-        <span>La date calculée à 21 jours est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
+        <span>La date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
     </row>
     <br>
     <row ng-if="!vm.data.history.exception">
@@ -105,13 +120,13 @@
 ## Comment ça marche ?
 
 Saisissez une `date`.  
-Une date à `date + 21 jours` sera alors calculée.
+Une date à `date + {% raw %}{{ vm.data.xDays }}{% endraw %} jours` sera alors calculée.
 
 ### Exceptions
 
 <neutral>
     <row>
-        <span>Si la <code>date + 21 jours</code> est un samedi ou un dimanche,</span>
+        <span>Si la <code>date + {% raw %}{{ vm.data.xDays }}{% endraw %} jours</code> est un samedi ou un dimanche,</span>
     </row>  
     <row>
         <span>Alors la date calculée sera le lundi suivant.</span>

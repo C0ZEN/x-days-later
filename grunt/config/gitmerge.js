@@ -1,5 +1,5 @@
 /**
- * Generated header by Cozen for generator-cozen-angular project
+ * Generated header by Cozen for x-days-later project
  * Generated file gitmerge on WebStorm
  *
  * Created by: Geoffrey "C0ZEN" Testelin

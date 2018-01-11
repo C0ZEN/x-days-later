@@ -1,5 +1,5 @@
 /**
- * Generated header by C0ZEN for 21-days project
+ * Generated header by C0ZEN for x-days-later project
  * Generated file babel on WebStorm
  *
  * Created by: Geoffrey "C0ZEN" Testelin
@@ -16,7 +16,7 @@ module.exports = {
 	},
 	concatScripts: {
 		files: {
-			'docs/release/21-days.js': '.tmp/release/scripts.js'
+			'docs/release/x-days-later.js': '.tmp/release/scripts.js'
 		}
 	},
 	uglifyScripts: {
@@ -26,7 +26,7 @@ module.exports = {
 			comments: false
 		},
 		files  : {
-			'docs/release/21-days.min.js': 'docs/release/21-days.js'
+			'docs/release/x-days-later.min.js': 'docs/release/x-days-later.js'
 		}
 	}
 };

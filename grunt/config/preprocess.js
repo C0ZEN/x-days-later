@@ -1,5 +1,5 @@
 /**
- * Generated header by Cozen for 21-days project
+ * Generated header by Cozen for x-days-later project
  * Generated file preprocess on WebStorm
  *
  * Created by: Geoffrey "C0ZEN" Testelin

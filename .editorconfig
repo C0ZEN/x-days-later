@@ -1,2 +1,5 @@
 [*.{md,markdown}]
 trim_trailing_whitespace = false
+
+[*]
+indent_style = tab

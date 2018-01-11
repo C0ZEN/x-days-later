@@ -1,5 +1,5 @@
 /**
- * Generated header by Cozen for 21-days project
+ * Generated header by Cozen for x-days-later project
  * Generated file version.initiator on WebStorm
  *
  * Created by: Geoffrey "C0ZEN" Testelin
@@ -11,13 +11,13 @@
 	'use strict';
 
 	angular
-		.module('21days')
+		.module('xDaysLater')
 		.run(config);
 
 	config.$inject = [];
 
 	function config() {
-		console.info('21-days version: /* @echo version */');
+		console.info('x-days-later version: /* @echo version */');
 	}
 
 }(window.angular));

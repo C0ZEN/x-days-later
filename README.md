@@ -1,6 +1,6 @@
-# 21-days
+# x-days-later
 [![Software License][license-image]](LICENSE)
-> Use this app to find a date at 21 days later
+> Use this app to find a date at X days later
 
 ## Contributing
 
@@ -12,7 +12,7 @@ Check out the [Contributing](CONTRIBUTING.md) file.
 
 ## Documentation
 
-You can also see me [beautifully](https://c0zen.github.io/21-days/).
+You can also see me [beautifully](https://c0zen.github.io/x-days-later/).
 
 ## License
 

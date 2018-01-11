@@ -1,6 +1,6 @@
 /**
- * Generated header by Geoffrey Testelin for 21-days project
- * Created with: generator-cozen-angular
+ * Generated header by Geoffrey Testelin for x-days-later project
+ * Created with: x-days-later
  *
  * Created by: Geoffrey Testelin
  * Date: 29/12/2017
@@ -11,7 +11,7 @@
 	'use strict';
 
 	angular
-		.module('21days')
+		.module('xDaysLater')
 		.controller('mainController', mainController);
 
 	mainController.$inject = [
@@ -39,7 +39,8 @@
 			initialDate      : null,
 			showDatepicker   : false,
 			isHoverDatepicker: false,
-			history          : null
+			history          : null,
+			xDays            : 21
 		};
 
 		// Public methods
