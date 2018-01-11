@@ -10,7 +10,8 @@
            ng-model="vm.data.xDays" 
            id="x-days-input" 
            name="x-days-input"
-           tabindex="0">
+           tabindex="0"
+           ng-change="vm.methods.onDaysInputChange()">
 </column>
 
 ## Choisir une date

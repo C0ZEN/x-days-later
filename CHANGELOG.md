@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- When the input days change, the date is recalculated
+- Input styles
 
 ## [0.10.3]
 ### Changed

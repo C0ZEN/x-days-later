@@ -1,0 +1,27 @@
+.x-days {
+  .x-days-label {
+	cursor        : pointer;
+	margin-bottom : $label-bottom-space;
+	display       : inline-table;
+  }
+  .x-days-input {
+	max-width     : $input-max-width;
+	width         : inherit;
+	outline       : none;
+	border-radius : 3px;
+	@include rgba-border(1px, solid, $color-input-border);
+	padding       : 0 1.2rem 0 1.2rem;
+	color         : $color-input-color;
+	font-size     : 1rem;
+	font-weight   : 400;
+	line-height   : initial;
+	transition    : $transition;
+	height        : $input-height;
+	min-height    : $input-height;
+	@include rgba-background($color-white);
+	font-family   : $font-family;
+	&:hover, &:focus, &:active {
+	  @include rgba-border(1px, solid, $color-green-sea);
+	}
+  }
+}

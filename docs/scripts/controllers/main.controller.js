@@ -55,7 +55,8 @@
 			isDatepickerOpen,
 			isHoverDatepicker,
 			onCopySuccess,
-			onInitialDateChange
+			onInitialDateChange,
+			onDaysInputChange
 		};
 
 		// Init
@@ -145,6 +146,10 @@
 			vm.data.showDatepicker = false;
 			vm.methods.defineDate();
 			Methods.safeApply($scope);
+		}
+
+		function onDaysInputChange() {
+			$timeout(vm.methods.defineDate);
 		}
 	}
 
