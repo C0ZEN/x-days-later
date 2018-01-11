@@ -109,7 +109,8 @@
 			isDatepickerOpen: isDatepickerOpen,
 			isHoverDatepicker: isHoverDatepicker,
 			onCopySuccess: onCopySuccess,
-			onInitialDateChange: onInitialDateChange
+			onInitialDateChange: onInitialDateChange,
+			onDaysInputChange: onDaysInputChange
 		};
 
 		// Init
@@ -198,6 +199,10 @@
 			vm.data.showDatepicker = false;
 			vm.methods.defineDate();
 			Methods.safeApply($scope);
+		}
+
+		function onDaysInputChange() {
+			$timeout(vm.methods.defineDate);
 		}
 	}
 })(window.angular);
@@ -631,7 +636,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.10.3');
+		console.info('x-days-later version: 0.10.4');
 	}
 })(window.angular);
 
