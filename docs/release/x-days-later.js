@@ -99,7 +99,7 @@
 
 		// Public methods
 		vm.methods = {
-			define21Date: define21Date,
+			defineDate: defineDate,
 			onDatepickerClick: onDatepickerClick,
 			toggleDatepicker: toggleDatepicker,
 			onDatepickerEnter: onDatepickerEnter,
@@ -119,7 +119,7 @@
 		// Watch initialDate changes
 		$scope.$watch('initialDate', function () {
 			$timeout(function () {
-				vm.methods.define21Date();
+				vm.methods.defineDate();
 			});
 		});
 
@@ -131,9 +131,9 @@
 			vm.data.history = $data.newHistory;
 		});
 
-		function define21Date() {
-			logService.fnCalled('define21Date');
-			vm.calculatedDate = dateService.add21days(vm.initialDate);
+		function defineDate() {
+			logService.fnCalled('defineDate');
+			vm.calculatedDate = dateService.addDays(vm.data.xDays, vm.initialDate);
 		}
 
 		function onDatepickerClick($event) {
@@ -145,7 +145,7 @@
 		function toggleDatepicker() {
 			logService.fnCalled('toggleDatepicker');
 			vm.data.showDatepicker = !vm.data.showDatepicker;
-			vm.methods.define21Date();
+			vm.methods.defineDate();
 		}
 
 		function onDatepickerEnter() {
@@ -190,13 +190,13 @@
 			logService.fnCalled('onInitialDateChange');
 			$timeout(function () {
 				vm.methods.hideDatepicker(true);
-				vm.methods.define21Date();
+				vm.methods.defineDate();
 			});
 		}
 
 		function execHideDatePicker() {
 			vm.data.showDatepicker = false;
-			vm.methods.define21Date();
+			vm.methods.defineDate();
 			Methods.safeApply($scope);
 		}
 	}
@@ -389,7 +389,6 @@
 	function dateService(moment, logService, appConstant, calculatedDateHistoryService) {
 		var data = {
 			service: 'dateService',
-			days: 21,
 			sunday: 0,
 			saturday: 6,
 			one: 1,
@@ -410,13 +409,13 @@
 		};
 
 		return {
-			add21days: add21days,
+			addDays: addDays,
 			toISOString: toISOString,
 			toString: toString
 		};
 
-		function add21days($date) {
-			logService.fnCalledService(data.service, 'add21days');
+		function addDays($days, $date) {
+			logService.fnCalledService(data.service, 'addDays');
 			if ($date) {
 				logService.service(data.service, 'original date is: ' + $date);
 				calculatedDateHistoryService.reset();
@@ -427,8 +426,8 @@
 				calculatedDateHistoryService.setOriginal(methods.toTimestamp(date));
 
 				// Add 21 days
-				date = methods.add(date, data.days, 'days');
-				logService.service(data.service, 'new +21 days date is: ' + methods.readable(date));
+				date = methods.add(date, $days, 'days');
+				logService.service(data.service, 'new +' + $days + ' days date is: ' + methods.readable(date));
 				calculatedDateHistoryService.setCalculated(methods.toTimestamp(date));
 
 				return methods.weekendAndExceptionsStuff(date);
@@ -632,7 +631,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.10.2');
+		console.info('x-days-later version: 0.10.3');
 	}
 })(window.angular);
 
