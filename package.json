@@ -45,8 +45,7 @@
         "q": "^1.5.1",
         "time-grunt": "^1.4.0"
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "scripts": {
         "lint": "eslint . --fix",
         "postinstall": "bower update"

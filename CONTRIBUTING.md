@@ -11,8 +11,10 @@ grunt release
 It will automatically:
 
 - Build the release
-- Publish to npm
+- Commit to develop
+- Merge the develop into the master
 - Push a new git tag
+- Build the release with jekyll (by GitHub)
 
 You can also lint the code:
 
