@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.12.8]
 ### Added
 - Logs to know on how many ms the body is loaded
 - `defer` attr to scripts injection
