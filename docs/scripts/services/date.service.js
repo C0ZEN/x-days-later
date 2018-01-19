@@ -66,7 +66,7 @@
 				for (let i = 0; i < days; i++) {
 
 					// Add 1 day
-					date = methods.add(date, date.one, 'days');
+					date = methods.add(date, data.one, 'days');
 
 					// Check if this is the weekend
 					if (methods.isWeekend(date)) {

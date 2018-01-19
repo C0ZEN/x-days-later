@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Fixed
 - Background color of the header when maintenance is active
+- Wrong calc of the date
 
 ## [0.11.1]
 ### Fixed
