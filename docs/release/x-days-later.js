@@ -4,7 +4,7 @@
 (function (angular) {
 	'use strict';
 
-	angular.module('xDaysLater', ['tmh.dynamicLocale', '720kb.datepicker', 'ngclipboard', 'ngAnimate', 'log.ex.uo', 'LocalStorageModule']);
+	angular.module('xDaysLater', ['720kb.datepicker', 'ngclipboard', 'ngAnimate', 'log.ex.uo', 'LocalStorageModule']);
 })(window.angular);
 
 (function (angular) {
@@ -655,7 +655,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.12.6');
+		console.info('x-days-later version: 0.12.7');
 	}
 })(window.angular);
 
