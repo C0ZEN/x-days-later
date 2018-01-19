@@ -70,6 +70,7 @@
 			data.history.calculated = {
 				date: $date
 			};
+			methods.notify();
 		}
 
 		/**

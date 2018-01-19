@@ -8,6 +8,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Readme `how does it works` section
 
+### Fixed
+- The `notify` method is now called when the `setCalculated` is called
+
 ## [0.11.2]
 ### Fixed
 - Background color of the header when maintenance is active
