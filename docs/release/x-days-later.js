@@ -645,7 +645,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.13.1');
+		console.info('Current version: 0.13.2');
 	}
 })(window.angular);
 
