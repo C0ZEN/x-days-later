@@ -1,6 +1,6 @@
 error {
   margin         : $messages-margin;
-  padding        : 0.1rem $messages-padding;
+  padding        : 0.3rem $messages-padding;
   @include rgba-border-left(0.3rem, solid, $color-red);
   display        : flex;
   flex-direction : column;
@@ -12,7 +12,7 @@ error {
 	align-items     : center;
 	quantity {
 	  font-weight : 600;
-	  font-size   : 1.8rem;
+	  font-size   : 1.6rem;
 	  color       : $color-red;
 	}
 	text {
