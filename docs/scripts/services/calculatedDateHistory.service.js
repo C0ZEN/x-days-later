@@ -36,7 +36,8 @@
 			setOriginal,
 			setCalculated,
 			addFerie,
-			addWeekend
+			addWeekend,
+			addSunday
 		};
 
 		function subscribe($scope, $callback) {
@@ -93,6 +94,11 @@
 
 		function addWeekend($data) {
 			logService.service(data.service, 'weekend');
+			methods.newException($data);
+		}
+
+		function addSunday($data) {
+			logService.service(data.service, 'sunday');
 			methods.newException($data);
 		}
 	}

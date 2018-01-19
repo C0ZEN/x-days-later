@@ -81,6 +81,13 @@
 							};
 							calculatedDateHistoryService.addWeekend(weekend);
 						}
+						else if (0 === i && methods.isSunday(date)) {
+							weekend = {
+								sunday: methods.toTimestamp(date),
+								type  : 'sunday'
+							};
+							calculatedDateHistoryService.addSunday(weekend);
+						}
 					}
 
 					// Check if this is an fr exception

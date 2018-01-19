@@ -109,6 +109,12 @@
     		<strong>{% raw %}{{ exception.saturday | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>
     	</text>
     </span>
+    <span ng-switch-when="sunday">
+        	<quantity>+1</quantity>
+        	<text>
+        		<strong>{% raw %}{{ exception.sunday | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>
+        	</text>
+        </span>
     <span ng-switch-when="ferie">
     	<quantity>+1</quantity>
     	<text>
