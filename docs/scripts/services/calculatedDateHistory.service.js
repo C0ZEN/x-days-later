@@ -35,7 +35,6 @@
 			reset,
 			setOriginal,
 			setCalculated,
-			setFinal,
 			addFerie,
 			addSunday,
 			addSaturday
