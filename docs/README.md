@@ -109,8 +109,10 @@
 
 ## Comment ça marche ?
 
-Saisissez une `date`.  
-Une date à `date + {% raw %}{{ vm.data.xDays }}{% endraw %} jours` sera alors calculée.
+Choisissez un `nombre de jours`.  
+Choisissez une `date`.  
+Une date à `date + {% raw %}{{ vm.data.xDays }}{% endraw %} jours` sera alors calculée.  
+Elle prendra compte des jours ouvrés.
 
 ### Exceptions
 
@@ -119,15 +121,15 @@ Une date à `date + {% raw %}{{ vm.data.xDays }}{% endraw %} jours` sera alors c
         <span>Si la <code>date + {% raw %}{{ vm.data.xDays }}{% endraw %} jours</code> est un samedi ou un dimanche,</span>
     </row>  
     <row>
-        <span>Alors la date calculée sera le lundi suivant.</span>
+        <span>Alors la date calculée sera le lundi suivant et le jour ne sera pas comptabilisé.</span>
     </row>  
 </neutral>
 
 <neutral>
     <row>
-        <span>Si la date calculée est un jour férié,  </span>
+        <span>Si la date calculée est un jour férié,</span>
     </row>  
     <row>
-        <span>Alors la date calculée sera le jour suivant non férié.</span>
+        <span>Alors la date calculée sera le jour suivant non férié et le jour ne sera pas comptabilisé.</span>
     </row>  
 </neutral>
