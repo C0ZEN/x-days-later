@@ -306,8 +306,7 @@
 			setOriginal: setOriginal,
 			setCalculated: setCalculated,
 			addFerie: addFerie,
-			addSunday: addSunday,
-			addSaturday: addSaturday
+			addWeekend: addWeekend
 		};
 
 		function subscribe($scope, $callback) {
@@ -363,13 +362,8 @@
 			$rootScope.$emit(data.service + ':newHistory');
 		}
 
-		function addSunday($data) {
-			logService.service(data.service, 'sunday');
-			methods.newException($data);
-		}
-
-		function addSaturday($data) {
-			logService.service(data.service, 'saturday');
+		function addWeekend($data) {
+			logService.service(data.service, 'weekend');
 			methods.newException($data);
 		}
 	}
@@ -459,16 +453,13 @@
 					if (methods.isWeekend(date)) {
 						logService.service(data.service, 'isWeekend');
 						weekend = {
-							currentDate: methods.toTimestamp(date),
-							type: methods.isSunday(date) ? 'sunday' : 'saturday'
+							sunday: methods.toTimestamp(date)
 						};
 						days++;
 
 						// If sunday
 						if ('sunday' === weekend.type) {
-							calculatedDateHistoryService.addSunday(weekend);
-						} else {
-							calculatedDateHistoryService.addSaturday(weekend);
+							calculatedDateHistoryService.addWeekend(weekend);
 						}
 					}
 
@@ -476,7 +467,6 @@
 					else if (date.isFerie()) {
 							logService.service(data.service, 'isFerie');
 							ferie = {
-								currentDate: methods.toTimestamp(date),
 								ferie: date.getFerie()
 							};
 							days++;
@@ -654,7 +644,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.12.12');
+		console.info('Current version: 0.12.13');
 	}
 })(window.angular);
 
