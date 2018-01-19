@@ -17,7 +17,7 @@
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: /* @echo version */');
+		console.info('Current version: /* @echo version */');
 	}
 
 }(window.angular));

@@ -21,7 +21,7 @@
 
 	function config(moment, appConstant) {
 		moment.locale(appConstant.lang.current);
-		console.info('x-days-later lang:', appConstant.lang.current);
+		console.info('Lang:', appConstant.lang.current);
 	}
 
 }(window.angular));

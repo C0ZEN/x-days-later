@@ -19,8 +19,7 @@
 	];
 
 	function config(maintenanceService) {
-		const maintenance = maintenanceService.isInMaintenance();
-		console.info('x-days-later maintenance:', maintenance ? 'active' : 'disabled');
+		console.info('Maintenance status:', maintenanceService.isInMaintenance() ? 'on' : 'off');
 	}
 
 }(window.angular));
