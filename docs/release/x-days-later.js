@@ -306,7 +306,8 @@
 			setOriginal: setOriginal,
 			setCalculated: setCalculated,
 			addFerie: addFerie,
-			addWeekend: addWeekend
+			addWeekend: addWeekend,
+			addSunday: addSunday
 		};
 
 		function subscribe($scope, $callback) {
@@ -363,6 +364,11 @@
 
 		function addWeekend($data) {
 			logService.service(data.service, 'weekend');
+			methods.newException($data);
+		}
+
+		function addSunday($data) {
+			logService.service(data.service, 'sunday');
 			methods.newException($data);
 		}
 	}
@@ -460,6 +466,12 @@
 								type: 'weekend'
 							};
 							calculatedDateHistoryService.addWeekend(weekend);
+						} else if (0 === i && methods.isSunday(date)) {
+							weekend = {
+								sunday: methods.toTimestamp(date),
+								type: 'sunday'
+							};
+							calculatedDateHistoryService.addSunday(weekend);
 						}
 					}
 
@@ -645,7 +657,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.13.2');
+		console.info('Current version: 0.13.3');
 	}
 })(window.angular);
 
