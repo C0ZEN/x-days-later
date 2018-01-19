@@ -15,8 +15,7 @@ module.exports = function (grunt) {
 			'preprocess:versionInitiator',
 			'concat:release',
 			'babel:concatScripts',
-			'babel:uglifyScripts',
-			'force:build'
+			'babel:uglifyScripts'
 		]);
 	});
 };
