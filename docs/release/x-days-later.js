@@ -446,7 +446,7 @@
 				for (var i = 0; i < days; i++) {
 
 					// Add 1 day
-					date = methods.add(date, date.one, 'days');
+					date = methods.add(date, data.one, 'days');
 
 					// Check if this is the weekend
 					if (methods.isWeekend(date)) {
@@ -647,7 +647,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.11.1');
+		console.info('x-days-later version: 0.11.2');
 	}
 })(window.angular);
 
