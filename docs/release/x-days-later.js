@@ -54,17 +54,17 @@
 
 	angular.module('xDaysLater').constant('appConstant', {
 		logs: {
-			enabled: true
+			enabled: false
 		},
 		lang: {
 			current: 'fr'
 		},
-		debugInfoEnabled: true,
+		debugInfoEnabled: false,
 		moment: {
 			readableFormat: 'dddd DD MMMM YYYY'
 		},
 		maintenance: {
-			active: true
+			active: false
 		}
 	});
 })(window.angular);
@@ -648,7 +648,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.11.8');
+		console.info('x-days-later version: 0.11.9');
 	}
 })(window.angular);
 
