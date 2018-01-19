@@ -12,7 +12,6 @@
 
 	angular
 		.module('xDaysLater', [
-			'tmh.dynamicLocale',
 			'720kb.datepicker',
 			'ngclipboard',
 			'ngAnimate',
