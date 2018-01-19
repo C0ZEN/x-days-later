@@ -20,7 +20,8 @@
 	];
 
 	function config($compileProvider, appConstant) {
-		$compileProvider.debugInfoEnabled(appConstant.debugInfoEnabled);
+		$compileProvider
+			.debugInfoEnabled(appConstant.debugInfoEnabled);
 	}
 
 }(window.angular));

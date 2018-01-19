@@ -16,7 +16,8 @@
 			'720kb.datepicker',
 			'ngclipboard',
 			'ngAnimate',
-			'log.ex.uo'
+			'log.ex.uo',
+			'LocalStorageModule'
 		]);
 
 })(window.angular);

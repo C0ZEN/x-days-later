@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New bower dependency `angular-local-storage`
+
+### Changed
+- The number of days are now set in the local storage
 
 ## [0.11.9]
 ### Changed

@@ -22,11 +22,17 @@
 		'$timeout',
 		'copyService',
 		'calculatedDateHistoryService',
-		'maintenanceService'
+		'maintenanceService',
+		'localStorageService'
 	];
 
-	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService, maintenanceService) {
+	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService, maintenanceService, localStorageService) {
 		const vm = this;
+
+		// Internal data
+		const data = {
+			days: 21
+		};
 
 		// Internal methods
 		const methods = {
@@ -41,7 +47,7 @@
 			showDatepicker   : false,
 			isHoverDatepicker: false,
 			history          : null,
-			xDays            : 21,
+			xDays            : localStorageService.get('days') || data.days,
 			maintenance      : maintenanceService.isInMaintenance()
 		};
 
@@ -151,7 +157,10 @@
 		}
 
 		function onDaysInputChange() {
-			$timeout(vm.methods.defineDate);
+			$timeout(() => {
+				vm.methods.defineDate();
+				localStorageService.set('days', vm.data.xDays);
+			});
 		}
 	}
 
