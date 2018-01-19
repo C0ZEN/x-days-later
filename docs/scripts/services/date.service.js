@@ -74,10 +74,10 @@
 						days++;
 
 						// If sunday
-						if (methods.isSunday(date)) {
+						if (methods.isSaturday(date)) {
 							weekend = {
-								sunday: methods.toTimestamp(date),
-								type  : 'weekend'
+								saturday: methods.toTimestamp(date),
+								type    : 'weekend'
 							};
 							calculatedDateHistoryService.addWeekend(weekend);
 						}

@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Codeclimate config file
+- Codeclimate maintainability badge
+- dependencies badge
+- dev dependencies badge
+
+### Changed
+- Used saturday instead of sunday for errors
 
 ## [0.12.17]
 ### Changed

@@ -106,7 +106,7 @@
     	<quantity>+2</quantity>
     	<text>
     		Weekend du
-    		<strong>{% raw %}{{ exception.sunday | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>
+    		<strong>{% raw %}{{ exception.saturday | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>
     	</text>
     </span>
     <span ng-switch-when="ferie">
