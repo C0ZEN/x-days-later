@@ -7,22 +7,22 @@ error {
   @include rgba-background($color-red, $color-red-opacity);
   &::selection,
   & *::selection {
-    @include rgba-background($color-red);
-    color : $color-white;
+	@include rgba-background($color-red);
+	color : $color-white;
   }
   &::-moz-selection,
   & *::-moz-selection {
-    @include rgba-background($color-red);
-    color : $color-white;
+	@include rgba-background($color-red);
+	color : $color-white;
   }
   &.with-animation {
-    animation-name      : fadeInUp;
-    animation-fill-mode : both;
-    animation-duration  : 200ms;
+	animation-name      : fadeInUp;
+	animation-fill-mode : both;
+	animation-duration  : 200ms;
   }
   &.ng-leave,
   &.ng-hide {
-    display            : none !important;
-    animation-duration : 0ms !important;
+	display            : none !important;
+	animation-duration : 0ms !important;
   }
 }
