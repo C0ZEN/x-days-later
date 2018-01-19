@@ -77,7 +77,7 @@
 						days++;
 
 						// If sunday
-						if ('sunday' === weekend.type) {
+						if (methods.isSunday(date)) {
 							calculatedDateHistoryService.addWeekend(weekend);
 						}
 					}

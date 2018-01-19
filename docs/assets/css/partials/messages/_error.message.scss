@@ -5,6 +5,12 @@ error {
   display        : flex;
   flex-direction : column;
   @include rgba-background($color-red, $color-red-opacity);
+  quantity {
+
+  }
+  strong {
+
+  }
   &::selection,
   & *::selection {
 	@include rgba-background($color-red);
