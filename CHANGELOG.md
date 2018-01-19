@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.12.2]
 ### Added
 - New bower dependency `grunt-usemin`
 - New grunt config file `copy` to copy the `default.html` file

@@ -16,7 +16,7 @@ module.exports = function (grunt) {
 			'concat:release',
 			'babel:concatScripts',
 			'babel:uglifyScripts',
-			'build --force'
+			'force:build'
 		]);
 	});
 };

@@ -17,7 +17,8 @@ module.exports = function (grunt) {
 		jitGrunt  : {
 			customTasksDir: 'grunt/tasks',
 			staticMappings: {
-				useminPrepare: 'grunt-usemin'
+				useminPrepare: 'grunt-usemin',
+				force        : 'grunt-force-task'
 			}
 		},
 		data      : {
