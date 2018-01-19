@@ -13,7 +13,9 @@ module.exports = function (grunt) {
 			'copy:defaultHtml',
 			'useminPrepare',
 			'concat:generated',
-			'usemin'
+			'usemin',
+			'sass:loader',
+			'htmlmin:defaultTemplate'
 		]);
 	});
 };

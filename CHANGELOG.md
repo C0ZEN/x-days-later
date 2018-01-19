@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New npm dependency `grunt-sass`
+- New npm dependency `grunt-contrib-htmlmin`
+- New file `loader.css` dedicated to display the loader
+- New grunt config file `sass` to compile `loader.scss`
+- New grunt config file `htmlmin` to compile `default.clean.html`
+
+### Changed
+- Async behavior added for vendors link
 
 ## [0.12.8]
 ### Added
@@ -34,7 +43,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.12.2]
 ### Added
-- New bower dependency `grunt-usemin`
+- New npm dependency `grunt-usemin`
 - New grunt config file `copy` to copy the `default.html` file
 - New grunt config file `usemin`
 - New grunt config file `useminPrepare`
