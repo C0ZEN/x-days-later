@@ -24,7 +24,7 @@
     </label>
     <datepicker class="initial-date-datepicker"
                 date-set="{% raw %}{{vm.data.today}}{% endraw %}"
-                date-format="EEEE dd MMMM yyyy"
+                date-format="EEEE d MMMM yyyy"
                 date-week-start-day="1"
                 date-typer="false"
                 button-prev="<svg viewBox='0 0 50 50'><g><path d='M 34.960938 2.980469 C 34.441406 2.996094 33.949219 3.214844 33.585938 3.585938 L 13.585938 23.585938 C 12.804688 24.367188 12.804688 25.632813 13.585938 26.414063 L 33.585938 46.414063 C 34.085938 46.9375 34.832031 47.148438 35.535156 46.964844 C 36.234375 46.78125 36.78125 46.234375 36.964844 45.535156 C 37.148438 44.832031 36.9375 44.085938 36.414063 43.585938 L 17.828125 25 L 36.414063 6.414063 C 37.003906 5.839844 37.183594 4.960938 36.863281 4.199219 C 36.539063 3.441406 35.785156 2.957031 34.960938 2.980469 Z '></path></g></svg>"
@@ -59,7 +59,7 @@
     </span>
     <row>
         <date class="calculated-date-value-container">
-            <value class="calculated-date-value">{% raw %}{{ vm.calculatedDate | date:'EEEE dd MMMM yyyy' }}{% endraw %}</value>
+            <value class="calculated-date-value">{% raw %}{{ vm.calculatedDate | date:'EEEE d MMMM yyyy' }}{% endraw %}</value>
         </date>
         <copy-btn ngclipboard 
                   data-clipboard-target=".calculated-date-value"
@@ -80,10 +80,10 @@
 
 <p ng-if="vm.data.history">
     <row>
-        <span>La date sélectionnée est le <strong>{% raw %}{{ vm.data.history.original.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
+        <span>La date sélectionnée est le <strong>{% raw %}{{ vm.data.history.original.date | date:'EEEE d MMMM yyyy' }}{% endraw %}</strong>.</span>
     </row>
     <row>
-        <span>La date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours ouvrés est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
+        <span>La date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours ouvrés est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE d MMMM yyyy' }}{% endraw %}</strong>.</span>
     </row>
     <br>
     <row ng-if="!vm.data.history.exception">
@@ -106,13 +106,13 @@
     	<quantity>+2</quantity>
     	<text>
     		Weekend du
-    		<strong>{% raw %}{{ exception.saturday | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>
+    		<strong>{% raw %}{{ exception.saturday | date:'EEEE d MMMM yyyy' }}{% endraw %}</strong>
     	</text>
     </span>
     <span ng-switch-when="sunday">
         	<quantity>+1</quantity>
         	<text>
-        		<strong>{% raw %}{{ exception.sunday | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>
+        		<strong>{% raw %}{{ exception.sunday | date:'EEEE d MMMM yyyy' }}{% endraw %}</strong>
         	</text>
         </span>
     <span ng-switch-when="ferie">
