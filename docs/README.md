@@ -97,6 +97,7 @@
     </row>
 </p>
 
+<pre>{% raw %}{{ vm.data.history.exceptionList | json }}{% endraw %}</pre>
 <error class="with-animation"
        ng-if="vm.data.history && vm.data.history.exception"
        ng-repeat="exception in vm.data.history.exceptionList track by $index"

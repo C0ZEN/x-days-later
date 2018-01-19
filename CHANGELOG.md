@@ -5,15 +5,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Added pre for debug
 
 ## [0.11.5]
+### Fixed
+- Exceptions dates
 
 ## [0.11.4]
 ### Changed
 - Exceptions styles
-
-### Fixed
-- Exceptions dates
 
 ## [0.11.3]
 ### Changed
