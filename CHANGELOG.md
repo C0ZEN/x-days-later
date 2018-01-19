@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.12.9]
 ### Added
 - New npm dependency `grunt-sass`
 - New npm dependency `grunt-contrib-htmlmin`
