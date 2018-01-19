@@ -14,17 +14,17 @@
 		.module('xDaysLater')
 		.constant('appConstant', {
 			logs            : {
-				enabled: true
+				enabled: false
 			},
 			lang            : {
 				current: 'fr'
 			},
-			debugInfoEnabled: true,
+			debugInfoEnabled: false,
 			moment          : {
 				readableFormat: 'dddd DD MMMM YYYY'
 			},
 			maintenance     : {
-				active: true
+				active: false
 			}
 		});
 
