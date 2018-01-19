@@ -348,7 +348,6 @@
    */
 		function addFerie($data) {
 			logService.service(data.service, 'addFerie');
-			$data.type = 'ferie';
 			methods.newException($data);
 		}
 
@@ -452,13 +451,14 @@
 					// Check if this is the weekend
 					if (methods.isWeekend(date)) {
 						logService.service(data.service, 'isWeekend');
-						weekend = {
-							sunday: methods.toTimestamp(date)
-						};
 						days++;
 
 						// If sunday
 						if (methods.isSunday(date)) {
+							weekend = {
+								sunday: methods.toTimestamp(date),
+								type: 'weekend'
+							};
 							calculatedDateHistoryService.addWeekend(weekend);
 						}
 					}
@@ -467,7 +467,8 @@
 					else if (date.isFerie()) {
 							logService.service(data.service, 'isFerie');
 							ferie = {
-								ferie: date.getFerie()
+								ferie: date.getFerie(),
+								type: 'ferie'
 							};
 							days++;
 							calculatedDateHistoryService.addFerie(ferie);
@@ -644,7 +645,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.12.14');
+		console.info('Current version: 0.12.15');
 	}
 })(window.angular);
 

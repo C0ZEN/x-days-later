@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.12.15]
+### Fixed
+- Missing weekends
+
 ## [0.12.14]
 ### Fixed
 - Missing weekends

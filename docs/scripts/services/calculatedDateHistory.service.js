@@ -78,7 +78,6 @@
 		 */
 		function addFerie($data) {
 			logService.service(data.service, 'addFerie');
-			$data.type = 'ferie';
 			methods.newException($data);
 		}
 
