@@ -48,17 +48,6 @@
 		});
 	}
 })(window.angular);
-(function (angular) {
-	'use strict';
-
-	angular.module('xDaysLater').config(config);
-
-	config.$inject = ['tmhDynamicLocaleProvider'];
-
-	function config(tmhDynamicLocaleProvider) {
-		tmhDynamicLocaleProvider.localeLocationPattern('/x-days-later/bower_components/angular-i18n/angular-locale_{{locale}}.js').defaultLocale('fr');
-	}
-})(window.angular);
 
 (function (angular) {
 	'use strict';
@@ -258,10 +247,9 @@
 
 	angular.module('xDaysLater').run(config);
 
-	config.$inject = ['tmhDynamicLocale', 'moment', 'appConstant'];
+	config.$inject = ['moment', 'appConstant'];
 
-	function config(tmhDynamicLocale, moment, appConstant) {
-		tmhDynamicLocale.set(appConstant.lang.current);
+	function config(moment, appConstant) {
 		moment.locale(appConstant.lang.current);
 		console.info('x-days-later lang:', appConstant.lang.current);
 	}
@@ -667,7 +655,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.12.5');
+		console.info('x-days-later version: 0.12.6');
 	}
 })(window.angular);
 
