@@ -55,7 +55,7 @@
 
 <column class="calculated-date">
     <span class="calculated-date-label">
-        Date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours:
+        Date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours ouvrés:
     </span>
     <row>
         <date class="calculated-date-value-container">
@@ -83,7 +83,7 @@
         <span>La date sélectionnée est le <strong>{% raw %}{{ vm.data.history.original.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
     </row>
     <row>
-        <span>La date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
+        <span>La date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours ouvrés est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
     </row>
     <br>
     <row ng-if="!vm.data.history.exception">
