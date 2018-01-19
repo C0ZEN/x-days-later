@@ -1,15 +1,23 @@
 error {
   margin         : $messages-margin;
-  padding        : $messages-padding;
+  padding        : 0.1rem $messages-padding;
   @include rgba-border-left(0.3rem, solid, $color-red);
   display        : flex;
   flex-direction : column;
   @include rgba-background($color-red, $color-red-opacity);
-  quantity {
-
-  }
-  strong {
-
+  span {
+	display         : flex;
+	flex-direction  : row;
+	justify-content : flex-start;
+	align-content   : center;
+	quantity {
+	  font-weight : 600;
+	  font-size   : 2rem;
+	  color       : $color-red;
+	}
+	strong {
+	  margin-left : 1rem;
+	}
   }
   &::selection,
   & *::selection {

@@ -103,11 +103,11 @@
        ng-switch="exception.type"
        ng-style="{'animation-delay': ($index * 100 + 'ms')}">
     <span ng-switch-when="weekend">
-    	<quantity>+ 2</quantity>
+    	<quantity>+2</quantity>
     	<strong>Weekend du {% raw %}{{ exception.sunday | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>
     </span>
     <span ng-switch-when="ferie">
-    	<quantity>+ 1</quantity>
+    	<quantity>+1</quantity>
     	<strong>{% raw %}{{ exception.ferie }}{% endraw %}</strong></span>
 </error>
 
