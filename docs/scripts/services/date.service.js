@@ -37,8 +37,6 @@
 			isSaturday,
 			isDay,
 			isWeekend,
-			setNextDayAfterWeekend,
-			weekendAndExceptionsStuff,
 			readable,
 			toTimestamp
 		};
@@ -125,55 +123,6 @@
 
 		function isWeekend($date) {
 			return methods.isSunday($date) || methods.isSaturday($date);
-		}
-
-		function setNextDayAfterWeekend($date) {
-			if (methods.isSunday($date)) {
-				return methods.add($date, data.one, 'days');
-			}
-			return methods.add($date, data.two, 'days');
-		}
-
-		function weekendAndExceptionsStuff($date) {
-			let date = $date;
-
-			// Check if this is the weekend
-			if (methods.isWeekend(date)) {
-				logService.service(data.service, 'isWeekend');
-				const weekend = {
-					dateBefore: methods.toTimestamp(date),
-					dateAfter : null,
-					type      : methods.isSunday(date) ? 'sunday' : 'saturday'
-				};
-
-				// Set the next monday
-				date = methods.setNextDayAfterWeekend(date);
-				logService.service(data.service, 'new date after weekend: ' + methods.readable(date));
-				weekend.dateAfter = methods.toTimestamp(date);
-				calculatedDateHistoryService.addWeekend(weekend);
-			}
-
-			// Check if this is an fr exception
-			if (date.isFerie()) {
-				logService.service(data.service, 'isFerie');
-				const ferie = {
-					dateBefore: methods.toTimestamp(date),
-					dateAfter : null,
-					ferie     : date.getFerie()
-				};
-
-				// Add one day
-				date = methods.add(date, data.one, 'days');
-				logService.service(data.service, 'new date after exception day: ' + methods.readable(date));
-				ferie.dateAfter = methods.toTimestamp(date);
-				calculatedDateHistoryService.addFerie(ferie);
-
-				// Loop again
-				date = weekendAndExceptionsStuff(date);
-			}
-			logService.service(data.service, 'final new date: ' + methods.readable(date));
-			calculatedDateHistoryService.setFinal(methods.toTimestamp(date));
-			return methods.toTimestamp(date);
 		}
 
 		function readable($date) {
