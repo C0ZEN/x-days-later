@@ -23,6 +23,7 @@
 	function config(tmhDynamicLocale, moment, appConstant) {
 		tmhDynamicLocale.set(appConstant.lang.current);
 		moment.locale(appConstant.lang.current);
+		console.info('x-days-later lang:', appConstant.lang.current);
 	}
 
 }(window.angular));

@@ -22,6 +22,9 @@
 			debugInfoEnabled: false,
 			moment          : {
 				readableFormat: 'dddd DD MMMM YYYY'
+			},
+			maintenance     : {
+				active: true
 			}
 		});
 

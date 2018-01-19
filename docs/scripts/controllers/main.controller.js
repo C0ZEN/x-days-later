@@ -21,10 +21,11 @@
 		'$window',
 		'$timeout',
 		'copyService',
-		'calculatedDateHistoryService'
+		'calculatedDateHistoryService',
+		'maintenanceService'
 	];
 
-	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService) {
+	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService, maintenanceService) {
 		const vm = this;
 
 		// Internal methods
@@ -40,7 +41,8 @@
 			showDatepicker   : false,
 			isHoverDatepicker: false,
 			history          : null,
-			xDays            : 21
+			xDays            : 21,
+			maintenance      : maintenanceService.isInMaintenance()
 		};
 
 		// Public methods
