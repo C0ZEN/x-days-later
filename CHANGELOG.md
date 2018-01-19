@@ -5,7 +5,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New bower dependency `grunt-usemin`
+- New grunt config file `copy` to copy the `default.html` file
+- New grunt config file `usemin`
+- New grunt config file `useminPrepare`
 
+### Changed
+- Ignored the bower dependencies
+- Changed the path of the bower dependencies
+- The `default.html` file will now contain only two files for the vendors
+ 
 ## [0.12.1]
 ### Changed
 - Text in the exceptions

@@ -1,70 +1,72 @@
 {
-    "name": "x-days-later",
-    "version": "0.12.1",
-    "description": "Use this app to find a date at X days later.",
-    "homepage": "https://github.com/C0ZEN/x-days-later",
-    "keywords": [
-        "cozen",
-        "angular",
-        "front-end",
-        "x-days-later",
-        "moment"
+  "name": "x-days-later",
+  "version": "0.12.1",
+  "description": "Use this app to find a date at X days later.",
+  "homepage": "https://github.com/C0ZEN/x-days-later",
+  "keywords": [
+    "cozen",
+    "angular",
+    "front-end",
+    "x-days-later",
+    "moment"
+  ],
+  "author": {
+    "name": "Geoffrey <C0ZEN> Testelin",
+    "email": "geoffrey.testelin@gmail.com",
+    "url": "www.geoffreytestelin.com"
+  },
+  "devDependencies": {
+    "array.from": "^1.0.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "chalk": "^2.3.0",
+    "eslint": "^4.14.0",
+    "eslint-config-xo": "^0.19.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^7.0.0",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-git": "^1.0.9",
+    "grunt-if": "^0.1.5",
+    "grunt-npm-command": "^0.1.2",
+    "grunt-preprocess": "^5.1.0",
+    "grunt-prompt": "^1.3.3",
+    "grunt-string-replace": "^1.3.1",
+    "grunt-usemin": "^3.1.1",
+    "has-ansi": "^3.0.0",
+    "jit-grunt": "^0.10.0",
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.5",
+    "lint-staged": "^6.0.0",
+    "load-grunt-config": "^0.19.2",
+    "process-nextick-args": "^2.0.0",
+    "q": "^1.5.1",
+    "time-grunt": "^1.4.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "lint": "eslint . --fix",
+    "postinstall": "bower update"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
     ],
-    "author": {
-        "name": "Geoffrey <C0ZEN> Testelin",
-        "email": "geoffrey.testelin@gmail.com",
-        "url": "www.geoffreytestelin.com"
-    },
-    "devDependencies": {
-        "array.from": "^1.0.3",
-        "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.0",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-es2015": "^6.24.1",
-        "chalk": "^2.3.0",
-        "eslint": "^4.14.0",
-        "eslint-config-xo": "^0.19.0",
-        "grunt": "^1.0.1",
-        "grunt-babel": "^7.0.0",
-        "grunt-bump": "^0.8.0",
-        "grunt-contrib-clean": "^1.1.0",
-        "grunt-contrib-concat": "^1.0.1",
-        "grunt-git": "^1.0.9",
-        "grunt-if": "^0.1.5",
-        "grunt-npm-command": "^0.1.2",
-        "grunt-preprocess": "^5.1.0",
-        "grunt-prompt": "^1.3.3",
-        "grunt-string-replace": "^1.3.1",
-        "has-ansi": "^3.0.0",
-        "jit-grunt": "^0.10.0",
-        "jscs": "^3.0.7",
-        "jshint": "^2.9.5",
-        "lint-staged": "^6.0.0",
-        "load-grunt-config": "^0.19.2",
-        "process-nextick-args": "^2.0.0",
-        "q": "^1.5.1",
-        "time-grunt": "^1.4.0"
-    },
-    "dependencies": {},
-    "scripts": {
-        "lint": "eslint . --fix",
-        "postinstall": "bower update"
-    },
-    "lint-staged": {
-        "*.js": [
-            "eslint --fix",
-            "git add"
-        ],
-        "*.json": [
-            "git add"
-        ]
-    },
-    "repository": "C0ZEN/x-days-later",
-    "license": "MIT",
-    "yoCallbackConfig": {
-        "appName": "X Days Later",
-        "appNameCamel": "xDaysLater",
-        "appNameKebab": "x-days-later",
-        "appNameUpperPython": "X_DAYS_LATER"
-    }
+    "*.json": [
+      "git add"
+    ]
+  },
+  "repository": "C0ZEN/x-days-later",
+  "license": "MIT",
+  "yoCallbackConfig": {
+    "appName": "X Days Later",
+    "appNameCamel": "xDaysLater",
+    "appNameKebab": "x-days-later",
+    "appNameUpperPython": "X_DAYS_LATER"
+  }
 }

@@ -15,7 +15,10 @@ module.exports = function (grunt) {
 	require('load-grunt-config')(grunt, {
 		configPath: path.join(process.cwd(), 'grunt/config'),
 		jitGrunt  : {
-			customTasksDir: 'grunt/tasks'
+			customTasksDir: 'grunt/tasks',
+			staticMappings: {
+				useminPrepare: 'grunt-usemin'
+			}
 		},
 		data      : {
 			config,
