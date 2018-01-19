@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.11.8]
+### Fixed
+- Exceptions dates
+
 ## [0.11.7]
 ### Fixed
 - Exceptions dates

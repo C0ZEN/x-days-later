@@ -453,7 +453,7 @@
 					if (methods.isWeekend(date)) {
 						logService.service(data.service, 'isWeekend');
 						weekend = {
-							currentDate: toString(date),
+							currentDate: methods.toTimestamp(date),
 							type: methods.isSunday(date) ? 'sunday' : 'saturday'
 						};
 						days++;
@@ -470,7 +470,7 @@
 					else if (date.isFerie()) {
 							logService.service(data.service, 'isFerie');
 							ferie = {
-								currentDate: toString(date),
+								currentDate: methods.toTimestamp(date),
 								ferie: date.getFerie()
 							};
 							days++;
@@ -648,7 +648,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.11.7');
+		console.info('x-days-later version: 0.11.8');
 	}
 })(window.angular);
 
