@@ -454,9 +454,9 @@
 						days++;
 
 						// If sunday
-						if (methods.isSunday(date)) {
+						if (methods.isSaturday(date)) {
 							weekend = {
-								sunday: methods.toTimestamp(date),
+								saturday: methods.toTimestamp(date),
 								type: 'weekend'
 							};
 							calculatedDateHistoryService.addWeekend(weekend);
@@ -645,7 +645,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.12.17');
+		console.info('Current version: 0.13.0');
 	}
 })(window.angular);
 
