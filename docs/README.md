@@ -111,7 +111,10 @@
     </span>
     <span ng-switch-when="ferie">
     	<quantity>+1</quantity>
-    	<strong>{% raw %}{{ exception.ferie }}{% endraw %}</strong></span>
+    	<text>
+    		<strong>{% raw %}{{ exception.ferie }}{% endraw %}</strong>
+		</text>
+	</span>
 </error>
 
 ## Comment ça marche ?

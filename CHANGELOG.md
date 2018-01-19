@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Styles for ferie error
 
 ## [0.13.1]
 ### Added
