@@ -4,7 +4,7 @@
 (function (angular) {
 	'use strict';
 
-	angular.module('xDaysLater', ['tmh.dynamicLocale', '720kb.datepicker', 'ngclipboard', 'ngAnimate', 'log.ex.uo']);
+	angular.module('xDaysLater', ['tmh.dynamicLocale', '720kb.datepicker', 'ngclipboard', 'ngAnimate', 'log.ex.uo', 'LocalStorageModule']);
 })(window.angular);
 
 (function (angular) {
@@ -16,6 +16,17 @@
 
 	function config($compileProvider, appConstant) {
 		$compileProvider.debugInfoEnabled(appConstant.debugInfoEnabled);
+	}
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	angular.module('xDaysLater').config(config);
+
+	config.$inject = ['localStorageServiceProvider'];
+
+	function config(localStorageServiceProvider) {
+		localStorageServiceProvider.setPrefix('xdl').setDefaultToCookie(true).setNotify(false, false);
 	}
 })(window.angular);
 (function (angular) {
@@ -79,10 +90,15 @@
 
 	angular.module('xDaysLater').controller('mainController', mainController);
 
-	mainController.$inject = ['$scope', 'logService', 'dateService', '$window', '$timeout', 'copyService', 'calculatedDateHistoryService', 'maintenanceService'];
+	mainController.$inject = ['$scope', 'logService', 'dateService', '$window', '$timeout', 'copyService', 'calculatedDateHistoryService', 'maintenanceService', 'localStorageService'];
 
-	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService, maintenanceService) {
+	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService, maintenanceService, localStorageService) {
 		var vm = this;
+
+		// Internal data
+		var data = {
+			days: 21
+		};
 
 		// Internal methods
 		var methods = {
@@ -97,7 +113,7 @@
 			showDatepicker: false,
 			isHoverDatepicker: false,
 			history: null,
-			xDays: 21,
+			xDays: localStorageService.get('days') || data.days,
 			maintenance: maintenanceService.isInMaintenance()
 		};
 
@@ -206,7 +222,10 @@
 		}
 
 		function onDaysInputChange() {
-			$timeout(vm.methods.defineDate);
+			$timeout(function () {
+				vm.methods.defineDate();
+				localStorageService.set('days', vm.data.xDays);
+			});
 		}
 	}
 })(window.angular);
@@ -648,7 +667,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.11.9');
+		console.info('x-days-later version: 0.12.0');
 	}
 })(window.angular);
 
