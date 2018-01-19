@@ -10,6 +10,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Exceptions styles
 
+### Fixed
+- Exceptions dates
+
 ## [0.11.3]
 ### Changed
 - Readme `how does it works` section

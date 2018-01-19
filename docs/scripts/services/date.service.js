@@ -72,8 +72,8 @@
 					if (methods.isWeekend(date)) {
 						logService.service(data.service, 'isWeekend');
 						weekend = {
-							date: methods.toTimestamp(date),
-							type: methods.isSunday(date) ? 'sunday' : 'saturday'
+							currentDate: toString(date),
+							type       : methods.isSunday(date) ? 'sunday' : 'saturday'
 						};
 						days++;
 
@@ -90,8 +90,8 @@
 					else if (date.isFerie()) {
 						logService.service(data.service, 'isFerie');
 						ferie = {
-							date : methods.toTimestamp(date),
-							ferie: date.getFerie()
+							currentDate: toString(date),
+							ferie      : date.getFerie()
 						};
 						days++;
 						calculatedDateHistoryService.addFerie(ferie);

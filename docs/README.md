@@ -102,8 +102,8 @@
        ng-repeat="exception in vm.data.history.exceptionList track by $index"
        ng-switch="exception.type"
        ng-style="{'animation-delay': ($index * 100 + 'ms')}">
-    <span ng-switch-when="sunday">La date calculée est un <strong>{% raw %}{{ exception.date || date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong></span>
-    <span ng-switch-when="saturday">La date calculée est un <strong>{% raw %}{{ exception.date || date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong></span>
+    <span ng-switch-when="sunday">La date calculée est un <strong>{% raw %}{{ exception.currentDate || date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong></span>
+    <span ng-switch-when="saturday">La date calculée est un <strong>{% raw %}{{ exception.currentDate || date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong></span>
     <span ng-switch-when="ferie">La date calculée est un jour férié: <strong>{% raw %}{{ exception.ferie }}{% endraw %}</strong></span>
 </error>
 
@@ -111,7 +111,7 @@
 
 Choisissez un `nombre de jours`.  
 Choisissez une `date`.  
-Une date à `date + {% raw %}{{ vm.data.xDays }}{% endraw %} jours` sera alors calculée.  
+Une date à `date + nombre de jours` sera alors calculée.  
 Elle prendra compte des jours ouvrés.
 
 ### Exceptions
