@@ -12,6 +12,7 @@
 
 	angular
 		.module('xDaysLater')
-		.constant('moment', moment);
+		.constant('moment', moment)
+		.constant('_', _);
 
 }(window.angular));

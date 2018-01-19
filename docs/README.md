@@ -102,22 +102,10 @@
        ng-repeat="exception in vm.data.history.exceptionList track by $index"
        ng-switch="exception.type"
        ng-style="{'animation-delay': ($index * 100 + 'ms')}">
-    <span>Exception <strong>{% raw %}{{ $index + 1 }}{% endraw %}</strong></span>
-    <ul>
-        <li ng-switch-when="sunday">La date calculée est un <strong>dimanche</strong></li>
-        <li ng-switch-when="sunday">La nouvelle date calculée est le <strong>{% raw %}{{ exception.dateAfter | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong></li>
-        <li ng-switch-when="saturday">La date calculée est un <strong>samedi</strong></li>
-        <li ng-switch-when="saturday">La nouvelle date calculée est le <strong>{% raw %}{{ exception.dateAfter | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong></li>
-        <li ng-switch-when="ferie">La date calculée est un jour férié: <strong>{% raw %}{{ exception.ferie }}{% endraw %}</strong></li>
-        <li ng-switch-when="ferie">La nouvelle date calculée est le <strong>{% raw %}{{ exception.dateAfter | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong></li>
-    </ul>
+    <li ng-switch-when="sunday">La date calculée est un <strong>dimanche</strong></li>
+    <li ng-switch-when="saturday">La date calculée est un <strong>samedi</strong></li>
+    <li ng-switch-when="ferie">La date calculée est un jour férié: <strong>{% raw %}{{ exception.ferie }}{% endraw %}</strong></li>
 </error>
-
-<p ng-if="vm.data.history">
-    <row>
-        <span>La date finale calculée est le <strong>{% raw %}{{ vm.data.history.final.date | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>.</span>
-    </row>
-</p>
 
 ## Comment ça marche ?
 

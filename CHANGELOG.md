@@ -10,11 +10,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Log about the current app lang
 - New initiator `maintenance`
 - Log about the maintenance status
+- New bower dependency `lodash`
 
 ### Changed
 - The header style is different when the application is in maintenance
 - Styles for the header selection text when the app is in maintenance
 - Changed some text to add the `ouvrés` notation
+- The way of calc the days
+- Some logs
+- Visual exceptions results
 
 ## [0.10.7]
 ### Changed

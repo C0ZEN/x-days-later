@@ -54,18 +54,54 @@
 			if ($date) {
 				logService.service(data.service, 'original date is: ' + $date);
 				calculatedDateHistoryService.reset();
+				let days = $days;
 
 				// Convert the date
 				let date = moment($date, appConstant.moment.readableFormat, appConstant.lang.current);
 				logService.service(data.service, 'moment original date is: ' + methods.readable(date));
 				calculatedDateHistoryService.setOriginal(methods.toTimestamp(date));
 
-				// Add 21 days
-				date = methods.add(date, $days, 'days');
-				logService.service(data.service, 'new +' + $days + ' days date is: ' + methods.readable(date));
-				calculatedDateHistoryService.setCalculated(methods.toTimestamp(date));
+				let weekend = null;
+				let ferie   = null;
 
-				return methods.weekendAndExceptionsStuff(date);
+				// For each days
+				for (let i = 0; i < days; i++) {
+
+					// Add 1 day
+					date = methods.add(date, date.one, 'days');
+
+					// Check if this is the weekend
+					if (methods.isWeekend(date)) {
+						logService.service(data.service, 'isWeekend');
+						weekend = {
+							date: methods.toTimestamp(date),
+							type: methods.isSunday(date) ? 'sunday' : 'saturday'
+						};
+						days++;
+
+						// If sunday
+						if ('sunday' === weekend.type) {
+							calculatedDateHistoryService.addSunday(weekend);
+						}
+						else {
+							calculatedDateHistoryService.addSaturday(weekend);
+						}
+					}
+
+					// Check if this is an fr exception
+					else if (date.isFerie()) {
+						logService.service(data.service, 'isFerie');
+						ferie = {
+							date : methods.toTimestamp(date),
+							ferie: date.getFerie()
+						};
+						days++;
+						calculatedDateHistoryService.addFerie(ferie);
+					}
+				}
+				calculatedDateHistoryService.setCalculated(methods.toTimestamp(date));
+				logService.service(data.service, 'final new date: ' + methods.readable(date));
+				return methods.toTimestamp(date);
 			}
 			return null;
 		}

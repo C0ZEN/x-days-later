@@ -36,8 +36,9 @@
 			setOriginal,
 			setCalculated,
 			setFinal,
-			addWeekend,
-			addFerie
+			addFerie,
+			addSunday,
+			addSaturday
 		};
 
 		function subscribe($scope, $callback) {
@@ -72,23 +73,6 @@
 			};
 		}
 
-		function setFinal($date) {
-			logService.service(data.service, 'setFinal');
-			data.history.final = {
-				date: $date
-			};
-			methods.notify();
-		}
-
-		/**
-		 * Add a weekend exception
-		 * @param {object} $data > Object with data (dateBefore, dateAfter, type (sunday, saturday))
-		 */
-		function addWeekend($data) {
-			logService.service(data.service, 'addWeekend');
-			methods.newException($data);
-		}
-
 		/**
 		 * Add a ferie exception
 		 * @param {object} $data > Object with data (dateBefore, dateAfter, ferie)
@@ -107,6 +91,16 @@
 
 		function notify() {
 			$rootScope.$emit(data.service + ':newHistory');
+		}
+
+		function addSunday($data) {
+			logService.service(data.service, 'sunday');
+			methods.newException($data);
+		}
+
+		function addSaturday($data) {
+			logService.service(data.service, 'saturday');
+			methods.newException($data);
 		}
 	}
 
