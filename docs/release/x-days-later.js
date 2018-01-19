@@ -251,7 +251,7 @@
 
 	function config(moment, appConstant) {
 		moment.locale(appConstant.lang.current);
-		console.info('x-days-later lang:', appConstant.lang.current);
+		console.info('Lang:', appConstant.lang.current);
 	}
 })(window.angular);
 (function (angular) {
@@ -278,8 +278,7 @@
 	config.$inject = ['maintenanceService'];
 
 	function config(maintenanceService) {
-		var maintenance = maintenanceService.isInMaintenance();
-		console.info('x-days-later maintenance:', maintenance ? 'active' : 'disabled');
+		console.info('Maintenance status:', maintenanceService.isInMaintenance() ? 'on' : 'off');
 	}
 })(window.angular);
 
@@ -655,7 +654,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.12.10');
+		console.info('Current version: 0.12.11');
 	}
 })(window.angular);
 
