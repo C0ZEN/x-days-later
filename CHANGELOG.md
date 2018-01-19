@@ -6,7 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.12.5]
+### Fixed
+- Missing vendors
+
 ## [0.12.4]
+### Fixed
+- Missing vendors
 
 ## [0.12.3]
 ### Fixed
