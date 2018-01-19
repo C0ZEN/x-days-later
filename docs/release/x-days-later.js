@@ -334,6 +334,7 @@
 			data.history.calculated = {
 				date: $date
 			};
+			methods.notify();
 		}
 
 		/**
@@ -647,7 +648,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.11.2');
+		console.info('x-days-later version: 0.11.3');
 	}
 })(window.angular);
 
