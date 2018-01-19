@@ -105,7 +105,7 @@
     <span ng-switch-when="weekend">
     	<quantity>+2</quantity>
     	<text>
-    		Weekend du
+    		Week-end du
     		<strong>{% raw %}{{ exception.saturday | date:'EEEE d MMMM yyyy' }}{% endraw %}</strong>
     	</text>
     </span>
