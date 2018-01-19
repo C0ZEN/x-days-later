@@ -42,3 +42,6 @@ checks:
   return-statements:
     config:
       threshold: 4
+exclude_patterns:
+- "docs/release/"
+- "docs/assets/loaders.css"

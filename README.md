@@ -24,4 +24,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 [daviddm-dev-image]: https://david-dm.org/C0ZEN/x-days-later/dev-status.svg
 [daviddm-dev-url]: https://david-dm.org/C0ZEN/x-days-later?type=dev
 [code-climate-maintainability-image]: https://api.codeclimate.com/v1/badges/0af5c5fadbf94200b87b/maintainability
-[code-climate-maintainability-url]: https://codeclimate.com/github/C0ZEN/generator-cozen-angular/maintainability
+[code-climate-maintainability-url]: https://codeclimate.com/github/C0ZEN/x-days-later/maintainability
