@@ -54,21 +54,24 @@
 
 	angular.module('xDaysLater').constant('appConstant', {
 		logs: {
-			enabled: false
+			enabled: true
 		},
 		lang: {
 			current: 'fr'
 		},
-		debugInfoEnabled: false,
+		debugInfoEnabled: true,
 		moment: {
 			readableFormat: 'dddd DD MMMM YYYY'
+		},
+		maintenance: {
+			active: true
 		}
 	});
 })(window.angular);
 (function (angular) {
 	'use strict';
 
-	angular.module('xDaysLater').constant('moment', moment);
+	angular.module('xDaysLater').constant('moment', moment).constant('_', _);
 })(window.angular);
 
 (function (angular) {
@@ -76,9 +79,9 @@
 
 	angular.module('xDaysLater').controller('mainController', mainController);
 
-	mainController.$inject = ['$scope', 'logService', 'dateService', '$window', '$timeout', 'copyService', 'calculatedDateHistoryService'];
+	mainController.$inject = ['$scope', 'logService', 'dateService', '$window', '$timeout', 'copyService', 'calculatedDateHistoryService', 'maintenanceService'];
 
-	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService) {
+	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService, maintenanceService) {
 		var vm = this;
 
 		// Internal methods
@@ -94,7 +97,8 @@
 			showDatepicker: false,
 			isHoverDatepicker: false,
 			history: null,
-			xDays: 21
+			xDays: 21,
+			maintenance: maintenanceService.isInMaintenance()
 		};
 
 		// Public methods
@@ -240,6 +244,7 @@
 	function config(tmhDynamicLocale, moment, appConstant) {
 		tmhDynamicLocale.set(appConstant.lang.current);
 		moment.locale(appConstant.lang.current);
+		console.info('x-days-later lang:', appConstant.lang.current);
 	}
 })(window.angular);
 (function (angular) {
@@ -256,6 +261,18 @@
 				addClass: 'hiding'
 			});
 		});
+	}
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	angular.module('xDaysLater').run(config);
+
+	config.$inject = ['maintenanceService'];
+
+	function config(maintenanceService) {
+		var maintenance = maintenanceService.isInMaintenance();
+		console.info('x-days-later maintenance:', maintenance ? 'active' : 'disabled');
 	}
 })(window.angular);
 
@@ -283,8 +300,9 @@
 			setOriginal: setOriginal,
 			setCalculated: setCalculated,
 			setFinal: setFinal,
-			addWeekend: addWeekend,
-			addFerie: addFerie
+			addFerie: addFerie,
+			addSunday: addSunday,
+			addSaturday: addSaturday
 		};
 
 		function subscribe($scope, $callback) {
@@ -319,23 +337,6 @@
 			};
 		}
 
-		function setFinal($date) {
-			logService.service(data.service, 'setFinal');
-			data.history.final = {
-				date: $date
-			};
-			methods.notify();
-		}
-
-		/**
-   * Add a weekend exception
-   * @param {object} $data > Object with data (dateBefore, dateAfter, type (sunday, saturday))
-   */
-		function addWeekend($data) {
-			logService.service(data.service, 'addWeekend');
-			methods.newException($data);
-		}
-
 		/**
    * Add a ferie exception
    * @param {object} $data > Object with data (dateBefore, dateAfter, ferie)
@@ -354,6 +355,16 @@
 
 		function notify() {
 			$rootScope.$emit(data.service + ':newHistory');
+		}
+
+		function addSunday($data) {
+			logService.service(data.service, 'sunday');
+			methods.newException($data);
+		}
+
+		function addSaturday($data) {
+			logService.service(data.service, 'saturday');
+			methods.newException($data);
 		}
 	}
 })(window.angular);
@@ -424,18 +435,53 @@
 			if ($date) {
 				logService.service(data.service, 'original date is: ' + $date);
 				calculatedDateHistoryService.reset();
+				var days = $days;
 
 				// Convert the date
 				var date = moment($date, appConstant.moment.readableFormat, appConstant.lang.current);
 				logService.service(data.service, 'moment original date is: ' + methods.readable(date));
 				calculatedDateHistoryService.setOriginal(methods.toTimestamp(date));
 
-				// Add 21 days
-				date = methods.add(date, $days, 'days');
-				logService.service(data.service, 'new +' + $days + ' days date is: ' + methods.readable(date));
-				calculatedDateHistoryService.setCalculated(methods.toTimestamp(date));
+				var weekend = null;
+				var ferie = null;
 
-				return methods.weekendAndExceptionsStuff(date);
+				// For each days
+				for (var i = 0; i < days; i++) {
+
+					// Add 1 day
+					date = methods.add(date, date.one, 'days');
+
+					// Check if this is the weekend
+					if (methods.isWeekend(date)) {
+						logService.service(data.service, 'isWeekend');
+						weekend = {
+							date: methods.toTimestamp(date),
+							type: methods.isSunday(date) ? 'sunday' : 'saturday'
+						};
+						days++;
+
+						// If sunday
+						if ('sunday' === weekend.type) {
+							calculatedDateHistoryService.addSunday(weekend);
+						} else {
+							calculatedDateHistoryService.addSaturday(weekend);
+						}
+					}
+
+					// Check if this is an fr exception
+					else if (date.isFerie()) {
+							logService.service(data.service, 'isFerie');
+							ferie = {
+								date: methods.toTimestamp(date),
+								ferie: date.getFerie()
+							};
+							days++;
+							calculatedDateHistoryService.addFerie(ferie);
+						}
+				}
+				calculatedDateHistoryService.setCalculated(methods.toTimestamp(date));
+				logService.service(data.service, 'final new date: ' + methods.readable(date));
+				return methods.toTimestamp(date);
 			}
 			return null;
 		}
@@ -607,6 +653,23 @@
 		}
 	}
 })(window.angular);
+(function (angular) {
+	'use strict';
+
+	angular.module('xDaysLater').factory('maintenanceService', maintenanceService);
+
+	maintenanceService.$inject = ['appConstant'];
+
+	function maintenanceService(appConstant) {
+		return {
+			isInMaintenance: isInMaintenance
+		};
+
+		function isInMaintenance() {
+			return angular.copy(appConstant.maintenance.active);
+		}
+	}
+})(window.angular);
 'use strict';
 
 /* eslint no-unused-vars:"off" */
@@ -636,7 +699,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('x-days-later version: 0.10.7');
+		console.info('x-days-later version: 0.11.0');
 	}
 })(window.angular);
 

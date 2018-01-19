@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.11.0]
 ### Added
 - New service `maintenance` to manage stuff about the maintenance
 - Log about the current app lang
