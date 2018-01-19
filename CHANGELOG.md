@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Changed
 - Spellcheck for weekend
+- Pluralize handled
 
 ## [0.13.4]
 ### Changed

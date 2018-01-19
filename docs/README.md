@@ -55,7 +55,8 @@
 
 <column class="calculated-date">
     <span class="calculated-date-label">
-        Date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours ouvrés:
+        <span ng-if="vm.data.xDays === 1">Date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jour ouvré:</span>
+        <span ng-if="vm.data.xDays > 1">Date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours ouvrés:</span>
     </span>
     <row>
         <date class="calculated-date-value-container">
@@ -83,7 +84,8 @@
         <span>La date sélectionnée est le <strong>{% raw %}{{ vm.data.history.original.date | date:'EEEE d MMMM yyyy' }}{% endraw %}</strong>.</span>
     </row>
     <row>
-        <span>La date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours ouvrés est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE d MMMM yyyy' }}{% endraw %}</strong>.</span>
+        <span ng-if="vm.data.xDays === 1">La date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jour ouvré est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE d MMMM yyyy' }}{% endraw %}</strong>.</span>
+        <span ng-if="vm.data.xDays > 1">La date calculée à {% raw %}{{ vm.data.xDays }}{% endraw %} jours ouvrés est le <strong>{% raw %}{{ vm.data.history.calculated.date | date:'EEEE d MMMM yyyy' }}{% endraw %}</strong>.</span>
     </row>
     <br>
     <row ng-if="!vm.data.history.exception">
@@ -128,13 +130,14 @@
 Choisissez un `nombre de jours`.  
 Choisissez une `date`.  
 Une date à `date + nombre de jours` sera alors calculée.  
-Elle prendra compte des jours ouvrés.
+Elle prendra en compte les jours ouvrés.
 
 ### Exceptions
 
 <neutral>
     <row>
-        <span>Si la <code>date + {% raw %}{{ vm.data.xDays }}{% endraw %} jours</code> est un samedi ou un dimanche,</span>
+        <span ng-if="vm.data.xDays === 1">Si la <code>date + {% raw %}{{ vm.data.xDays }}{% endraw %} jour</code> est un samedi ou un dimanche,</span>
+        <span ng-if="vm.data.xDays > 1">Si la <code>date + {% raw %}{{ vm.data.xDays }}{% endraw %} jours</code> est un samedi ou un dimanche,</span>
     </row>  
     <row>
         <span>Alors la date calculée sera le lundi suivant et le jour ne sera pas comptabilisé.</span>
