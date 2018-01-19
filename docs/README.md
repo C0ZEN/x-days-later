@@ -104,7 +104,10 @@
        ng-style="{'animation-delay': ($index * 100 + 'ms')}">
     <span ng-switch-when="weekend">
     	<quantity>+2</quantity>
-    	<strong>Weekend du {% raw %}{{ exception.sunday | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>
+    	<text>
+    		Weekend du
+    		<strong>{% raw %}{{ exception.sunday | date:'EEEE dd MMMM yyyy' }}{% endraw %}</strong>
+    	</text>
     </span>
     <span ng-switch-when="ferie">
     	<quantity>+1</quantity>

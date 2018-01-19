@@ -9,14 +9,14 @@ error {
 	display         : flex;
 	flex-direction  : row;
 	justify-content : flex-start;
-	align-content   : center;
+	align-items     : center;
 	quantity {
 	  font-weight : 600;
-	  font-size   : 2rem;
+	  font-size   : 1.8rem;
 	  color       : $color-red;
 	}
-	strong {
-	  margin-left : 1rem;
+	text {
+	  margin-left : 0.8rem;
 	}
   }
   &::selection,
