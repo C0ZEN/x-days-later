@@ -5,7 +5,7 @@
 	<head>
 		<script>
 			if (typeof console != 'undefined') {
-				console.time('Loading');
+				console.time('Body loading time');
 			}
 		</script>
 		<meta charset="UTF-8">
@@ -99,7 +99,7 @@
 		        src="{{ '/release/x-days-later.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 		<script>
 			if (typeof console != 'undefined') {
-				console.timeEnd('Loading');
+				console.timeEnd('Body loading time');
 			}
 		</script>
 	</body>
