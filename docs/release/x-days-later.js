@@ -279,6 +279,16 @@
 
 	angular.module('xDaysLater').run(config);
 
+	function config() {
+		console.info('Sitemap:', 'https://c0zen.github.io/x-days-later/sitemap.xml');
+		console.info('Feed:', 'https://c0zen.github.io/x-days-later/feed.xml');
+	}
+})(window.angular);
+(function (angular) {
+	'use strict';
+
+	angular.module('xDaysLater').run(config);
+
 	config.$inject = ['moment', 'appConstant'];
 
 	function config(moment, appConstant) {
@@ -716,7 +726,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.15.10');
+		console.info('Current version: 0.15.11');
 	}
 })(window.angular);
 

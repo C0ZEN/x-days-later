@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.11]
+### Added
+- New initiator `common`
+
 ## [0.15.10]
 ### Added
 - Path to feed
