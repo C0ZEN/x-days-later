@@ -158,6 +158,12 @@
 		function defineDate() {
 			logService.fnCalled('defineDate');
 			vm.calculatedDate = dateService.addDays(vm.data.xDays, vm.initialDate);
+			console.log(vm.calculatedDate);
+			gaTrackEventService.newEvent({
+				category: 'Model',
+				action: 'Change',
+				label: 'Calculated date'
+			});
 		}
 
 		function onDatepickerClick($event) {
@@ -169,6 +175,13 @@
 		function toggleDatepicker() {
 			logService.fnCalled('toggleDatepicker');
 			vm.data.showDatepicker = !vm.data.showDatepicker;
+			if (vm.data.showDatepicker) {
+				gaTrackEventService.newEvent({
+					category: 'DatePicker',
+					action: 'Show',
+					label: 'Initial date'
+				});
+			}
 			vm.methods.defineDate();
 		}
 
@@ -703,7 +716,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.14.1');
+		console.info('Current version: 0.14.2');
 	}
 })(window.angular);
 
