@@ -5,10 +5,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Link to sitemap
+- New favicon for apple
 
 ## [0.15.4]
+### Fixed
+- Wrong canonical url
 
 ## [0.15.3]
+### Fixed
+- Wrong canonical url
 
 ## [0.15.2]
 ### Fixed
