@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Tag for SEO injection
+- New Jekyll plugin `jekyll-seo-tag`
 
 ## [0.14.3]
 ### Changed
