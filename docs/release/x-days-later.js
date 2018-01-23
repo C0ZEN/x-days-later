@@ -12,7 +12,7 @@
 
 	angular.module('xDaysLater').config(config);
 
-	config.$inject = ['$compileProvider', 'appConstant'];
+	config.$inject = ['AnalyticsProvider', 'appConstant'];
 
 	function config(AnalyticsProvider, appConstant) {
 		AnalyticsProvider.setAccount(appConstant.analytics.account);
@@ -703,7 +703,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.14.0');
+		console.info('Current version: 0.14.1');
 	}
 })(window.angular);
 
