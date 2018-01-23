@@ -282,6 +282,16 @@
 	function config() {
 		console.info('Sitemap:', 'https://c0zen.github.io/x-days-later/sitemap.xml');
 		console.info('Feed:', 'https://c0zen.github.io/x-days-later/feed.xml');
+
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function () {
+				navigator.serviceWorker.register('/sw.js').then(function (registration) {
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, function (err) {
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
 	}
 })(window.angular);
 (function (angular) {
@@ -726,7 +736,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.15.14');
+		console.info('Current version: 0.15.15');
 	}
 })(window.angular);
 

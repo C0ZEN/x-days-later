@@ -45,6 +45,7 @@
         "moment": true,
         "console": true,
         "Methods": true,
-        "document": true
+        "document": true,
+		"navigator": true
     }
 }
