@@ -20,7 +20,8 @@ module.exports = {
 			'docs/scripts/**/*',
 			'.tmp/release/version.initiator.js',
 			'!docs/scripts/initiators/version.initiator.js',
-			'!docs/scripts/sw.js'
+			'!docs/scripts/sw.js',
+			'!docs/scripts/sw.init.js'
 		],
 		dest: '.tmp/release/scripts.js'
 	}

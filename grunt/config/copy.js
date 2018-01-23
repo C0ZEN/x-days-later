@@ -15,5 +15,9 @@ module.exports = {
 	sw         : {
 		src : 'docs/scripts/sw.js',
 		dest: 'docs/release/sw.js'
+	},
+	swInit     : {
+		src : 'docs/scripts/sw.init.js',
+		dest: 'docs/release/sw.init.js'
 	}
 };

@@ -27,7 +27,8 @@ module.exports = {
 		},
 		files  : {
 			'docs/release/x-days-later.min.js': 'docs/release/x-days-later.js',
-			'docs/release/sw.min.js'          : 'docs/release/sw.js'
+			'docs/release/sw.min.js'          : 'docs/release/sw.js',
+			'docs/release/sw.init.min.js'     : 'docs/release/sw.init.js'
 		}
 	}
 };

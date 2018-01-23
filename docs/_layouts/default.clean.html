@@ -7,17 +7,6 @@
 			if (typeof console != 'undefined') {
 				console.time('Body loading time');
 			}
-			if ('serviceWorker' in navigator) {
-				window.addEventListener('load', function () {
-					navigator.serviceWorker
-						.register('{{ site.baseUrl }}release/sw.min.js')
-						.then(function (registration) {
-							console.log('ServiceWorker registration successful with scope: ', registration.scope);
-						}, function (err) {
-							console.log('ServiceWorker registration failed: ', err);
-						});
-				});
-			}
 		</script>
 		<meta charset="UTF-8">
 		<title>{{ site.title }} by {{ site.author }}</title>
@@ -153,12 +142,19 @@
 		<!-- Vendors -->
 		<script type="text/javascript"
 		        defer
-		        src="{{ '/release/vendors.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+		        src="{{ '/release/vendors.js?v=' | append: site.github.build_revision | relative_url }}">
+		</script>
 
 		<!-- Scripts -->
 		<script type="text/javascript"
 		        defer
-		        src="{{ '/release/x-days-later.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+		        src="{{ '/release/x-days-later.min.js?v=' | append: site.github.build_revision | relative_url }}">
+		</script>
+
+		<!-- SW -->
+		<script type="text/javascript"
+		        src="{{ 'release/sw.init.min.js'}}">
+		</script>
 		<script>
 			if (typeof console != 'undefined') {
 				console.timeEnd('Body loading time');
