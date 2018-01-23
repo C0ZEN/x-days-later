@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Failed to instantiate module xDaysLater due to: TypeError: AnalyticsProvider.setAccount is not a function
 
 ## [0.14.0]
 ### Added

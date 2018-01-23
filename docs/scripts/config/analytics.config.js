@@ -15,7 +15,7 @@
 		.config(config);
 
 	config.$inject = [
-		'$compileProvider',
+		'AnalyticsProvider',
 		'appConstant'
 	];
 
