@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.25]
+### Added
+- Experimental service worker
+
 ## [0.15.24]
 ### Added
 - Experimental service worker
