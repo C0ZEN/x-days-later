@@ -4,6 +4,7 @@ title: X jours plus tard
 description: Affiche la date à X jours ouvrés
 permalink: pretty
 url: https://c0zen.github.io/x-days-later/
+canonical_url: 'https://c0zen.github.io/x-days-later/'
 
 # Url
 homePageUrl: https://c0zen.github.io/x-days-later/
