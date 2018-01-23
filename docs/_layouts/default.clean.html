@@ -10,7 +10,7 @@
 			if ('serviceWorker' in navigator) {
 				window.addEventListener('load', function () {
 					navigator.serviceWorker
-						.register('/release/sw.min.js')
+						.register('{{ site.baseUrl }}sw.min.js')
 						.then(function (registration) {
 							console.log('ServiceWorker registration successful with scope: ', registration.scope);
 						}, function (err) {
