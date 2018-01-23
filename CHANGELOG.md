@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.1]
+
 ## [0.15.0]
 ### Added
 - Tag for SEO injection
