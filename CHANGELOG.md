@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.6]
+### Fixed
+- The tag `baseUrl` on line 1 in `/_layouts/default.html` is not a recognized Liquid tag
+
 ## [0.15.5]
 ### Added
 - Link to sitemap
