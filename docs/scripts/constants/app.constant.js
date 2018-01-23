@@ -25,6 +25,9 @@
 			},
 			maintenance     : {
 				active: false
+			},
+			analytics       : {
+				account: 'UA-60282719-6'
 			}
 		});
 

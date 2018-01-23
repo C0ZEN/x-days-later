@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- New bower dependency `angular-google-analytics`
+- New config `analytics`
+- New service `gaTrackEvent`
+- GA track click for copy calculated date btn
+
+### Removed
+- Tracking of `.yo-rc.json` file
 
 ## [0.13.6]
 ### Changed

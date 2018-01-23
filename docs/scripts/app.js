@@ -16,7 +16,8 @@
 			'ngclipboard',
 			'ngAnimate',
 			'log.ex.uo',
-			'LocalStorageModule'
+			'LocalStorageModule',
+			'angular-google-analytics'
 		]);
 
 })(window.angular);

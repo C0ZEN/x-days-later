@@ -23,10 +23,11 @@
 		'copyService',
 		'calculatedDateHistoryService',
 		'maintenanceService',
-		'localStorageService'
+		'localStorageService',
+		'gaTrackEventService'
 	];
 
-	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService, maintenanceService, localStorageService) {
+	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService, maintenanceService, localStorageService, gaTrackEventService) {
 		const vm = this;
 
 		// Internal data
@@ -140,6 +141,11 @@
 		function onCopySuccess() {
 			logService.fnCalled('onCopySuccess');
 			copyService.show();
+			gaTrackEventService.newEvent({
+				category: 'Button',
+				action  : 'Click',
+				label   : 'Copy calculated date'
+			});
 		}
 
 		function onInitialDateChange() {

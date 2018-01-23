@@ -4,3 +4,4 @@
 /.tmp/
 /docs/_layouts/default.useless.html
 /bower_components/
+/.yo-rc.json
