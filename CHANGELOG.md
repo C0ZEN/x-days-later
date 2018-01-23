@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.13]
+### Changed
+- Jekyll sass plugin to compress the styles
+
 ## [0.15.12]
 ### Fixed
 - Canonical url

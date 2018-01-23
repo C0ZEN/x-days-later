@@ -14,6 +14,7 @@ gitHubUrl: https://github.com/C0ZEN/x-days-later
 # Required when using import to import other sass files
 sass:
   sass_dir: ./assets/css
+  style: compressed
 
 # SEO configuration
 author: C0ZEN
