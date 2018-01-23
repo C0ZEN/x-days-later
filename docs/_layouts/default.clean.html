@@ -153,7 +153,7 @@
 
 		<!-- SW -->
 		<script type="text/javascript"
-		        src="{{ 'release/sw.init.min.js'}}">
+		        src="{{ 'release/sw.init.min.js?v=' | append: site.github.build_revision | relative_url }}">
 		</script>
 		<script>
 			if (typeof console != 'undefined') {
