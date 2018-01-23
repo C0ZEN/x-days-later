@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.8]
+### Changed
+- Styles for site footer credits
+
 ## [0.15.7]
 ## #Fixed
 - Wrong url for apple icons
