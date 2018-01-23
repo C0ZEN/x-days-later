@@ -32,6 +32,8 @@ social:
     - http://www.geoffreytestelin.com/
     - https://stackoverflow.com/users/4440414/c0zen
 lang: fr_FR
+feed:
+  path: feed.xml
 
 # Plugins
 plugins:

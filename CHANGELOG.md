@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.9]
+### Fixed
+- Wrong feed path
+
 ## [0.15.8]
 ### Changed
 - Styles for site footer credits
