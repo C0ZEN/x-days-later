@@ -4,9 +4,20 @@
 (function (angular) {
 	'use strict';
 
-	angular.module('xDaysLater', ['720kb.datepicker', 'ngclipboard', 'ngAnimate', 'log.ex.uo', 'LocalStorageModule']);
+	angular.module('xDaysLater', ['720kb.datepicker', 'ngclipboard', 'ngAnimate', 'log.ex.uo', 'LocalStorageModule', 'angular-google-analytics']);
 })(window.angular);
 
+(function (angular) {
+	'use strict';
+
+	angular.module('xDaysLater').config(config);
+
+	config.$inject = ['$compileProvider', 'appConstant'];
+
+	function config(AnalyticsProvider, appConstant) {
+		AnalyticsProvider.setAccount(appConstant.analytics.account);
+	}
+})(window.angular);
 (function (angular) {
 	'use strict';
 
@@ -65,6 +76,9 @@
 		},
 		maintenance: {
 			active: false
+		},
+		analytics: {
+			account: 'UA-60282719-6'
 		}
 	});
 })(window.angular);
@@ -79,9 +93,9 @@
 
 	angular.module('xDaysLater').controller('mainController', mainController);
 
-	mainController.$inject = ['$scope', 'logService', 'dateService', '$window', '$timeout', 'copyService', 'calculatedDateHistoryService', 'maintenanceService', 'localStorageService'];
+	mainController.$inject = ['$scope', 'logService', 'dateService', '$window', '$timeout', 'copyService', 'calculatedDateHistoryService', 'maintenanceService', 'localStorageService', 'gaTrackEventService'];
 
-	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService, maintenanceService, localStorageService) {
+	function mainController($scope, logService, dateService, $window, $timeout, copyService, calculatedDateHistoryService, maintenanceService, localStorageService, gaTrackEventService) {
 		var vm = this;
 
 		// Internal data
@@ -194,6 +208,11 @@
 		function onCopySuccess() {
 			logService.fnCalled('onCopySuccess');
 			copyService.show();
+			gaTrackEventService.newEvent({
+				category: 'Button',
+				action: 'Click',
+				label: 'Copy calculated date'
+			});
 		}
 
 		function onInitialDateChange() {
@@ -540,6 +559,33 @@
 (function (angular) {
 	'use strict';
 
+	angular.module('xDaysLater').factory('gaTrackEventService', gaTrackEventService);
+
+	gaTrackEventService.$inject = ['Analytics', '_'];
+
+	function gaTrackEventService(Analytics, _) {
+		return {
+			newEvent: newEvent
+		};
+
+		function newEvent($event) {
+			var event = $event;
+			if (_.has(event, 'category') && _.has(event, 'action') && _.has(event, 'label')) {
+				event.nonInteraction = _.isBoolean(event.nonInteraction) ? event.nonInteraction : false;
+				if (event.nonInteraction) {
+					Analytics.trackEvent(event.category, event.action, event.label, event.value, true);
+				} else if (_.has(event, 'value')) {
+					Analytics.trackEvent(event.category, event.action, event.label, event.value);
+				} else {
+					Analytics.trackEvent(event.category, event.action, event.label);
+				}
+			}
+		}
+	}
+})(window.angular);
+(function (angular) {
+	'use strict';
+
 	angular.module('xDaysLater').factory('keyboardService', keyboardService);
 
 	function keyboardService() {
@@ -657,7 +703,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.13.6');
+		console.info('Current version: 0.14.0');
 	}
 })(window.angular);
 
