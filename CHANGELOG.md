@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.10]
+### Added
+- Path to feed
+
+### Changed
+- Added custom header html link to feed instead of using a plugin
+
 ## [0.15.9]
 ### Fixed
 - Wrong feed path
