@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.14.3]
+### Changed
+- Analytics events
+
 ## [0.14.2]
 ### Added
 - Analytics events

@@ -90,11 +90,11 @@
 		function defineDate() {
 			logService.fnCalled('defineDate');
 			vm.calculatedDate = dateService.addDays(vm.data.xDays, vm.initialDate);
-			console.log(vm.calculatedDate);
 			gaTrackEventService.newEvent({
 				category: 'Model',
 				action  : 'Change',
-				label   : 'Calculated date'
+				label   : 'Calculated date',
+				value   : vm.calculatedDate
 			});
 		}
 

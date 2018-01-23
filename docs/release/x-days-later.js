@@ -158,11 +158,11 @@
 		function defineDate() {
 			logService.fnCalled('defineDate');
 			vm.calculatedDate = dateService.addDays(vm.data.xDays, vm.initialDate);
-			console.log(vm.calculatedDate);
 			gaTrackEventService.newEvent({
 				category: 'Model',
 				action: 'Change',
-				label: 'Calculated date'
+				label: 'Calculated date',
+				value: vm.calculatedDate
 			});
 		}
 
@@ -716,7 +716,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.14.2');
+		console.info('Current version: 0.14.3');
 	}
 })(window.angular);
 
