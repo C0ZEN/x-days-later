@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.12]
+### Fixed
+- Canonical url
+
 ## [0.15.11]
 ### Added
 - New initiator `common`
