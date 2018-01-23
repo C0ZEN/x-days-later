@@ -17,16 +17,6 @@
 	function config() {
 		console.info('Sitemap:', 'https://c0zen.github.io/x-days-later/sitemap.xml');
 		console.info('Feed:', 'https://c0zen.github.io/x-days-later/feed.xml');
-
-		if ('serviceWorker' in navigator) {
-			window.addEventListener('load', () => {
-				navigator.serviceWorker.register('/sw.js').then(registration => {
-					console.log('ServiceWorker registration successful with scope: ', registration.scope);
-				}, err => {
-					console.log('ServiceWorker registration failed: ', err);
-				});
-			});
-		}
 	}
 
 }(window.angular));
