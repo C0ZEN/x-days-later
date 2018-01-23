@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.18]
+### Added
+- Experimental service worker
+
 ## [0.15.17]
 ### Added
 - Sw js file
