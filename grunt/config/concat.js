@@ -18,8 +18,9 @@ module.exports = {
 	release: {
 		src : [
 			'docs/scripts/**/*',
+			'.tmp/release/version.initiator.js',
 			'!docs/scripts/initiators/version.initiator.js',
-			'.tmp/release/version.initiator.js'
+			'!docs/scripts/sw.js'
 		],
 		dest: '.tmp/release/scripts.js'
 	}

@@ -14,6 +14,7 @@ module.exports = function (grunt) {
 			'clean:releaseScripts',
 			'preprocess:versionInitiator',
 			'concat:release',
+			'copy:sw',
 			'babel:concatScripts',
 			'babel:uglifyScripts',
 			'force:build'
