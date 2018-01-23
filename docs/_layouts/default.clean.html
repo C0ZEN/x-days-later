@@ -10,15 +10,16 @@
 		</script>
 		<meta charset="UTF-8">
 		<title>{{ site.title }} by {{ site.author }}</title>
-		<meta name="description"
-		      content="{{ site.description }}"/>
 		<meta name="viewport"
 		      content="width=device-width, initial-scale=1">
 		<meta name="theme-color"
 		      content="#16A085">
 
 		<!-- Meta injected with jekyll-seo-tag plugin -->
-		{% seo %}
+		{% seo title=false %}
+
+		<!-- Meta injected feed with jekyll-feed plugin -->
+		{% feed_meta %}
 
 		<!-- Loader -->
 		<link rel="stylesheet"

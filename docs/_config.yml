@@ -35,3 +35,6 @@ lang: fr_FR
 # Plugins
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-mentions

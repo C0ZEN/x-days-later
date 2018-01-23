@@ -10,6 +10,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Tag for SEO injection
 - New Jekyll plugin `jekyll-seo-tag`
+- New Jekyll plugin `jekyll-feed`
+- New Jekyll plugin `jekyll-sitemap`
+- New Jekyll plugin `jekyll-mentions`
 
 ## [0.14.3]
 ### Changed
