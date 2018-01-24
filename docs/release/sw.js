@@ -28,9 +28,12 @@
 		$event.waitUntil(() => {
 			caches
 				.open(cacheName)
-				.then(cache => {
+				.then($cache => {
 					console.log('SW: cache opened');
-					return cache.addAll(filesToCache);
+					return $cache.addAll(filesToCache);
+				})
+				.catch(() => {
+					console.log('SW: cache install error');
 				});
 		});
 	});
