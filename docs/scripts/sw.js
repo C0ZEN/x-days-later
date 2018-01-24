@@ -11,14 +11,7 @@ const data = {
 	successHttpStatus: 200,
 	cacheName        : 'x-days-later-cache-v1',
 	filesToCache     : [
-		'/x-days-later/',
-		'/x-days-later/index.html',
 		'/x-days-later/assets/css/loader.css',
-		'/x-days-later/assets/css/vendors.css',
-		'/x-days-later/assets/css/styles.css',
-		'/x-days-later/release/vendors.js',
-		'/x-days-later/release/x-days-later.min.js',
-		'/x-days-later/sw.init.min.js'
 	]
 };
 
