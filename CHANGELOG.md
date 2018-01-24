@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.50]
+
 ## [0.16.49]
 
 ## [0.16.48]

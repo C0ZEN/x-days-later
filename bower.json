@@ -1,6 +1,6 @@
 {
 	"name": "x-days-later",
-	"version": "0.16.49",
+	"version": "0.16.50",
 	"dependencies": {
 		"jquery": "^3.2.1",
 		"angular": "^1.6.8",
