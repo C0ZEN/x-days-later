@@ -29,7 +29,7 @@ self.addEventListener('install', $event => {
 				return $cache.addAll(filesToCache);
 			})
 			.catch(() => {
-				console.log('SW: cache install error');
+				console.error('SW: cache install error');
 			});
 	});
 });
