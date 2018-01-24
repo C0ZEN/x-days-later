@@ -24,7 +24,7 @@ const data = {
 	]
 };
 
-for (let i = 2, length = data.filesToCache; i < length; i++) {
+for (let i = 2, length = data.filesToCache.length; i < length; i++) {
 	data.filesToCache[i] += '?timestamp=' + data.now;
 }
 
