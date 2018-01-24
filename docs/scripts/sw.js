@@ -38,6 +38,8 @@ self.addEventListener('install', $event => {
 					.then(() => {
 						console.log('SW: all stuff cached');
 						// self.skipWaiting();
+					}).catch(() => {
+						console.error('SW: cache install error');
 					});
 			})
 			.catch(() => {
