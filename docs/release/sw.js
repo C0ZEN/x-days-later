@@ -41,17 +41,17 @@ self.addEventListener('activate', $event => {
 });
 
 function onRespondWithMatch($event) {
-	// caches
-	// 	.match($event.request)
-	// 	.then($response => {
-	// 		if ($response) {
-	// 			return $response;
-	// 		}
-	// 		const fetchRequest = $event.request.clone();
-	// 		return fetch(fetchRequest).then($response2 => {
-	// 			return onFetchSuccess($event, $response2);
-	// 		});
-	// 	});
+	caches
+		.match($event.request)
+		.then($response => {
+			if ($response) {
+				return $response;
+			}
+			const fetchRequest = $event.request.clone();
+			return fetch(fetchRequest).then($response2 => {
+				return onFetchSuccess($event, $response2);
+			});
+		});
 }
 
 function onFetchSuccess($event, $response) {
