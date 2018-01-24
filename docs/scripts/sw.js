@@ -22,12 +22,12 @@ const data = {
 	]
 };
 
+for (let i = 2, length = data.filesToCache.length; i < length; i++) {
+	data.filesToCache[i] += '?timestamp=' + data.now;
+}
+
 self.addEventListener('install', $event => {
 	console.log('SW: install');
-
-	// for (let i = 2, length = data.filesToCache.length; i < length; i++) {
-	// 	data.filesToCache[i] += '?timestamp=' + data.now;
-	// }
 	$event.waitUntil(() => {
 		caches
 			.open(data.cacheName)
