@@ -8,6 +8,7 @@
  * Version: 1.0.0
  */
 const data = {
+	now              : Date.now(),
 	successHttpStatus: 200,
 	cacheName        : 'x-days-later-cache-v1',
 	filesToCache     : [
@@ -22,7 +23,7 @@ const data = {
 };
 
 for (let i = 2, length = data.filesToCache.length; i < length; i++) {
-	data.filesToCache[i] += '?timestamp=';
+	data.filesToCache[i] += '?timestamp=' + data.now;
 }
 
 self.addEventListener('install', $event => {
