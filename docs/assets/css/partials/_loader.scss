@@ -2,8 +2,8 @@ loader-container {
   position        : fixed;
   top             : 0;
   right           : 0;
-  bottom          : 0;
-  left            : 0;
+  width           : 100vw;
+  height          : 100vh;
   @include rgba-background($color-white);
   z-index         : 300;
   display         : flex;
@@ -15,23 +15,23 @@ loader-container {
   cursor          : default;
   loader,
   loader:after {
-    border-radius : 50%;
-    width         : $loader-size;
-    height        : $loader-size;
+	border-radius : 50%;
+	width         : $loader-size;
+	height        : $loader-size;
   }
   loader {
-    font-size : 1rem;
-    position  : relative;
-    @include rgba-border-top(0.35rem, solid, $color-turquoise, 0.25);
-    @include rgba-border-right(0.35rem, solid, $color-turquoise, 0.25);
-    @include rgba-border-bottom(0.35rem, solid, $color-turquoise, 0.25);
-    @include rgba-border-left(0.35rem, solid, $color-green-sea);
-    transform : translateZ(0);
-    animation : load8 1.1s infinite linear;
+	font-size : 1rem;
+	position  : relative;
+	@include rgba-border-top(0.35rem, solid, $color-turquoise, 0.25);
+	@include rgba-border-right(0.35rem, solid, $color-turquoise, 0.25);
+	@include rgba-border-bottom(0.35rem, solid, $color-turquoise, 0.25);
+	@include rgba-border-left(0.35rem, solid, $color-green-sea);
+	transform : translateZ(0);
+	animation : load8 1.1s infinite linear;
   }
   &.hiding {
-    animation-name      : fadeOut;
-    animation-fill-mode : both;
-    animation-duration  : 100ms;
+	animation-name      : fadeOut;
+	animation-fill-mode : both;
+	animation-duration  : 100ms;
   }
 }
