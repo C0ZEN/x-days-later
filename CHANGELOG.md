@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.13]
+### Changed
+- Manifest start_url
+
 ## [0.16.12]
 ### Changed
 - Manifest start_url

@@ -14,7 +14,7 @@
 	"background_color": "#16A085",
 	"lang": "fr_FR",
 	"display": "standalone",
-	"start_url": "home",
+	"start_url": "index.html",
 	"orientation": "portrait",
 	"icons": [
 		{
