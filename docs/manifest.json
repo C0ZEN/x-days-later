@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "X days later",
+	"version": "0.15.25",
+	"description": "Affiche la date à X jours ouvrés",
+	"author": "C0ZEN",
+	"background": {
+		"persistent": false
+	},
+	"homepage_url": "https://c0zen.github.io/x-days-later/",
+	"short_name": "XDaysLater",
+	"version_name": "0.15.25",
+	"theme_color": "null",
+	"background_color": "null",
+	"lang": "fr_FR",
+	"display": "standalone"
+}

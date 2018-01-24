@@ -34,6 +34,8 @@ module.exports = function (grunt) {
 				'gitcheckout:develop',
 				'js.release',
 				'string-replace:changelog',
+				'string-replace:configVersion',
+				'preprocess:manifest',
 				'internal.bump',
 				'gitpush:develop',
 				'gitcheckout:master',

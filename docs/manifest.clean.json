@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "<!-- @echo config.name -->",
+	"version": "<!-- @echo config.version -->",
+	"description": "<!-- @echo config.description -->",
+	"author": "<!-- @echo config.author -->",
+	"background": {
+		"persistent": false
+	},
+	"homepage_url": "<!-- @echo config.homePageUrl -->",
+	"short_name": "<!-- @echo config.short_name -->",
+	"version_name": "<!-- @echo config.version -->",
+	"theme_color": "<!-- @echo config.color -->",
+	"background_color": "<!-- @echo config.color -->",
+	"lang": "<!-- @echo config.lang -->",
+	"display": "standalone"
+}

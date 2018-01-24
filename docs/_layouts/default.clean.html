@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-FR"
+<html lang="{{ site.lang }}"
       ng-app="xDaysLater"
       ng-controller="mainController as vm">
 	<head>
@@ -12,8 +12,10 @@
 		<title>{{ site.title }} by {{ site.author }}</title>
 		<meta name="viewport"
 		      content="width=device-width, initial-scale=1">
+		<link rel="manifest"
+			  href="{{ site.baseUrl }}manifest.json">
 		<meta name="theme-color"
-		      content="#16A085">
+		      content="{{ site.color }}">
 		<link rel="canonical"
 		      href="{{ site.baseUrl }}">
 
@@ -152,7 +154,7 @@
 		</script>
 
 		<!-- SW -->
-		<script src="release/sw.init.min.js"></script>
+		<script src="{{ site.baseUrl }}release/sw.init.min.js"></script>
 		<script>
 			if (typeof console != 'undefined') {
 				console.timeEnd('Body loading time');

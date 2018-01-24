@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Link to manifest
+- Manifest
+
+### Changed
+- The lang is now from the config in default template
+- The theme-color is now from the config in default template
+- Grunt config tasks to add version in the config.yml
+- Grunt config tasks to edit manifest based on config.yml
 
 ## [0.15.25]
 ### Added
