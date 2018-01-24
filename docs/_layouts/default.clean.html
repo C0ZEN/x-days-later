@@ -13,7 +13,7 @@
 		<meta name="viewport"
 		      content="width=device-width, initial-scale=1">
 		<link rel="manifest"
-			  href="{{ site.baseUrl }}manifest.json">
+			  href="{{ '/manifest.json?v=' | append: site.github.build_revision | relative_url }}">
 		<meta name="theme-color"
 		      content="{{ site.color }}">
 		<link rel="canonical"
@@ -27,7 +27,7 @@
 		<!-- Meta injected feed with jekyll-feed plugin -->
 		<link type="application/atom+xml"
 		      rel="alternate"
-		      href="{{ site.baseUrl }}feed.xml"
+		      href="{{ '/feed.xml?v=' | append: site.github.build_revision | relative_url }}"
 		      title="{{ site.title }}">
 
 		<!-- Loader -->
@@ -154,7 +154,7 @@
 		</script>
 
 		<!-- SW -->
-		<script src="{{ site.baseUrl }}release/sw.init.min.js"></script>
+		<script src="{{ '/release/sw.init.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 		<script>
 			if (typeof console != 'undefined') {
 				console.timeEnd('Body loading time');
