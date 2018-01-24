@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.17]
+### Changed
+- Loader styles
+
 ## [0.16.16]
 ### Changed
 - Loader styles
