@@ -1,15 +1,20 @@
 loader-container {
-  position       : fixed;
-  top            : 0;
-  right          : 0;
-  bottom         : 0;
-  left           : 0;
-  overflow       : hidden;
+  position                    : fixed;
+  top                         : 0;
+  right                       : 0;
+  bottom                      : 0;
+  left                        : 0;
+  overflow                    : hidden;
   @include rgba-background($color-white);
-  z-index        : 300;
-  transition     : $transition;
-  pointer-events : none;
-  cursor         : default;
+  z-index                     : 300;
+  transition                  : $transition;
+  pointer-events              : none;
+  cursor                      : default;
+  -webkit-backface-visibility : hidden;
+  display                     : flex;
+  flex-direction              : row;
+  justify-content             : center;
+  align-items                 : center;
   loader,
   loader:after {
 	border-radius : 50%;
@@ -17,10 +22,6 @@ loader-container {
 	height        : $loader-size;
   }
   loader {
-	position  : fixed;
-	top       : 50%;
-	left      : 50%;
-	transform : translate(-50%, -50%);
 	font-size : 1rem;
 	@include rgba-border-top(0.35rem, solid, $color-turquoise, 0.25);
 	@include rgba-border-right(0.35rem, solid, $color-turquoise, 0.25);
