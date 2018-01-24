@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.3]
+### Added
+- Version tag of most of default href
+
 ## [0.16.2]
 ### Added
 - Version tag of most of default href
