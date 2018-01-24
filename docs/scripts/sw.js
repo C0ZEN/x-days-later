@@ -7,26 +7,40 @@
  * Time: 23:28
  * Version: 1.0.0
  */
-const cacheName    = 'x-days-later-cache-v1';
-const filesToCache = [
-	'/x-days-later/index.html',
-	'/x-days-later/assets/css/loader.css',
-	'/x-days-later/assets/css/vendors.css',
-	'/x-days-later/assets/css/styles.css',
-	'/x-days-later/release/vendors.js',
-	'/x-days-later/release/x-days-later.min.js',
-	'/x-days-later/release/sw.init.min.js'
-];
-const success      = 200;
+const data = {
+	now              : Date.now(),
+	successHttpStatus: 200,
+	cacheName        : 'x-days-later-cache-v1',
+	filesToCache     : [
+		'/',
+		'/x-days-later/',
+		'/x-days-later/index.html',
+		'/x-days-later/assets/css/loader.css',
+		'/x-days-later/assets/css/vendors.css',
+		'/x-days-later/assets/css/styles.css',
+		'/x-days-later/release/vendors.js',
+		'/x-days-later/release/x-days-later.min.js',
+		'/x-days-later/release/sw.init.min.js'
+	]
+};
+
+for (let i = 2, length = data.filesToCache; i < length; i++) {
+	data.filesToCache[i] += '?timestamp=' + data.now;
+}
 
 self.addEventListener('install', $event => {
 	console.log('SW: install');
 	$event.waitUntil(() => {
 		caches
-			.open(cacheName)
+			.open(data.cacheName)
 			.then($cache => {
 				console.log('SW: cache opened');
-				return $cache.addAll(filesToCache);
+				return $cache
+					.addAll(data.filesToCache)
+					.then(() => {
+						console.log('SW: all stuff cached');
+						self.skipWaiting();
+					});
 			})
 			.catch(() => {
 				console.error('SW: cache install error');
@@ -56,12 +70,12 @@ function onRespondWithMatch($event) {
 }
 
 function onFetchSuccess($event, $response) {
-	if (!$response || $response.status !== success || 'basic' !== $response.type) {
+	if (!$response || $response.status !== data.successHttpStatus || 'basic' !== $response.type) {
 		return $response;
 	}
 	const responseToCache = $response.clone();
 	caches
-		.open(cacheName)
+		.open(data.cacheName)
 		.then(cache => {
 			cache.put($event.request, responseToCache);
 		});
