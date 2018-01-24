@@ -47,3 +47,37 @@ self.addEventListener('install', $event => {
 			});
 	});
 });
+
+self.addEventListener('fetch', $event => {
+	console.log('SW: fetch');
+	$event.respondWith(() => {
+		return onRespondWithMatch($event);
+	});
+});
+
+function onRespondWithMatch($event) {
+	caches
+		.match($event.request)
+		.then($response => {
+			if ($response) {
+				return $response;
+			}
+			const fetchRequest = $event.request.clone();
+			return fetch(fetchRequest).then($response2 => {
+				return onFetchSuccess($event, $response2);
+			});
+		});
+}
+
+function onFetchSuccess($event, $response) {
+	if (!$response || $response.status !== data.successHttpStatus || 'basic' !== $response.type) {
+		return $response;
+	}
+	const responseToCache = $response.clone();
+	caches
+		.open(data.cacheName)
+		.then(cache => {
+			cache.put($event.request, responseToCache);
+		});
+	return $response;
+}
