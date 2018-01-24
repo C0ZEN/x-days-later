@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.27]
+### Fixed
+- The path of the provided scope ('/') is not under the max scope allowed ('/x-days-later/'). Adjust the scope, move the Service Worker script, or use the Service-Worker-Allowed HTTP header to allow the scope.
+
 ## [0.16.26]
 ### Fixed
 - A bad HTTP response code (404) was received when fetching the script.
