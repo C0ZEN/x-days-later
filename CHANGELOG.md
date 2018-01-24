@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.1]
+### Fixed
+- Escaped config.yml color
+
 ## [0.16.0]
 ### Added
 - Link to manifest

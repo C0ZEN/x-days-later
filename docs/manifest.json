@@ -10,8 +10,8 @@
 	"homepage_url": "https://c0zen.github.io/x-days-later/",
 	"short_name": "XDaysLater",
 	"version_name": "0.15.25",
-	"theme_color": "null",
-	"background_color": "null",
+	"theme_color": "#16A085",
+	"background_color": "#16A085",
 	"lang": "fr_FR",
 	"display": "standalone"
 }
