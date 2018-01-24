@@ -11,7 +11,7 @@ const data = {
 	successHttpStatus: 200,
 	cacheName        : 'x-days-later-cache-v1',
 	filesToCache     : [
-		'/x-days-later/assets/css/loader.css',
+		'/x-days-later/assets/css/loader.css'
 	]
 };
 

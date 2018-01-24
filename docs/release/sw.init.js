@@ -10,9 +10,7 @@
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
 		navigator.serviceWorker
-			.register('/x-days-later/sw.min.js', {
-				scope: '/x-days-later/'
-			})
+			.register('/x-days-later/sw.min.js')
 			.then(registration => {
 				console.log('SW: registration successful');
 				console.info(registration.scope);
