@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.5]
+### Fixed
+- Manifest start url
+
 ## [0.16.4]
 ### Added
 - Icons, orientation and start url for manifest 
