@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.10]
+### Added
+- New manifest icon
+
 ## [0.16.9]
 ### Fixed
 - Path to sw
