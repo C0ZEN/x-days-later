@@ -24,9 +24,10 @@ const data = {
 
 self.addEventListener('install', $event => {
 	console.log('SW: install');
-	for (let i = 2, length = data.filesToCache.length; i < length; i++) {
-		data.filesToCache[i] += '?timestamp=' + data.now;
-	}
+
+	// for (let i = 2, length = data.filesToCache.length; i < length; i++) {
+	// 	data.filesToCache[i] += '?timestamp=' + data.now;
+	// }
 	$event.waitUntil(() => {
 		caches
 			.open(data.cacheName)
@@ -36,7 +37,7 @@ self.addEventListener('install', $event => {
 					.addAll(data.filesToCache)
 					.then(() => {
 						console.log('SW: all stuff cached');
-						self.skipWaiting();
+						// self.skipWaiting();
 					});
 			})
 			.catch(() => {
