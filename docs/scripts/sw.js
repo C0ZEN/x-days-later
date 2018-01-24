@@ -30,16 +30,7 @@ self.addEventListener('install', $event => {
 			.then($cache => {
 				console.log('SW: cache opened');
 				return $cache
-					.addAll(data.filesToCache)
-					.then(() => {
-						console.log('SW: all stuff cached');
-						// self.skipWaiting();
-					}).catch(() => {
-						console.error('SW: cache install error');
-					});
-			})
-			.catch(() => {
-				console.error('SW: cache install error');
+					.addAll(data.filesToCache);
 			});
 	});
 });
