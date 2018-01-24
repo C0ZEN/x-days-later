@@ -7,29 +7,25 @@
  * Time: 23:53
  * Version: 1.0.0
  */
-(function () {
-	'use strict';
-
-	if ('serviceWorker' in navigator) {
-		window.addEventListener('load', () => {
-			navigator.serviceWorker
-				.register('release/sw.min.js')
-				.then(registration => {
-					console.log('SW: registration successful');
-					console.info(registration.scope);
-					if (registration.installing) {
-						console.log('SW: installing');
-					}
-					else if (registration.waiting) {
-						console.log('SW: installed');
-					}
-					else if (registration.active) {
-						console.log('SW: active');
-					}
-				}, err => {
-					console.error('SW: registration failed');
-					console.error(err);
-				});
-		});
-	}
-})();
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', () => {
+		navigator.serviceWorker
+			.register('release/sw.min.js')
+			.then(registration => {
+				console.log('SW: registration successful');
+				console.info(registration.scope);
+				if (registration.installing) {
+					console.log('SW: installing');
+				}
+				else if (registration.waiting) {
+					console.log('SW: installed');
+				}
+				else if (registration.active) {
+					console.log('SW: active');
+				}
+			}, err => {
+				console.error('SW: registration failed');
+				console.error(err);
+			});
+	});
+}

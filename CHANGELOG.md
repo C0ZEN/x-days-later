@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.22]
+### Changed
+- SW
+
 ## [0.16.21]
 ### Changed
 - SW
