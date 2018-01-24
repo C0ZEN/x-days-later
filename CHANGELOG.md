@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.26]
+### Fixed
+- A bad HTTP response code (404) was received when fetching the script.
+
 ## [0.16.25]
 ### Fixed
 - Missing sw files
