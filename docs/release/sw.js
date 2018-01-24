@@ -24,6 +24,7 @@
 	const success      = 200;
 
 	self.addEventListener('install', $event => {
+		console.log('SW: install');
 		$event.waitUntil(() => {
 			caches
 				.open(cacheName)
@@ -35,6 +36,7 @@
 	});
 
 	self.addEventListener('fetch', $event => {
+		console.log('SW: fetch');
 		$event.respondWith(() => {
 			return onRespondWithMatch($event);
 		});
