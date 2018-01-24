@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.25]
+### Fixed
+- Missing sw files
+
 ## [0.16.24]
 ### Changed
 - Path location of sw files
