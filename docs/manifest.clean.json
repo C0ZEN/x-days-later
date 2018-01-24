@@ -14,7 +14,7 @@
 	"background_color": "<!-- @echo config.color -->",
 	"lang": "<!-- @echo config.lang -->",
 	"display": "standalone",
-	"start_url": "?source=home",
+	"start_url": "home",
 	"orientation": "portrait",
 	"icons": [
 		{
