@@ -9,15 +9,19 @@ copy-btn {
   cursor          : pointer;
   border-radius   : 50%;
   width           : $input-height;
+  min-width       : $input-height;
+  max-width       : $input-height;
   height          : $input-height;
+  min-height      : $input-height;
+  max-height      : $input-height;
   transition      : $transition;
   svg {
-    width  : 50%;
-    height : 50%;
-    fill   : inherit;
+	width  : 50%;
+	height : 50%;
+	fill   : inherit;
   }
   &:hover, &:focus, &:active {
-    @include rgba-background($color-grey-light, $color-grey-light-opacity);
-    fill : $color-turquoise;
+	@include rgba-background($color-grey-light, $color-grey-light-opacity);
+	fill : $color-turquoise;
   }
 }

@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.4]
+### Added
+- Icons, orientation and start url for manifest 
+
+### Fixed
+- Copy btn width on mobile
+
 ## [0.16.3]
 ### Added
 - Version tag of most of default href

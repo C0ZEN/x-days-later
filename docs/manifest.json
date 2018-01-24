@@ -13,5 +13,49 @@
 	"theme_color": "#16A085",
 	"background_color": "#16A085",
 	"lang": "fr_FR",
-	"display": "standalone"
+	"display": "standalone",
+	"start_url": "/?utm_source=homescreen",
+	"orientation": "portrait",
+	"icons": [
+		{
+			"src": "images/apple-touch-icon-57x57.png",
+			"type": "image/png",
+			"sizes": "57x57"
+		},
+		{
+			"src": "images/apple-touch-icon-72x72.png",
+			"type": "image/png",
+			"sizes": "72x72"
+		},
+		{
+			"src": "images/apple-touch-icon-76x76.png",
+			"type": "image/png",
+			"sizes": "76x76"
+		},
+		{
+			"src": "images/apple-touch-icon-114x114.png",
+			"type": "image/png",
+			"sizes": "114x114"
+		},
+		{
+			"src": "images/apple-touch-icon-120x120.png",
+			"type": "image/png",
+			"sizes": "120x120"
+		},
+		{
+			"src": "images/apple-touch-icon-144x144.png",
+			"type": "image/png",
+			"sizes": "144x144"
+		},
+		{
+			"src": "images/apple-touch-icon-152x152.png",
+			"type": "image/png",
+			"sizes": "152x152"
+		},
+		{
+			"src": "images/apple-touch-icon-180x180.png",
+			"type": "image/png",
+			"sizes": "180x180"
+		}
+	]
 }
