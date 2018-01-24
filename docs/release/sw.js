@@ -18,7 +18,7 @@ const data = {
 		'/x-days-later/assets/css/styles.css',
 		'/x-days-later/release/vendors.js',
 		'/x-days-later/release/x-days-later.min.js',
-		'/x-days-later/release/sw.init.min.js'
+		'/x-days-later/sw.init.min.js'
 	]
 };
 
@@ -40,6 +40,11 @@ self.addEventListener('fetch', $event => {
 	$event.respondWith(() => {
 		return onRespondWithMatch($event);
 	});
+});
+
+self.addEventListener('activate', $event => {
+	console.log('SW: activate');
+	$event.waitUntil(self.clients.claim());
 });
 
 function onRespondWithMatch($event) {
