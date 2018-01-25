@@ -23,7 +23,16 @@ self.addEventListener('install', $event => {
 			.then($cache => {
 				console.log('SW: cache opened');
 				return $cache
-					.addAll(data.filesToCache);
+					.addAll(data.filesToCache)
+					.then(() => {
+						console.log('SW: files added to cache');
+					})
+					.catch(() => {
+						console.log('SW: cache files error');
+					});
+			})
+			.catch(() => {
+				console.log('SW: cache open error');
 			});
 	});
 });
