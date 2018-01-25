@@ -44,11 +44,11 @@ self.addEventListener('fetch', $event => {
 		.match($event.request)
 		.then($response => {
 			console.log('SW: fetch match found');
-			response = $response;
+			response = $response.clone();
 			caches.open(data.cacheName).then(cache => {
 				cache.put($event.request, response);
 			});
-			return response.clone();
+			return response;
 		})
 		.catch(() => {
 			console.log('SW: fetch match not found');
