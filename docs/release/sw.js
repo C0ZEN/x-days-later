@@ -43,15 +43,12 @@ self.addEventListener('fetch', $event => {
 	$event.respondWith(caches
 		.match($event.request)
 		.then($response => {
-			console.log('SW: fetch match found');
+			console.log('SW: file was in the cache, execute cache fetching', $response);
 			response = $response;
-			caches.open(data.cacheName).then(cache => {
-				cache.put($event.request, response);
-			});
 			return response.clone();
 		})
 		.catch(() => {
-			console.log('SW: fetch match not found');
+			console.log('SW: file was not in the cache, execute http request');
 			return fetch($event.request);
 		}));
 });
