@@ -53,11 +53,12 @@ self.addEventListener('fetch', $event => {
 		.catch(() => {
 			console.log('SW: fetch match not found');
 			return fetch($event.request).then($response => {
+				response = $response.clone();
 				return caches
 					.open(data.cacheName)
 					.then($cache => {
-						$cache.put($event.request, $response.clone());
-						return $response;
+						$cache.put($event.request, response);
+						return response;
 					});
 			});
 		}));
