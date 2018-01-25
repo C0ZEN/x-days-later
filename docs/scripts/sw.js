@@ -39,24 +39,22 @@ self.addEventListener('install', $event => {
 
 self.addEventListener('fetch', $event => {
 	console.log('SW: fetch');
-	$event.respondWith(() => {
-		caches
-			.match($event.request)
-			.then(() => {
-				console.log('SW: fetch match found');
-			})
-			.catch(() => {
-				console.log('SW: fetch match not found');
-				return fetch($event.request).then($response => {
-					return caches
-						.open(data.cacheName)
-						.then($cache => {
-							$cache.put($event.request, $response.clone());
-							return $response;
-						});
-				});
+	$event.respondWith(caches
+		.match($event.request)
+		.then(() => {
+			console.log('SW: fetch match found');
+		})
+		.catch(() => {
+			console.log('SW: fetch match not found');
+			return fetch($event.request).then($response => {
+				return caches
+					.open(data.cacheName)
+					.then($cache => {
+						$cache.put($event.request, $response.clone());
+						return $response;
+					});
 			});
-	});
+		}));
 });
 
 self.addEventListener('activate', $event => {
