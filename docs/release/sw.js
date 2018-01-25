@@ -39,10 +39,16 @@ self.addEventListener('install', $event => {
 
 self.addEventListener('fetch', $event => {
 	console.log('SW: fetch');
+	let response = null;
 	$event.respondWith(caches
 		.match($event.request)
-		.then(() => {
+		.then($response => {
 			console.log('SW: fetch match found');
+			response = $response;
+			caches.open(data.cacheName).then(cache => {
+				cache.put($event.request, response);
+			});
+			return response.clone();
 		})
 		.catch(() => {
 			console.log('SW: fetch match not found');
