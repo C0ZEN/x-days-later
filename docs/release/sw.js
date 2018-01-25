@@ -42,22 +42,18 @@ self.addEventListener('fetch', $event => {
 	$event.respondWith(() => {
 		caches
 			.match($event.request)
-			.then($response => {
-				if ($response) {
-					return $response;
-				}
-				const fetchRequest = $event.request.clone();
-				return fetch(fetchRequest).then($response2 => {
-					if (!$response2 || $response2.status !== data.successHttpStatus || 'basic' !== $response2.type) {
-						return $response2;
-					}
-					const responseToCache = $response2.clone();
-					caches
+			.then(() => {
+				console.log('SW: fetch match found');
+			})
+			.catch(() => {
+				console.log('SW: fetch match not found');
+				return fetch($event.request).then($response => {
+					return caches
 						.open(data.cacheName)
-						.then(cache => {
-							cache.put($event.request, responseToCache);
+						.then($cache => {
+							$cache.put($event.request, $response.clone());
+							return $response;
 						});
-					return $response2;
 				});
 			});
 	});
