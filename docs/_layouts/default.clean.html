@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}"
-      ng-app="xDaysLater"
-      ng-controller="mainController as vm">
+	  ng-app="xDaysLater"
+	  ng-controller="mainController as vm">
 	<head>
 		<script>
 			if (typeof console != 'undefined') {
@@ -11,89 +11,90 @@
 		<meta charset="UTF-8">
 		<title>{{ site.title }} by {{ site.author }}</title>
 		<meta name="viewport"
-		      content="width=device-width, initial-scale=1">
+			  content="width=device-width, initial-scale=1">
 		<link rel="manifest"
 			  href="{{ '/manifest.json?v=' | append: site.github.build_revision | relative_url }}">
 		<meta name="theme-color"
-		      content="{{ site.color }}">
+			  content="{{ site.color }}">
 		<link rel="canonical"
-		      href="{{ site.baseUrl }}">
+			  href="{{ site.baseUrl }}">
 
 		<!-- Meta injected with jekyll-seo-tag plugin -->
 		{% seo title=false %}
 		<link rel="canonical"
-		      href="{{ site.baseUrl }}">
+			  href="{{ site.baseUrl }}">
 
 		<!-- Meta injected feed with jekyll-feed plugin -->
 		<link type="application/atom+xml"
-		      rel="alternate"
-		      href="{{ '/feed.xml?v=' | append: site.github.build_revision | relative_url }}"
-		      title="{{ site.title }}">
+			  rel="alternate"
+			  href="{{ '/feed.xml?v=' | append: site.github.build_revision | relative_url }}"
+			  title="{{ site.title }}">
 
 		<!-- Loader -->
 		<link rel="stylesheet"
-		      href="{{ '/assets/css/loader.css?v=' | append: site.github.build_revision | relative_url }}">
+			  href="{{ '/assets/css/loader.css?v=' | append: site.github.build_revision | relative_url }}">
 
 		<!-- Vendors -->
 		<link rel="preload"
-		      as="style"
-		      href="{{ '/release/vendors.css?v=' | append: site.github.build_revision | relative_url }}"
-		      onload="this.rel='stylesheet'">
+			  as="style"
+			  href="{{ '/release/vendors.css?v=' | append: site.github.build_revision | relative_url }}"
+			  onload="this.rel='stylesheet'">
 
 		<!-- Fonts -->
 		<link rel="preload"
-		      as="font"
-		      href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600"
-		      onload="this.rel='stylesheet'">
+			  as="font"
+			  href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600"
+			  onload="this.rel='stylesheet'">
 
 		<!-- Styles -->
 		<link rel="preload"
-		      as="style"
-		      href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
-		      onload="this.rel='stylesheet'">
+			  as="style"
+			  href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+			  onload="this.rel='stylesheet'">
 
 		<!-- Favicon -->
 		<link rel="shortcut icon"
-		      href="{{ '/images/favicon.ico?v=' | append: site.github.build_revision | relative_url }}"
-		      type="image/x-icon"/>
+			  href="{{ '/images/favicon.ico?v=' | append: site.github.build_revision | relative_url }}"
+			  type="image/x-icon"/>
 		<link rel="apple-touch-icon"
-		      href="{{ '/images/apple-touch-icon.png?v=' | append: site.github.build_revision | relative_url }}"/>
+			  href="{{ '/images/apple-touch-icon.png?v=' | append: site.github.build_revision | relative_url }}"/>
 		<link rel="apple-touch-icon"
-		      sizes="57x57"
-		      href="{{ '/images/apple-touch-icon-57x57.png?v=' | append: site.github.build_revision | relative_url }}"/>
+			  sizes="57x57"
+			  href="{{ '/images/apple-touch-icon-57x57.png?v=' | append: site.github.build_revision | relative_url }}"/>
 		<link rel="apple-touch-icon"
-		      sizes="72x72"
-		      href="{{ '/images/apple-touch-icon-72x72.png?v=' | append: site.github.build_revision | relative_url }}"/>
+			  sizes="72x72"
+			  href="{{ '/images/apple-touch-icon-72x72.png?v=' | append: site.github.build_revision | relative_url }}"/>
 		<link rel="apple-touch-icon"
-		      sizes="76x76"
-		      href="{{ '/images/apple-touch-icon-76x76.png?v=' | append: site.github.build_revision | relative_url }}"/>
+			  sizes="76x76"
+			  href="{{ '/images/apple-touch-icon-76x76.png?v=' | append: site.github.build_revision | relative_url }}"/>
 		<link rel="apple-touch-icon"
-		      sizes="114x114"
-		      href="{{ '/images/apple-touch-icon-114x114.png?v=' | append: site.github.build_revision | relative_url }}"/>
+			  sizes="114x114"
+			  href="{{ '/images/apple-touch-icon-114x114.png?v=' | append: site.github.build_revision | relative_url }}"/>
 		<link rel="apple-touch-icon"
-		      sizes="120x120"
-		      href="{{ '/images/apple-touch-icon-120x120.png?v=' | append: site.github.build_revision | relative_url }}"/>
+			  sizes="120x120"
+			  href="{{ '/images/apple-touch-icon-120x120.png?v=' | append: site.github.build_revision | relative_url }}"/>
 		<link rel="apple-touch-icon"
-		      sizes="144x144"
-		      href="{{ '/images/apple-touch-icon-144x144.png?v=' | append: site.github.build_revision | relative_url }}"/>
+			  sizes="144x144"
+			  href="{{ '/images/apple-touch-icon-144x144.png?v=' | append: site.github.build_revision | relative_url }}"/>
 		<link rel="apple-touch-icon"
-		      sizes="152x152"
-		      href="{{ '/images/apple-touch-icon-152x152.png?v=' | append: site.github.build_revision | relative_url }}"/>
+			  sizes="152x152"
+			  href="{{ '/images/apple-touch-icon-152x152.png?v=' | append: site.github.build_revision | relative_url }}"/>
 		<link rel="apple-touch-icon"
-		      sizes="180x180"
-		      href="{{ '/images/apple-touch-icon-180x180.png?v=' | append: site.github.build_revision | relative_url }}"/>
+			  sizes="180x180"
+			  href="{{ '/images/apple-touch-icon-180x180.png?v=' | append: site.github.build_revision | relative_url }}"/>
 	</head>
-	<body ng-class="{'maintenance': vm.data.maintenance}">
+	<body class="overflow-hidden"
+		  ng-class="{'maintenance': vm.data.maintenance}">
 
 		<!-- Header -->
 		<section class="page-header">
 			<h1 class="project-name">{{ site.title }}</h1>
 			<h2 ng-if="!vm.data.maintenance"
-			    class="project-tagline">
+				class="project-tagline">
 				{{ site.description }}
 			</h2>
 			<h2 ng-if="vm.data.maintenance"
-			    class="project-tagline">
+				class="project-tagline">
 				L'application est en cours de maintenance
 			</h2>
 		</section>
@@ -143,14 +144,14 @@
 
 		<!-- Vendors -->
 		<script type="text/javascript"
-		        defer
-		        src="{{ '/release/vendors.js?v=' | append: site.github.build_revision | relative_url }}">
+				defer
+				src="{{ '/release/vendors.js?v=' | append: site.github.build_revision | relative_url }}">
 		</script>
 
 		<!-- Scripts -->
 		<script type="text/javascript"
-		        defer
-		        src="{{ '/release/x-days-later.min.js?v=' | append: site.github.build_revision | relative_url }}">
+				defer
+				src="{{ '/release/x-days-later.min.js?v=' | append: site.github.build_revision | relative_url }}">
 		</script>
 
 		<!-- SW -->

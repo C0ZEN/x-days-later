@@ -305,6 +305,8 @@
 
 	function config($animate, $timeout) {
 		$timeout(function () {
+			var body = angular.element(document).find('body');
+			body.removedClass('overflow-hidden');
 			var loaderContainer = angular.element(document).find('loader-container');
 			$animate.leave(loaderContainer, {
 				addClass: 'hiding'
@@ -726,7 +728,7 @@ function safeApply(scope, fn) {
 	config.$inject = [];
 
 	function config() {
-		console.info('Current version: 0.17.3');
+		console.info('Current version: 0.17.4');
 	}
 })(window.angular);
 

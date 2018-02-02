@@ -21,6 +21,8 @@
 
 	function config($animate, $timeout) {
 		$timeout(() => {
+			const body = angular.element(document).find('body');
+			body.removedClass('overflow-hidden');
 			const loaderContainer = angular.element(document).find('loader-container');
 			$animate.leave(loaderContainer, {
 				addClass: 'hiding'

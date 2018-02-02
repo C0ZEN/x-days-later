@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.17.4]
+### Changed
+- The overflow is hidden when the loader is active
+
+### Fixed
+- Undo changed about icons for the manifest
+
 ## [0.17.3]
 ### Removed
 - Logs from sw file
