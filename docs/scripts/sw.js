@@ -38,7 +38,7 @@ self.addEventListener('install', $event => {
 });
 
 self.addEventListener('fetch', $event => {
-	console.log('SW: fetch', $event.request);
+	// console.log('SW: fetch', $event.request);
 	let response = null;
 	$event.respondWith(caches
 		.match($event.request)

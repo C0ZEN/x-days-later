@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.17.3]
+### Removed
+- Logs from sw file
+
 ## [0.17.2]
 ### Fixed
 - Undo changed about icons for the manifest
