@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.17.6]
+### Fixed
+- Datepicker on mobile
+
 ## [0.17.5]
 ### Fixed
 - Loader stay always visible
