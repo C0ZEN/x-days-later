@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.17.5]
+### Fixed
+- Loader stay always visible
+
 ## [0.17.4]
 ### Changed
 - The overflow is hidden when the loader is active
