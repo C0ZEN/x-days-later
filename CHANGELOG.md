@@ -6,59 +6,121 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.17.0]
+### Added
+- New `developer` key for manifest
+- New `incognito` key for manifest
+
+### Changed
+- Icons manifest structure
+
 ## [0.16.65]
+### Changed
+- SW
 
 ## [0.16.64]
+### Changed
+- SW
 
 ## [0.16.63]
+### Changed
+- SW
 
 ## [0.16.62]
+### Changed
+- SW
 
 ## [0.16.61]
+### Changed
+- SW
 
 ## [0.16.60]
+### Changed
+- SW
 
 ## [0.16.59]
+### Changed
+- SW
 
 ## [0.16.58]
+### Changed
+- SW
 
 ## [0.16.57]
+### Changed
+- SW
 
 ## [0.16.56]
+### Changed
+- SW
 
 ## [0.16.55]
+### Changed
+- SW
 
 ## [0.16.54]
+### Changed
+- SW
 
 ## [0.16.53]
+### Changed
+- SW
 
 ## [0.16.52]
+### Changed
+- SW
 
 ## [0.16.51]
+### Changed
+- SW
 
 ## [0.16.50]
+### Changed
+- SW
 
 ## [0.16.49]
+### Changed
+- SW
 
 ## [0.16.48]
+### Changed
+- SW
 
 ## [0.16.47]
+### Changed
+- SW
 
 ## [0.16.46]
+### Changed
+- SW
 
 ## [0.16.45]
+### Changed
+- SW
 
 ## [0.16.44]
+### Changed
+- SW
 
 ## [0.16.43]
+### Changed
+- SW
 
 ## [0.16.42]
+### Changed
+- SW
 
 ## [0.16.41]
+### Changed
+- SW
 
 ## [0.16.40]
+### Changed
+- SW
 
 ## [0.16.39]
+### Changed
+- SW
 
 ## [0.16.38]
 ### Changed

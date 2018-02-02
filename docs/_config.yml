@@ -2,7 +2,7 @@
 theme: jekyll-theme-cayman
 title: X jours plus tard
 name: X days later
-short_name: XDaysLater
+short_name: X Days Later
 description: Affiche la date à X jours ouvrés
 permalink: pretty
 url: https://c0zen.github.io/x-days-later/
@@ -23,6 +23,7 @@ sass:
 # SEO configuration
 author: C0ZEN
 author_email: geoffrey.testelin@gmail.com
+author_url: http://www.geoffreytestelin.com/
 twitter:
   username: C0ZEN
 logo: /images/logo.png
