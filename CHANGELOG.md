@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.17.1]
+### Removed
+- Logs from sw file
+
 ## [0.17.0]
 ### Added
 - New `developer` key for manifest

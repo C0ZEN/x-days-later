@@ -25,10 +25,10 @@ self.addEventListener('install', $event => {
 				return $cache
 					.addAll(data.filesToCache)
 					.then(() => {
-						console.log('SW: files added to cache');
+						// console.log('SW: files added to cache');
 					})
 					.catch(() => {
-						console.log('SW: cache files error');
+						// console.log('SW: cache files error');
 					});
 			})
 			.catch(() => {
@@ -43,12 +43,12 @@ self.addEventListener('fetch', $event => {
 	$event.respondWith(caches
 		.match($event.request)
 		.then($response => {
-			console.log('SW: file was in the cache, execute cache fetching', $response);
+			// console.log('SW: file was in the cache, execute cache fetching', $response);
 			response = $response;
 			return response.clone();
 		})
 		.catch(() => {
-			console.log('SW: file was not in the cache, execute http request');
+			// console.log('SW: file was not in the cache, execute http request');
 			return fetch($event.request);
 		}));
 });
