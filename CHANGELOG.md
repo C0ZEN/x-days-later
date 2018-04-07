@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.18.3]
 ### Changed
 - CodeClimate config file to add eslint version 4 (ESLint v4.15.0 instead of v3.19.0)
 
