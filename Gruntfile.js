@@ -14,18 +14,18 @@ module.exports = function (grunt) {
 
 	require('load-grunt-config')(grunt, {
 		configPath: path.join(process.cwd(), 'grunt/config'),
-		jitGrunt  : {
+		jitGrunt: {
 			customTasksDir: 'grunt/tasks',
 			staticMappings: {
 				useminPrepare: 'grunt-usemin',
-				force        : 'grunt-force-task'
+				force: 'grunt-force-task'
 			}
 		},
-		data      : {
+		data: {
 			config,
-			newVersion      : 'toDefine',
+			newVersion: 'toDefine',
 			newVersionTarget: 'toDefine',
-			version         : 'toDefine'
+			version: 'toDefine'
 		}
 	});
 
