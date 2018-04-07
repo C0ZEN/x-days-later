@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.18.1]
+### Changed
+- Excluded all PWA files from eslint
+
+### Removed
+- Logs from PWA stuff
+
 ## [0.18.0]
 ### Changed
 - Refactored some files with tabs
