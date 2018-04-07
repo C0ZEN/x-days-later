@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.18.9]
+### Fixed
+- CodeClimate error
+
 ## [0.18.8]
 ### Fixed
 - CodeClimate error
