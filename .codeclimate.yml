@@ -10,7 +10,6 @@ plugins:
         enabled: false
   eslint:
     enabled: true
-      config:
 	  config: .eslintrc.json
         extensions:
         - .js
