@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.19.0]
+### Added
+- Travis CI config file
+- Badges for coverage
+
 ## [0.18.9]
 ### Fixed
 - CodeClimate error
