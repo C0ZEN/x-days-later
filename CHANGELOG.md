@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.19.1]
+### Removed
+- Postinstall bower update script
+
 ## [0.19.0]
 ### Added
 - Travis CI config file
