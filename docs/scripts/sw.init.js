@@ -12,20 +12,20 @@ if ('serviceWorker' in navigator) {
 		navigator.serviceWorker
 			.register('/x-days-later/sw.min.js')
 			.then(registration => {
-				console.log('SW: registration successful');
-				console.info(registration.scope);
+				//console.log('SW: registration successful');
+				//console.info(registration.scope);
 				if (registration.installing) {
-					console.log('SW: installing');
+					//console.log('SW: installing');
 				}
 				else if (registration.waiting) {
-					console.log('SW: installed');
+					//console.log('SW: installed');
 				}
 				else if (registration.active) {
-					console.log('SW: active');
+					//console.log('SW: active');
 				}
 			}, err => {
-				console.error('SW: registration failed');
-				console.error(err);
+				//console.error('SW: registration failed');
+				//console.error(err);
 			});
 	});
 }

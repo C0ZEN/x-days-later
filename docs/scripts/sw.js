@@ -9,51 +9,51 @@
  */
 const data = {
 	successHttpStatus: 200,
-	cacheName        : 'x-days-later-cache-v1',
-	filesToCache     : [
+	cacheName: 'x-days-later-cache-v1',
+	filesToCache: [
 		'/x-days-later/assets/css/loader.css'
 	]
 };
 
 self.addEventListener('install', $event => {
-	console.log('SW: install');
+	//console.log('SW: install');
 	$event.waitUntil(() => {
 		caches
 			.open(data.cacheName)
 			.then($cache => {
-				console.log('SW: cache opened');
+				//console.log('SW: cache opened');
 				return $cache
 					.addAll(data.filesToCache)
 					.then(() => {
-						// console.log('SW: files added to cache');
+						//console.log('SW: files added to cache');
 					})
 					.catch(() => {
-						// console.log('SW: cache files error');
+						//console.log('SW: cache files error');
 					});
 			})
 			.catch(() => {
-				console.log('SW: cache open error');
+				//console.log('SW: cache open error');
 			});
 	});
 });
 
 self.addEventListener('fetch', $event => {
-	// console.log('SW: fetch', $event.request);
+	//console.log('SW: fetch', $event.request);
 	let response = null;
 	$event.respondWith(caches
 		.match($event.request)
 		.then($response => {
-			// console.log('SW: file was in the cache, execute cache fetching', $response);
+			//console.log('SW: file was in the cache, execute cache fetching', $response);
 			response = $response;
 			return response.clone();
 		})
 		.catch(() => {
-			// console.log('SW: file was not in the cache, execute http request');
+			//console.log('SW: file was not in the cache, execute http request');
 			return fetch($event.request);
 		}));
 });
 
 self.addEventListener('activate', $event => {
-	console.log('SW: activate');
+	//console.log('SW: activate');
 	$event.waitUntil(self.clients.claim());
 });

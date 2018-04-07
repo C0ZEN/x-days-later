@@ -2,3 +2,6 @@
 /docs/bower_components/
 /.tmp/
 /docs/release/
+/docs/scripts/sw.js
+/docs/scripts/sw.init.js
+*.min.js
