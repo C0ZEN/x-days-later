@@ -13,7 +13,7 @@ plugins:
       config:
           config: .eslintrc.json
           extensions:
-              - .js
+          - .js
 	  channel: "eslint-4"
   csslint:
       enabled: true
