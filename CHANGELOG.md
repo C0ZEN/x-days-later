@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.18.0]
+### Changed
+- Refactored some files with tabs
+- Versions for npm and bower packages
+
 ## [0.17.6]
 ### Fixed
 - Datepicker on mobile
