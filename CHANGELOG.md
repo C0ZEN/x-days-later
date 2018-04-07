@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.18.5]
+### Fixed
+- ERROR: Unable to parse: (<unknown>): found a tab character that violate intendation while scanning a plain scalar at line 16 column 17
+
 ## [0.18.4]
 ### Fixed
 - ERROR: Unable to parse: (<unknown>): found a tab character that violate intendation while scanning a plain scalar at line 16 column 17

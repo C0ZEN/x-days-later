@@ -9,14 +9,14 @@ plugins:
       MD022:
         enabled: false
   eslint:
-      enabled: true
+    enabled: true
       config:
-          config: .eslintrc.json
-          extensions:
-          - .js
+	  config: .eslintrc.json
+        extensions:
+        - .js
 	  channel: "eslint-4"
   csslint:
-      enabled: true
+    enabled: true
 version: "2"
 checks:
   argument-count:
