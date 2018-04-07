@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.18.7]
+### Fixed
+- CodeClimate error
+
 ## [0.18.6]
 ### Fixed
 - ERROR: Unable to parse: (<unknown>): mapping values are not allowed in this context at line 13 column 13

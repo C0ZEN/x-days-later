@@ -10,10 +10,10 @@ plugins:
         enabled: false
   eslint:
     enabled: true
-	  config: .eslintrc.json
+      config: .eslintrc.json
         extensions:
         - .js
-	  channel: "eslint-4"
+      channel: "eslint-4"
   csslint:
     enabled: true
 version: "2"
